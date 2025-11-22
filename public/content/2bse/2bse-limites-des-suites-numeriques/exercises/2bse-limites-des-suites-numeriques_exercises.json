@@ -1,0 +1,17 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Calcul de limites",
+      "statement": "Calculer les limites des suites suivantes :",
+      "sub_questions": [
+        { "text": "$u_n = \\frac{2n^2 - 3n + 1}{n^2 + 5}$", "questionNumber": "1" },
+        { "text": "$v_n = \\sqrt{n+1} - \\sqrt{n}$", "questionNumber": "2" }
+      ],
+      "solution": [
+        "1. On factorise par $n^2$ : $\\frac{2 - 3/n + 1/n^2}{1 + 5/n^2} \\to 2$.",
+        "2. Expression conjuguée : $\\frac{(\\sqrt{n+1}-\\sqrt{n})(\\sqrt{n+1}+\\sqrt{n})}{\\sqrt{n+1}+\\sqrt{n}} = \\frac{1}{\\sqrt{n+1}+\\sqrt{n}} \\to 0$."
+      ]
+    }
+  ]
+}

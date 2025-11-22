@@ -1,0 +1,69 @@
+{
+  "header": {
+    "title": "Calcul de Probabilités",
+    "subtitle": "Lois de probabilité, conditionnement et indépendance",
+    "classe": "2ème Bac Sciences Expérimentales",
+    "chapter": "Chapitre 8",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Calculs Élémentaires",
+      "subsections": [
+        {
+          "title": "Propriétés de base",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Une probabilité $P$ associe à chaque événement $A$ un nombre dans $[0, 1]$.\n$P(\\Omega) = 1$ (Univers) et $P(\\emptyset) = 0$ (Impossible)."
+            },
+            {
+              "type": "theorem-box",
+              "title": "Formule de la Réunion",
+              "content": "Pour tous événements $A$ et $B$ :\n$$\\boxed{P(A \\cup B) = P(A) + P(B) - P(A \\cap B)}$$\nSi $A$ et $B$ sont incompatibles ($A \\cap B = \\emptyset$), alors $P(A \\cup B) = P(A) + P(B)$."
+            },
+            {
+              "type": "property-box",
+              "title": "Événement contraire",
+              "content": "$P(\\bar{A}) = 1 - P(A)$."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Probabilités Conditionnelles",
+      "subsections": [
+        {
+          "title": "Conditionnement et Indépendance",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Probabilité conditionnelle",
+              "content": "Si $P(B) \\neq 0$, la probabilité de $A$ sachant $B$ est définie par :\n$$ P_B(A) = P(A|B) = \\dfrac{P(A \\cap B)}{P(B)} $$"
+            },
+            {
+              "type": "example-box",
+              "title": "Arbre pondéré",
+              "content": [
+                "Dans une population, 40% sont vaccinés ($V$). Parmi les vaccinés, 1% sont malades ($M$).",
+                "On a $P(V) = 0.4$ et $P_V(M) = 0.01$.",
+                "La probabilité d'être vacciné ET malade est :",
+                "$$P(V \\cap M) = P(V) \\times P_V(M) = 0.4 \\times 0.01 = ___0.004___$$"
+              ]
+            },
+            {
+              "type": "theorem-box",
+              "title": "Indépendance",
+              "content": [
+                "Deux événements $A$ et $B$ sont **indépendants** si la réalisation de l'un n'influence pas l'autre.",
+                "Condition mathématique :",
+                "$$\\boxed{P(A \\cap B) = P(A) \\times P(B)}$$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

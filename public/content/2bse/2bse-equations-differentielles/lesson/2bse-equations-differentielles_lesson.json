@@ -1,0 +1,68 @@
+{
+  "header": {
+    "title": "Équations Différentielles",
+    "subtitle": "Modélisation et résolution",
+    "classe": "2ème Bac Sciences Expérimentales",
+    "chapter": "Chapitre 6",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Équation linéaire du premier ordre",
+      "subsections": [
+        {
+          "title": "Résolution de y' = ay + b",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Une équation différentielle est une relation entre une fonction inconnue $y$ et ses dérivées $y', y'', ...$."
+            },
+            {
+              "type": "theorem-box",
+              "title": "Solution Générale",
+              "content": "Les solutions de l'équation différentielle $(E) : y' = ay + b$ (avec $a \\neq 0$) sont les fonctions définies sur $\\mathbb{R}$ par :\n$$\\boxed{y(x) = C e^{ax} - \\dfrac{b}{a}}$$\noù $C$ est une constante réelle arbitraire."
+            },
+            {
+              "type": "example-box",
+              "title": "Exemple avec condition initiale",
+              "content": [
+                "Résoudre l'équation $y' = 2y - 4$ telle que $y(0) = 5$.",
+                ">>1. Solution générale :",
+                "Ici $a=2$ et $b=-4$. La solution particulière constante est $-b/a = -(-4)/2 = 2$.",
+                "$$y(x) = C e^{2x} + 2$$",
+                ">>2. Détermination de la constante C :",
+                "On utilise la condition $y(0) = 5$.",
+                "$C e^{2(0)} + 2 = 5 \\implies C \\times 1 + 2 = 5 \\implies C = 3$.",
+                ">>3. Solution unique :",
+                "$$y(x) = 3e^{2x} + 2$$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Équations du second ordre",
+      "subsections": [
+        {
+          "title": "Équation y'' + w²y = 0",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": "Les solutions de l'équation $y'' + \\omega^2 y = 0$ (avec $\\omega > 0$) sont les fonctions :\n$$ y(x) = \\alpha \\cos(\\omega x) + \\beta \\sin(\\omega x) $$\noù $\\alpha$ et $\\beta$ sont des constantes réelles."
+            },
+            {
+              "type": "practice-box",
+              "statement": "Résoudre $y'' + 9y = 0$.",
+              "solution": [
+                "On identifie $\\omega^2 = 9$, donc $\\omega = 3$.",
+                "La solution générale est :",
+                "$$y(x) = \\alpha \\cos(3x) + \\beta \\sin(3x)$$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

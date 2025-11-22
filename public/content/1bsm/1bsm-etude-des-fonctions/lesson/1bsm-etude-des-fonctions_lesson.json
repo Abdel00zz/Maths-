@@ -1,0 +1,717 @@
+{
+  "header": {
+    "title": "Étude des Fonctions Numériques",
+    "subtitle": "Analyse Complète et Représentation Graphique",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 12",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Branches Infinies d'une Courbe",
+      "subsections": [
+        {
+          "title": "Définition Générale",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Branche Infinie",
+              "content": [
+                "On dit que la courbe $\\mathcal{C}_f$ de la fonction $f$ admet une **branche infinie**, lorsque l'une des coordonnées d'un point de $\\mathcal{C}_f$ tend vers l'infini."
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Conditions d'Existence",
+              "listType": "bullet",
+              "content": [
+                "Le couple de coordonnées d'un point de la courbe est $(x; f(x))$ avec $x \\in D_f$",
+                "La courbe admet une branche infinie si l'une des conditions suivantes est vérifiée :",
+                "L'ensemble $D_f$ contient un intervalle de la forme $[a; +\\infty[$",
+                "L'ensemble $D_f$ contient un intervalle de la forme $]-\\infty; a]$",
+                "La fonction $f$ admet une limite infinie en un point (à gauche ou à droite)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Asymptote Verticale",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Asymptote Parallèle à l'Axe des Ordonnées",
+              "content": [
+                "Soit $a$ un nombre réel.",
+                "Si l'une des conditions suivantes est vérifiée :",
+                "$$\\lim_{x \\to a^-} f(x) = \\pm\\infty \\quad \\text{ou} \\quad \\lim_{x \\to a^+} f(x) = \\pm\\infty$$",
+                "alors on dit que la droite $(\\Delta)$ d'équation $x = a$ est une **asymptote verticale** de la courbe $\\mathcal{C}_f$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Asymptotes Verticales de Fonctions Rationnelles",
+              "content": [
+                ">>Fonction homographique :",
+                "Soit $f(x) = \\dfrac{3x - 7}{x - 2}$",
+                "Le dénominateur s'annule en $x = ___2___$",
+                ">>Calcul des limites :",
+                "$$\\begin{aligned} \\lim_{x \\to 2^-} f(x) &= \\lim_{x \\to 2^-} \\dfrac{3x - 7}{x - 2} \\\\ &= \\dfrac{3(2) - 7}{0^-} = \\dfrac{-1}{0^-} = ___+\\infty___ \\end{aligned}$$",
+                "$$\\lim_{x \\to 2^+} f(x) = \\dfrac{-1}{0^+} = ___-\\infty___$$",
+                ">>Conclusion :",
+                "La droite d'équation $x = ___2___$ est une asymptote verticale de $\\mathcal{C}_f$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Fonction avec Racine Carrée",
+              "content": [
+                "Soit $f(x) = \\dfrac{x}{\\sqrt{x - 1}}$ définie sur $]1; +\\infty[$",
+                ">>Limite en $1^+$ :",
+                "$$\\begin{aligned} \\lim_{x \\to 1^+} f(x) &= \\lim_{x \\to 1^+} \\dfrac{x}{\\sqrt{x - 1}} \\\\ &= \\dfrac{1}{\\sqrt{0^+}} = \\dfrac{1}{0^+} = ___+\\infty___ \\end{aligned}$$",
+                ">>Conclusion :",
+                "La droite d'équation $x = ___1___$ est une asymptote verticale."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application",
+              "statement": "Soit $f(x) = \\dfrac{2x + 3}{(x - 1)^2}$. Déterminer les asymptotes verticales de $\\mathcal{C}_f$.",
+              "solution": [
+                "Le dénominateur s'annule en $x = ___1___$",
+                "$$\\lim_{x \\to 1} f(x) = \\lim_{x \\to 1} \\dfrac{2x + 3}{(x - 1)^2} = \\dfrac{5}{0^+} = ___+\\infty___$$",
+                "La droite $x = 1$ est une asymptote verticale."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Asymptote Horizontale",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Asymptote Parallèle à l'Axe des Abscisses",
+              "content": [
+                "Soit $b$ un nombre réel.",
+                "Si l'une des conditions suivantes est vérifiée :",
+                "$$\\lim_{x \\to +\\infty} f(x) = b \\quad \\text{ou} \\quad \\lim_{x \\to -\\infty} f(x) = b$$",
+                "alors on dit que la droite $(\\Delta)$ d'équation $y = b$ est une **asymptote horizontale** de la courbe $\\mathcal{C}_f$."
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Position Relative",
+              "content": [
+                "Pour étudier la position relative de la courbe $\\mathcal{C}_f$ par rapport à son asymptote $y = b$ sur un intervalle $I$, on étudie le signe de la différence $f(x) - b$ sur $I$.",
+                "$$\\begin{aligned} f(x) - b > 0 &\\Rightarrow \\mathcal{C}_f \\text{ au-dessus de } (\\Delta) \\\\ f(x) - b < 0 &\\Rightarrow \\mathcal{C}_f \\text{ en-dessous de } (\\Delta) \\end{aligned}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Fonction Rationnelle avec Position Relative",
+              "content": [
+                "Soit $f(x) = \\dfrac{3x - 2}{2x - 1}$ pour $x \\neq \\dfrac{1}{2}$",
+                ">>Limite en $+\\infty$ :",
+                "$$\\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} \\dfrac{3x - 2}{2x - 1} = \\lim_{x \\to +\\infty} \\dfrac{3 - \\frac{2}{x}}{2 - \\frac{1}{x}} = \\dfrac{3}{___2___}$$",
+                "La droite $y = \\dfrac{3}{2}$ est une asymptote horizontale en $+\\infty$",
+                ">>Position relative :",
+                "$$f(x) - \\dfrac{3}{2} = \\dfrac{3x - 2}{2x - 1} - \\dfrac{3}{2} = \\dfrac{2(3x - 2) - 3(2x - 1)}{2(2x - 1)}$$",
+                "$$= \\dfrac{6x - 4 - 6x + 3}{2(2x - 1)} = \\dfrac{-1}{2(2x - 1)}$$",
+                ">>Étude du signe :",
+                "Pour $x > \\dfrac{1}{2}$ : $2x - 1 > 0$, donc $f(x) - \\dfrac{3}{2} < ___0___$",
+                ">>Conclusion :",
+                "La courbe est **en-dessous** de l'asymptote sur $]\\dfrac{1}{2}; +\\infty[$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Fonction avec Racine",
+              "content": [
+                "Soit $f(x) = \\sqrt{x^2 + x + 1} - x$ pour $x \\in \\mathbb{R}$",
+                ">>Limite en $+\\infty$ :",
+                "$$\\lim_{x \\to +\\infty} f(x) = \\lim_{x \\to +\\infty} \\dfrac{(\\sqrt{x^2 + x + 1} - x)(\\sqrt{x^2 + x + 1} + x)}{\\sqrt{x^2 + x + 1} + x}$$",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{x^2 + x + 1 - x^2}{\\sqrt{x^2 + x + 1} + x} = \\lim_{x \\to +\\infty} \\dfrac{x + 1}{\\sqrt{x^2 + x + 1} + x}$$",
+                "En divisant par $x$ (avec $x > 0$) :",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{1 + \\frac{1}{x}}{\\sqrt{1 + \\frac{1}{x} + \\frac{1}{x^2}} + 1} = \\dfrac{1}{1 + 1} = ___\\dfrac{1}{2}___$$",
+                ">>Conclusion :",
+                "La droite $y = \\dfrac{1}{2}$ est une asymptote horizontale en $+\\infty$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Asymptote Oblique",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Asymptote Oblique",
+              "content": [
+                "Soient $a$ et $b$ deux réels tels que $a \\neq 0$.",
+                "Si l'une des conditions suivantes est vérifiée :",
+                "$$\\lim_{x \\to +\\infty} [f(x) - (ax + b)] = 0 \\quad \\text{ou} \\quad \\lim_{x \\to -\\infty} [f(x) - (ax + b)] = 0$$",
+                "alors on dit que la droite $(D)$ d'équation $y = ax + b$ est une **asymptote oblique** de la courbe $\\mathcal{C}_f$."
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Méthode de Détermination",
+              "content": [
+                "Pour que la droite $(D) : y = ax + b$ soit une asymptote oblique de $\\mathcal{C}_f$, il faut et il suffit qu'il existe une fonction $u$ définie sur $D_f$ telle que :",
+                "$$f(x) = ax + b + u(x) \\quad \\text{et} \\quad \\lim_{x \\to \\pm\\infty} u(x) = 0$$",
+                "**Méthode pratique :**",
+                "$$a = \\lim_{x \\to \\pm\\infty} \\dfrac{f(x)}{x} \\quad \\text{et} \\quad b = \\lim_{x \\to \\pm\\infty} [f(x) - ax]$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Détermination d'Asymptote Oblique",
+              "content": [
+                "Soit $f(x) = \\dfrac{2x^2 + x - 1}{x - 1}$ pour $x \\neq 1$",
+                ">>Calcul de $a$ :",
+                "$$a = \\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = \\lim_{x \\to +\\infty} \\dfrac{2x^2 + x - 1}{x(x - 1)}$$",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{2x^2 + x - 1}{x^2 - x} = \\lim_{x \\to +\\infty} \\dfrac{2 + \\frac{1}{x} - \\frac{1}{x^2}}{1 - \\frac{1}{x}} = ___2___$$",
+                ">>Calcul de $b$ :",
+                "$$b = \\lim_{x \\to +\\infty} [f(x) - 2x] = \\lim_{x \\to +\\infty} \\left[\\dfrac{2x^2 + x - 1}{x - 1} - 2x\\right]$$",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{2x^2 + x - 1 - 2x(x - 1)}{x - 1} = \\lim_{x \\to +\\infty} \\dfrac{2x^2 + x - 1 - 2x^2 + 2x}{x - 1}$$",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{3x - 1}{x - 1} = \\lim_{x \\to +\\infty} \\dfrac{3 - \\frac{1}{x}}{1 - \\frac{1}{x}} = ___3___$$",
+                ">>Conclusion :",
+                "La droite d'équation $y = 2x + 3$ est une asymptote oblique en $\\pm\\infty$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Position Relative par Rapport à l'Asymptote",
+              "content": [
+                "Soit $f(x) = x + 4 - \\dfrac{1}{\\sqrt{1 - x}}$ sur $]-\\infty; 1[$",
+                ">>Recherche de l'asymptote en $-\\infty$ :",
+                "$$\\lim_{x \\to -\\infty} \\dfrac{f(x)}{x} = \\lim_{x \\to -\\infty} \\dfrac{x + 4 - \\frac{1}{\\sqrt{1 - x}}}{x} = ___1___$$",
+                "$$\\lim_{x \\to -\\infty} [f(x) - x] = \\lim_{x \\to -\\infty} \\left[4 - \\dfrac{1}{\\sqrt{1 - x}}\\right] = ___4___$$",
+                "La droite $y = x + 4$ est une asymptote oblique",
+                ">>Position relative :",
+                "$$f(x) - (x + 4) = -\\dfrac{1}{\\sqrt{1 - x}}$$",
+                "Pour $x < 1$ : $1 - x > 0$, donc $\\sqrt{1 - x} > 0$",
+                "Ainsi : $f(x) - (x + 4) < ___0___$",
+                ">>Conclusion :",
+                "La courbe est **en-dessous** de l'asymptote sur $]-\\infty; 1[$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application",
+              "statement": "Soit $f(x) = \\sqrt{x^2 - x + 1}$ sur $\\mathbb{R}$. Déterminer l'asymptote oblique en $+\\infty$.",
+              "solution": [
+                "$$a = \\lim_{x \\to +\\infty} \\dfrac{\\sqrt{x^2 - x + 1}}{x} = \\lim_{x \\to +\\infty} \\sqrt{\\dfrac{x^2 - x + 1}{x^2}} = \\sqrt{1} = ___1___$$",
+                "$$b = \\lim_{x \\to +\\infty} [\\sqrt{x^2 - x + 1} - x] = \\lim_{x \\to +\\infty} \\dfrac{x^2 - x + 1 - x^2}{\\sqrt{x^2 - x + 1} + x}$$",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{-x + 1}{\\sqrt{x^2 - x + 1} + x} = \\lim_{x \\to +\\infty} \\dfrac{-1 + \\frac{1}{x}}{\\sqrt{1 - \\frac{1}{x} + \\frac{1}{x^2}} + 1} = ___-\\dfrac{1}{2}___$$",
+                "La droite $y = x - \\dfrac{1}{2}$ est une asymptote oblique en $+\\infty$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Branches Paraboliques",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Directions Asymptotiques",
+              "content": [
+                "Soit $f$ une fonction numérique telle que : $\\displaystyle\\lim_{x \\to +\\infty} f(x) = +\\infty$",
+                ">>Trois cas possibles :",
+                "**Branche parabolique de direction l'axe des ordonnées :**",
+                "Si $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = \\pm\\infty$",
+                "**Branche parabolique de direction l'axe des abscisses :**",
+                "Si $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = 0$",
+                "**Branche parabolique de direction la droite $(D) : y = ax$ :**",
+                "Si $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = a \\neq 0$ et $\\displaystyle\\lim_{x \\to +\\infty} [f(x) - ax] = \\pm\\infty$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Branche Parabolique vers l'Axe des Ordonnées",
+              "content": [
+                "Soit $f(x) = x^3 + x^2 + 1$ sur $\\mathbb{R}$",
+                ">>Limite en $+\\infty$ :",
+                "$$\\lim_{x \\to +\\infty} f(x) = ___+\\infty___$$",
+                ">>Calcul du quotient :",
+                "$$\\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = \\lim_{x \\to +\\infty} \\dfrac{x^3 + x^2 + 1}{x} = \\lim_{x \\to +\\infty} (x^2 + x + \\dfrac{1}{x}) = ___+\\infty___$$",
+                ">>Conclusion :",
+                "La courbe admet une **branche parabolique de direction l'axe des ordonnées** en $+\\infty$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Branche Parabolique de Direction Oblique",
+              "content": [
+                "Soit $f(x) = \\sqrt{x^2 + x + 1}$ sur $\\mathbb{R}$",
+                ">>En $+\\infty$ :",
+                "$$\\lim_{x \\to +\\infty} f(x) = ___+\\infty___$$",
+                "$$a = \\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = \\lim_{x \\to +\\infty} \\dfrac{\\sqrt{x^2 + x + 1}}{x} = ___1___$$",
+                "$$\\lim_{x \\to +\\infty} [f(x) - x] = \\lim_{x \\to +\\infty} [\\sqrt{x^2 + x + 1} - x]$$",
+                "En multipliant par la quantité conjuguée :",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{x + 1}{\\sqrt{x^2 + x + 1} + x} = \\dfrac{1}{2} \\quad \\text{(fini, pas } \\pm\\infty\\text{)}$$",
+                ">>Conclusion :",
+                "Il y a une **asymptote oblique** $y = x + \\dfrac{1}{2}$, donc pas de branche parabolique"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Éléments de Symétrie d'une Courbe",
+      "subsections": [
+        {
+          "title": "Axe de Symétrie",
+          "elements": [
+            {
+              "type": "property-box",
+              "title": "Axe de Symétrie d'une Courbe",
+              "content": [
+                "Soit $f$ une fonction numérique et $\\mathcal{C}_f$ sa courbe représentative dans un repère orthogonal.",
+                "Pour que la droite $(\\Delta)$ d'équation $x = a$ soit un **axe de symétrie** de la courbe $\\mathcal{C}_f$, il faut et il suffit que pour tout $x \\in D_f$ :",
+                "$$\\boxed{(2a - x) \\in D_f \\quad \\text{et} \\quad f(2a - x) = f(x)}$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Cas Particulier Important",
+              "content": [
+                "Si $f$ est une **fonction paire** (c'est-à-dire $f(-x) = f(x)$), alors sa courbe $\\mathcal{C}_f$ admet l'**axe des ordonnées** comme axe de symétrie."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Axe de Symétrie x = -2",
+              "content": [
+                "Soit $f(x) = x^2 + 4x + 5$ définie sur $\\mathbb{R}$",
+                ">>Montrons que la droite $x = -2$ est un axe de symétrie :",
+                "Pour tout $x \\in \\mathbb{R}$, calculons $f(2(-2) - x) = f(-4 - x)$ :",
+                "$$\\begin{aligned} f(-4 - x) &= (-4 - x)^2 + 4(-4 - x) + 5 \\\\ &= 16 + 8x + x^2 - 16 - 4x + 5 \\\\ &= x^2 + 4x + 5 \\\\ &= ___f(x)___ \\end{aligned}$$",
+                ">>Conclusion :",
+                "La droite d'équation $x = ___-2___$ est un axe de symétrie de $\\mathcal{C}_f$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application",
+              "statement": "Soit $f(x) = \\dfrac{|x|}{\\sqrt{x^2 + 1}}$. Montrer que la droite $x = 0$ (axe des ordonnées) est un axe de symétrie.",
+              "solution": [
+                "Pour tout $x \\in \\mathbb{R}$ :",
+                "$$f(-x) = \\dfrac{|-x|}{\\sqrt{(-x)^2 + 1}} = \\dfrac{|x|}{\\sqrt{x^2 + 1}} = ___f(x)___$$",
+                "La fonction est **paire**, donc $x = 0$ est un axe de symétrie."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Centre de Symétrie",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Centre de Symétrie d'une Courbe",
+              "content": [
+                "Soit $f$ une fonction numérique et $\\mathcal{C}_f$ sa courbe représentative dans un repère orthogonal.",
+                "Pour que le point $\\Omega(a; b)$ soit un **centre de symétrie** de la courbe $\\mathcal{C}_f$, il faut et il suffit que pour tout $x \\in D_f$ :",
+                "$$\\boxed{(2a - x) \\in D_f \\quad \\text{et} \\quad f(2a - x) = 2b - f(x)}$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Cas Particuliers",
+              "listType": "bullet",
+              "content": [
+                "Si $f$ est une **fonction impaire** ($f(-x) = -f(x)$), alors $\\mathcal{C}_f$ admet l'**origine** $O(0; 0)$ comme centre de symétrie",
+                "Si $\\mathcal{C}_f$ admet la droite $x = a$ comme axe de symétrie OU le point $(a; b)$ comme centre de symétrie, alors on peut restreindre l'étude de $f$ sur $D_f \\cap [a; +\\infty[$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Centre de Symétrie",
+              "content": [
+                "Soit $f(x) = \\dfrac{x - 1}{2x + 1}$ définie sur $\\mathbb{R} \\setminus \\{-\\dfrac{1}{2}\\}$",
+                ">>Montrons que $\\Omega\\left(-\\dfrac{1}{2}; \\dfrac{1}{2}\\right)$ est un centre de symétrie :",
+                "Pour tout $x \\in D_f$, calculons $f(2(-\\dfrac{1}{2}) - x) = f(-1 - x)$ :",
+                "$$\\begin{aligned} f(-1 - x) &= \\dfrac{(-1 - x) - 1}{2(-1 - x) + 1} = \\dfrac{-2 - x}{-2 - 2x + 1} \\\\ &= \\dfrac{-2 - x}{-1 - 2x} = \\dfrac{2 + x}{1 + 2x} \\end{aligned}$$",
+                ">>Vérifions que $f(-1 - x) = 2(\\dfrac{1}{2}) - f(x)$ :",
+                "$$2 \\times \\dfrac{1}{2} - f(x) = 1 - \\dfrac{x - 1}{2x + 1} = \\dfrac{2x + 1 - (x - 1)}{2x + 1} = \\dfrac{x + 2}{2x + 1} = ___f(-1 - x)___ \\; ✓$$",
+                ">>Conclusion :",
+                "Le point $\\Omega\\left(-\\dfrac{1}{2}; \\dfrac{1}{2}\\right)$ est un centre de symétrie de $\\mathcal{C}_f$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application",
+              "statement": "Soit $f(x) = x^3 - 3x^2 - 2$. Montrer que $\\Omega(0; -2)$ est un centre de symétrie.",
+              "solution": [
+                "Pour tout $x \\in \\mathbb{R}$ :",
+                "$$f(-x) = (-x)^3 - 3(-x)^2 - 2 = -x^3 - 3x^2 - 2$$",
+                "$$2(-2) - f(x) = -4 - (x^3 - 3x^2 - 2) = -4 - x^3 + 3x^2 + 2 = ___-x^3 - 3x^2 - 2___$$",
+                "Donc $f(-x) = -4 - f(x)$, le point $(0; -2)$ est bien un centre de symétrie."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Concavité et Point d'Inflexion",
+      "subsections": [
+        {
+          "title": "Convexité et Concavité",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Convexité et Concavité",
+              "content": [
+                "Soit $f$ une fonction définie sur un intervalle $I$ et $\\mathcal{C}_f$ sa courbe représentative.",
+                ">>Courbe convexe :",
+                "On dit que $\\mathcal{C}_f$ est **convexe** sur $I$ si elle est entièrement située **au-dessus** de chacune de ses tangentes.",
+                ">>Courbe concave :",
+                "On dit que $\\mathcal{C}_f$ est **concave** sur $I$ si elle est entièrement située **en-dessous** de chacune de ses tangentes."
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Critère avec la Dérivée Seconde",
+              "content": [
+                "Soit $f$ une fonction **deux fois dérivable** sur un intervalle $I$.",
+                "$$\\boxed{\\mathcal{C}_f \\text{ convexe sur } I \\iff \\forall x \\in I, \\; f''(x) \\ge 0}$$",
+                "$$\\boxed{\\mathcal{C}_f \\text{ concave sur } I \\iff \\forall x \\in I, \\; f''(x) \\le 0}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Étude de Convexité",
+              "content": [
+                "Soit $f(x) = x^2 - 5x + 2$ définie sur $\\mathbb{R}$",
+                ">>Calcul de la dérivée première :",
+                "$$f'(x) = 2x - ___5___$$",
+                ">>Calcul de la dérivée seconde :",
+                "$$f''(x) = ___2___$$",
+                ">>Étude du signe :",
+                "Pour tout $x \\in \\mathbb{R}$ : $f''(x) = 2 > 0$",
+                ">>Conclusion :",
+                "La courbe $\\mathcal{C}_f$ est **convexe** sur $\\mathbb{R}$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Convexité par Intervalles",
+              "content": [
+                "Soit $f(x) = x^3 - 3x^2 + 2x - 1$ sur $\\mathbb{R}$",
+                ">>Dérivées :",
+                "$$f'(x) = 3x^2 - 6x + 2$$",
+                "$$f''(x) = 6x - 6 = 6(x - ___1___)$$",
+                ">>Tableau de signes de $f''(x)$ :",
+                "$$\\begin{array}{c|ccc} x & -\\infty & & 1 & & +\\infty \\\\ \\hline f''(x) & & - & 0 & + & \\\\ \\hline \\mathcal{C}_f & & \\text{concave} & & \\text{convexe} & \\end{array}$$",
+                ">>Conclusion :",
+                "$\\mathcal{C}_f$ est **concave** sur $]-\\infty; 1]$ et **convexe** sur $[1; +\\infty[$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Point d'Inflexion",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Point d'Inflexion",
+              "content": [
+                "On appelle **point d'inflexion** de la courbe $\\mathcal{C}_f$, tout point où elle **change de concavité**."
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Caractérisation",
+              "content": [
+                "Soit $f$ une fonction deux fois dérivable sur un intervalle $I$.",
+                "Pour que le point $M_0(x_0; f(x_0))$ soit un **point d'inflexion** de $\\mathcal{C}_f$, il faut et il suffit que la dérivée seconde $f''$ s'annule en $x_0$ et **change de signe** de part et d'autre de $x_0$.",
+                "$$\\boxed{f''(x_0) = 0 \\quad \\text{et} \\quad f'' \\text{ change de signe en } x_0}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Détermination d'un Point d'Inflexion",
+              "content": [
+                "Soit $f(x) = x^4 - 4x^3 + 1$ sur $\\mathbb{R}$",
+                ">>Dérivées :",
+                "$$f'(x) = 4x^3 - 12x^2 = 4x^2(x - 3)$$",
+                "$$f''(x) = 12x^2 - 24x = 12x(x - ___2___)$$",
+                ">>Résolution de $f''(x) = 0$ :",
+                "$$12x(x - 2) = 0 \\iff x = 0 \\text{ ou } x = ___2___$$",
+                ">>Tableau de signes de $f''(x)$ :",
+                "$$\\begin{array}{c|ccccc} x & -\\infty & & 0 & & 2 & & +\\infty \\\\ \\hline f''(x) & & + & 0 & - & 0 & + & \\\\ \\hline \\mathcal{C}_f & & \\text{convexe} & & \\text{concave} & & \\text{convexe} & \\end{array}$$",
+                ">>Points d'inflexion :",
+                "En $x = 0$ : $f(0) = ___1___ \\Rightarrow$ Point $A(0; 1)$",
+                "En $x = 2$ : $f(2) = 16 - 32 + 1 = ___-15___ \\Rightarrow$ Point $B(2; -15)$",
+                ">>Conclusion :",
+                "$\\mathcal{C}_f$ admet **deux points d'inflexion** : $A(0; 1)$ et $B(2; -15)$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application",
+              "statement": "Soit $f(x) = \\cos(2x) + \\sin(2x)$ sur $[0; \\pi]$. Déterminer les points d'inflexion.",
+              "solution": [
+                "$$f'(x) = -2\\sin(2x) + 2\\cos(2x)$$",
+                "$$f''(x) = -4\\cos(2x) - 4\\sin(2x) = -4[\\cos(2x) + \\sin(2x)]$$",
+                "$f''(x) = 0 \\iff \\cos(2x) + \\sin(2x) = 0 \\iff \\tan(2x) = -1$",
+                "Sur $[0; \\pi]$ : $2x = \\dfrac{3\\pi}{4}$ ou $2x = \\dfrac{7\\pi}{4}$",
+                "Donc : $x = ___\\dfrac{3\\pi}{8}___$ (seule solution dans $[0; \\pi]$)",
+                "$f''$ change de signe en $x = \\dfrac{3\\pi}{8}$, donc c'est un point d'inflexion."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Synthèse des Techniques d'Étude",
+      "subsections": [
+        {
+          "title": "Reconnaissance des Asymptotes",
+          "elements": [
+            {
+              "type": "method-box",
+              "title": "Stratégie de Recherche des Asymptotes",
+              "listType": "numbered",
+              "content": [
+                "**Asymptotes verticales** : Chercher les valeurs qui annulent le dénominateur ou rendent la fonction non définie",
+                "**Asymptotes horizontales** : Calculer $\\displaystyle\\lim_{x \\to \\pm\\infty} f(x)$ → Si limite finie $= b$, alors $y = b$ est asymptote",
+                "**Asymptotes obliques** : Si pas d'asymptote horizontale, calculer $a = \\displaystyle\\lim_{x \\to \\pm\\infty} \\dfrac{f(x)}{x}$ puis $b = \\displaystyle\\lim_{x \\to \\pm\\infty} [f(x) - ax]$",
+                "**Branches paraboliques** : Si $\\displaystyle\\lim_{x \\to \\pm\\infty} f(x) = \\pm\\infty$ sans asymptote oblique"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Fonction avec Plusieurs Types d'Asymptotes",
+              "content": [
+                "Soit $f(x) = \\dfrac{2x^2 - 4x + 1}{x - 3}$ sur $\\mathbb{R} \\setminus \\{3\\}$",
+                ">>Asymptote verticale :",
+                "$$\\lim_{x \\to 3} f(x) = \\lim_{x \\to 3} \\dfrac{2x^2 - 4x + 1}{x - 3}$$",
+                "Au numérateur : $2(3)^2 - 4(3) + 1 = 18 - 12 + 1 = 7$",
+                "Au dénominateur : $3 - 3 = 0$",
+                "$$\\lim_{x \\to 3^-} f(x) = \\dfrac{7}{0^-} = ___-\\infty___ \\quad \\lim_{x \\to 3^+} f(x) = \\dfrac{7}{0^+} = ___+\\infty___$$",
+                "La droite $x = ___3___$ est une asymptote verticale",
+                ">>Asymptote oblique en $\\pm\\infty$ :",
+                "Division euclidienne : $2x^2 - 4x + 1 = (x - 3)(2x + 2) + 7$",
+                "Donc : $f(x) = 2x + 2 + \\dfrac{7}{x - 3}$",
+                "$$\\lim_{x \\to \\pm\\infty} \\dfrac{7}{x - 3} = ___0___$$",
+                ">>Conclusion :",
+                "La droite $y = 2x + 2$ est une asymptote oblique en $\\pm\\infty$",
+                ">>Position relative :",
+                "$$f(x) - (2x + 2) = \\dfrac{7}{x - 3}$$",
+                "Pour $x > 3$ : $\\dfrac{7}{x - 3} > 0$ → courbe **au-dessus**",
+                "Pour $x < 3$ : $\\dfrac{7}{x - 3} < 0$ → courbe **en-dessous**"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Fonction Irrationnelle avec Asymptotes",
+              "content": [
+                "Soit $f(x) = \\sqrt{4x^2 + x + 3}$ sur $\\mathbb{R}$",
+                ">>Comportement en $+\\infty$ :",
+                "$$f(x) = \\sqrt{x^2(4 + \\dfrac{1}{x} + \\dfrac{3}{x^2})} = |x|\\sqrt{4 + \\dfrac{1}{x} + \\dfrac{3}{x^2}}$$",
+                "Pour $x > 0$ : $f(x) = x\\sqrt{4 + \\dfrac{1}{x} + \\dfrac{3}{x^2}}$",
+                "$$\\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = \\sqrt{4} = ___2___$$",
+                "$$\\lim_{x \\to +\\infty} [f(x) - 2x] = \\lim_{x \\to +\\infty} \\left[\\sqrt{4x^2 + x + 3} - 2x\\right]$$",
+                "Multiplication par la quantité conjuguée :",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{4x^2 + x + 3 - 4x^2}{\\sqrt{4x^2 + x + 3} + 2x} = \\lim_{x \\to +\\infty} \\dfrac{x + 3}{\\sqrt{4x^2 + x + 3} + 2x}$$",
+                "En divisant par $x$ :",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{1 + \\frac{3}{x}}{\\sqrt{4 + \\frac{1}{x} + \\frac{3}{x^2}} + 2} = \\dfrac{1}{2 + 2} = ___\\dfrac{1}{4}___$$",
+                ">>Asymptote en $+\\infty$ :",
+                "$y = 2x + \\dfrac{1}{4}$",
+                ">>Comportement en $-\\infty$ :",
+                "Pour $x < 0$ : $f(x) = -x\\sqrt{4 + \\dfrac{1}{x} + \\dfrac{3}{x^2}}$",
+                "$$\\lim_{x \\to -\\infty} \\dfrac{f(x)}{x} = \\lim_{x \\to -\\infty} -\\sqrt{4 + \\dfrac{1}{x} + \\dfrac{3}{x^2}} = ___-2___$$",
+                "Par un calcul similaire : $\\displaystyle\\lim_{x \\to -\\infty} [f(x) + 2x] = -\\dfrac{1}{4}$",
+                ">>Asymptote en $-\\infty$ :",
+                "$y = -2x - \\dfrac{1}{4}$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Études Complètes de Fonctions Types",
+          "elements": [
+            {
+              "type": "example-box",
+              "title": "Fonction Polynomiale du Troisième Degré",
+              "content": [
+                "Soit $f(x) = x^3 - 6x^2 + 9x + 1$ sur $\\mathbb{R}$",
+                ">>**Domaine :** $D_f = \\mathbb{R}$",
+                ">>**Limites :**",
+                "$$\\lim_{x \\to -\\infty} f(x) = ___-\\infty___ \\quad \\lim_{x \\to +\\infty} f(x) = ___+\\infty___$$",
+                ">>**Dérivée première :**",
+                "$$f'(x) = 3x^2 - 12x + 9 = 3(x^2 - 4x + 3) = 3(x - 1)(x - ___3___)$$",
+                ">>**Tableau de variations :**",
+                "$$\\begin{array}{c|ccccc} x & -\\infty & & 1 & & 3 & & +\\infty \\\\ \\hline f'(x) & & + & 0 & - & 0 & + & \\\\ \\hline & & & 5 & & & & \\\\ f(x) & -\\infty & \\nearrow & & \\searrow & 1 & \\nearrow & +\\infty \\end{array}$$",
+                "$f(1) = 1 - 6 + 9 + 1 = ___5___$ (maximum local)",
+                "$f(3) = 27 - 54 + 27 + 1 = ___1___$ (minimum local)",
+                ">>**Dérivée seconde :**",
+                "$$f''(x) = 6x - 12 = 6(x - ___2___)$$",
+                "$f''(x) = 0 \\iff x = 2$",
+                "$f(2) = 8 - 24 + 18 + 1 = ___3___$",
+                ">>**Point d'inflexion :**",
+                "Le point $I(2; 3)$ est un point d'inflexion",
+                ">>**Branches infinies :**",
+                "$$\\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = \\lim_{x \\to +\\infty} (x^2 - 6x + 9 + \\dfrac{1}{x}) = ___+\\infty___$$",
+                "Branche parabolique de direction l'axe des ordonnées"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Fonction Homographique Complète",
+              "content": [
+                "Soit $f(x) = \\dfrac{-2x + 5}{x + 1}$ sur $\\mathbb{R} \\setminus \\{-1\\}$",
+                ">>**Symétrie :**",
+                "Pas de symétrie évidente",
+                ">>**Limites et asymptotes :**",
+                "$$\\lim_{x \\to -1^-} f(x) = \\dfrac{7}{0^-} = ___-\\infty___ \\quad (x = -1 \\text{ asymptote verticale})$$",
+                "$$\\lim_{x \\to -1^+} f(x) = \\dfrac{7}{0^+} = ___+\\infty___$$",
+                "$$\\lim_{x \\to \\pm\\infty} f(x) = \\lim_{x \\to \\pm\\infty} \\dfrac{-2 + \\frac{5}{x}}{1 + \\frac{1}{x}} = ___-2___ \\quad (y = -2 \\text{ asymptote horizontale})$$",
+                ">>**Dérivée :**",
+                "$$f'(x) = \\dfrac{-2(x + 1) - (-2x + 5)}{(x + 1)^2} = \\dfrac{-2x - 2 + 2x - 5}{(x + 1)^2} = \\dfrac{-7}{(x + 1)^2}$$",
+                "Pour tout $x \\in D_f$ : $f'(x) < 0$",
+                ">>**Variations :**",
+                "$f$ est **strictement décroissante** sur $]-\\infty; -1[$ et sur $]-1; +\\infty[$",
+                ">>**Position par rapport à l'asymptote horizontale :**",
+                "$$f(x) - (-2) = \\dfrac{-2x + 5}{x + 1} + 2 = \\dfrac{-2x + 5 + 2(x + 1)}{x + 1} = \\dfrac{7}{x + 1}$$",
+                "Pour $x > -1$ : $f(x) + 2 > 0$ → courbe **au-dessus**",
+                "Pour $x < -1$ : $f(x) + 2 < 0$ → courbe **en-dessous**"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Exercice d'Entraînement",
+              "statement": "Soit $f(x) = \\dfrac{x^2 - 4}{x}$ sur $\\mathbb{R}^*$. Étudier complètement cette fonction (domaine, limites, asymptotes, variations).",
+              "solution": [
+                "**Domaine :** $D_f = \\mathbb{R}^* = ]-\\infty; 0[ \\cup ]0; +\\infty[$",
+                "**Parité :** $f(-x) = \\dfrac{(-x)^2 - 4}{-x} = \\dfrac{x^2 - 4}{-x} = -f(x)$ → fonction **impaire**",
+                "**Asymptote verticale :** $\\displaystyle\\lim_{x \\to 0} f(x) = \\displaystyle\\lim_{x \\to 0} \\dfrac{x^2 - 4}{x} = \\dfrac{-4}{0}$ → $x = ___0___$ asymptote verticale",
+                "**Asymptote oblique :** $f(x) = \\dfrac{x^2 - 4}{x} = x - \\dfrac{4}{x}$",
+                "$\\displaystyle\\lim_{x \\to \\pm\\infty} [f(x) - x] = \\displaystyle\\lim_{x \\to \\pm\\infty} -\\dfrac{4}{x} = ___0___$ → $y = x$ asymptote",
+                "**Dérivée :** $f'(x) = 1 + \\dfrac{4}{x^2} > 0$ pour tout $x \\in D_f$",
+                "$f$ est **strictement croissante** sur chaque intervalle de définition"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Plan d'Étude d'une Fonction",
+      "subsections": [
+        {
+          "title": "Méthodologie Complète",
+          "elements": [
+            {
+              "type": "method-box",
+              "title": "Plan d'Étude Systématique",
+              "listType": "numbered",
+              "content": [
+                "**Ensemble de définition** : Déterminer $D_f$ (attention aux dénominateurs, racines, logarithmes...)",
+                "**Symétries** : Étudier la parité, la périodicité, rechercher des axes ou centres de symétrie → Déterminer l'ensemble d'étude $D_E$",
+                "**Limites** : Calculer les limites de $f$ aux bornes de $D_f$",
+                "**Dérivabilité** : Étudier la dérivabilité de $f$ sur $D_f$, calculer $f'(x)$",
+                "**Variations** : Étudier le signe de $f'(x)$ et dresser le tableau de variations",
+                "**Branches infinies** : Déterminer les asymptotes (verticales, horizontales, obliques) et les branches paraboliques",
+                "**Positions relatives** : Étudier la position de $\\mathcal{C}_f$ par rapport aux asymptotes",
+                "**Tangentes particulières** : Déterminer les équations des tangentes en des points remarquables",
+                "**Concavité** : Calculer $f''(x)$ et déterminer les points d'inflexion",
+                "**Tracé** : Construire $\\mathcal{C}_f$ dans un repère orthonormé avec tous les éléments précédents"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Étude Complète d'une Fonction Rationnelle",
+              "content": [
+                "Soit $f(x) = \\dfrac{x^2 + 1}{x - 1}$",
+                ">>**1. Ensemble de définition :**",
+                "Le dénominateur s'annule en $x = 1$",
+                "$$D_f = \\mathbb{R} \\setminus \\{___1___\\} = ]-\\infty; 1[ \\cup ]1; +\\infty[$$",
+                ">>**2. Symétries :**",
+                "$f(-x) = \\dfrac{(-x)^2 + 1}{-x - 1} = \\dfrac{x^2 + 1}{-x - 1} \\neq f(x)$ et $\\neq -f(x)$",
+                "Pas de symétrie évidente. Ensemble d'étude : $D_E = D_f$",
+                ">>**3. Limites aux bornes :**",
+                "En $-\\infty$ : $\\displaystyle\\lim_{x \\to -\\infty} f(x) = \\lim_{x \\to -\\infty} \\dfrac{x^2(1 + \\frac{1}{x^2})}{x(1 - \\frac{1}{x})} = ___-\\infty___$",
+                "En $1^-$ : $\\displaystyle\\lim_{x \\to 1^-} f(x) = \\dfrac{2}{0^-} = ___-\\infty___$",
+                "En $1^+$ : $\\displaystyle\\lim_{x \\to 1^+} f(x) = \\dfrac{2}{0^+} = ___+\\infty___$",
+                "En $+\\infty$ : $\\displaystyle\\lim_{x \\to +\\infty} f(x) = ___+\\infty___$",
+                ">>**4. Dérivabilité :**",
+                "$f$ est dérivable sur $D_f$ (fonction rationnelle)",
+                "$$f'(x) = \\dfrac{2x(x - 1) - (x^2 + 1)}{(x - 1)^2} = \\dfrac{2x^2 - 2x - x^2 - 1}{(x - 1)^2} = \\dfrac{x^2 - 2x - 1}{(x - 1)^2}$$",
+                ">>**5. Variations :**",
+                "$(x - 1)^2 > 0$ sur $D_f$, donc le signe de $f'(x)$ dépend de $x^2 - 2x - 1$",
+                "$\\Delta = 4 + 4 = 8$, racines : $x = \\dfrac{2 \\pm 2\\sqrt{2}}{2} = 1 \\pm \\sqrt{2}$",
+                "$x_1 = 1 - \\sqrt{2} \\approx -0.41$ et $x_2 = 1 + \\sqrt{2} \\approx ___2.41___$",
+                ">>**6. Asymptote verticale :**",
+                "La droite $x = ___1___$ est une asymptote verticale",
+                ">>**7. Asymptote oblique :**",
+                "$$a = \\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = \\lim_{x \\to +\\infty} \\dfrac{x^2 + 1}{x(x - 1)} = ___1___$$",
+                "$$b = \\lim_{x \\to +\\infty} [f(x) - x] = \\lim_{x \\to +\\infty} \\left[\\dfrac{x^2 + 1}{x - 1} - x\\right]$$",
+                "$$= \\lim_{x \\to +\\infty} \\dfrac{x^2 + 1 - x(x - 1)}{x - 1} = \\lim_{x \\to +\\infty} \\dfrac{x + 1}{x - 1} = ___1___$$",
+                "La droite $y = x + 1$ est une asymptote oblique en $\\pm\\infty$"
+              ]
+            },
+            {
+              "type": "activity-box",
+              "title": "Étude Guidée Complète",
+              "content": [
+                "Soit $f(x) = x + \\dfrac{2}{x}$ sur $\\mathbb{R}^*$",
+                ">>**1. Domaine de définition :**",
+                "$D_f = \\mathbb{R}^* = ]-\\infty; 0[ \\cup ]0; +\\infty[$",
+                ">>**2. Parité :**",
+                "$f(-x) = -x + \\dfrac{2}{-x} = -x - \\dfrac{2}{x} = -(x + \\dfrac{2}{x}) = -f(x)$",
+                "La fonction est **impaire**, donc l'origine $O(0; 0)$ est un centre de symétrie.",
+                "On peut étudier $f$ sur $]0; +\\infty[$ puis compléter par symétrie centrale.",
+                ">>**3. Limites :**",
+                "$$\\lim_{x \\to 0^+} f(x) = 0 + \\dfrac{2}{0^+} = ___+\\infty___$$",
+                "La droite $x = 0$ (axe des ordonnées) est une asymptote verticale",
+                "$$\\lim_{x \\to +\\infty} f(x) = +\\infty + 0 = ___+\\infty___$$",
+                ">>**4. Recherche d'asymptote oblique en $+\\infty$ :**",
+                "$$a = \\lim_{x \\to +\\infty} \\dfrac{f(x)}{x} = \\lim_{x \\to +\\infty} \\dfrac{x + \\frac{2}{x}}{x} = \\lim_{x \\to +\\infty} (1 + \\dfrac{2}{x^2}) = ___1___$$",
+                "$$b = \\lim_{x \\to +\\infty} [f(x) - x] = \\lim_{x \\to +\\infty} \\dfrac{2}{x} = ___0___$$",
+                "La droite $y = x$ est une asymptote oblique en $\\pm\\infty$",
+                ">>**5. Position relative par rapport à $y = x$ :**",
+                "$$f(x) - x = \\dfrac{2}{x}$$",
+                "Sur $]0; +\\infty[$ : $\\dfrac{2}{x} > 0$ → courbe **au-dessus** de l'asymptote",
+                "Sur $]-\\infty; 0[$ : $\\dfrac{2}{x} < 0$ → courbe **en-dessous** (par symétrie)",
+                ">>**6. Dérivée première :**",
+                "$$f'(x) = 1 - \\dfrac{2}{x^2} = \\dfrac{x^2 - 2}{x^2}$$",
+                "Sur $]0; +\\infty[$ : $f'(x) = 0 \\iff x^2 = 2 \\iff x = ___\\sqrt{2}___$",
+                "$$\\begin{array}{c|ccc} x & 0^+ & & \\sqrt{2} & & +\\infty \\\\ \\hline f'(x) & & - & 0 & + & \\\\ \\hline f(x) & +\\infty & \\searrow & 2\\sqrt{2} & \\nearrow & +\\infty \\end{array}$$",
+                "Minimum local en $x = \\sqrt{2}$ : $f(\\sqrt{2}) = \\sqrt{2} + \\dfrac{2}{\\sqrt{2}} = \\sqrt{2} + \\sqrt{2} = ___2\\sqrt{2}___$",
+                ">>**7. Dérivée seconde :**",
+                "$$f''(x) = \\dfrac{4}{x^3}$$",
+                "Sur $]0; +\\infty[$ : $f''(x) > 0$ pour tout $x$",
+                "La courbe est **convexe** sur $]0; +\\infty[$",
+                "Par imparité : **concave** sur $]-\\infty; 0[$",
+                ">>**8. Points particuliers :**",
+                "$f(1) = 1 + 2 = ___3___$, $f(2) = 2 + 1 = ___3___$",
+                "$f(\\sqrt{2}) \\approx 2.83$ (minimum)",
+                ">>**9. Conclusion pour le tracé :**",
+                "Centre de symétrie : origine $O$",
+                "Asymptote verticale : axe des ordonnées",
+                "Asymptote oblique : droite $y = x$",
+                "Minimum : $(\\sqrt{2}; 2\\sqrt{2})$",
+                "Convexe sur $]0; +\\infty[$, concave sur $]-\\infty; 0[$"
+              ]
+            },
+            {
+              "type": "warning-box",
+              "title": "Erreurs Fréquentes à Éviter",
+              "listType": "bullet",
+              "content": [
+                "Ne pas oublier de vérifier la **dérivabilité** avant d'utiliser $f'$",
+                "Une asymptote oblique n'existe que si $a \\neq 0$ et les limites sont finies",
+                "Un point d'inflexion nécessite que $f''$ **change de signe**, pas seulement qu'elle s'annule",
+                "Pour la position relative, toujours étudier le signe de $f(x) - (\\text{équation asymptote})$",
+                "Ne pas confondre **branche parabolique** (pas d'asymptote) et **asymptote oblique**"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

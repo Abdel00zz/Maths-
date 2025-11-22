@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quelle est la formule correcte pour $\\sin(2a)$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$2 \\sin a$",
+          "is_correct": false,
+          "explanation": ""
+        },
+        {
+          "text": "$2 \\sin a \\cos a$",
+          "is_correct": true,
+          "explanation": "Formule de duplication."
+        },
+        {
+          "text": "$\\cos^2 a - \\sin^2 a$",
+          "is_correct": false,
+          "explanation": "C'est $\\cos(2a)$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "L'expression $\\cos x + \\sin x$ est égale à :",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$\\sqrt{2} \\cos(x - \\frac{\\pi}{4})$",
+          "is_correct": true,
+          "explanation": "On factorise par $\\sqrt{2}$ et on utilise la formule d'addition."
+        },
+        {
+          "text": "$1$",
+          "is_correct": false,
+          "explanation": "C'est $\\cos^2 x + \\sin^2 x$ qui vaut 1."
+        }
+      ]
+    }
+  ]
+}

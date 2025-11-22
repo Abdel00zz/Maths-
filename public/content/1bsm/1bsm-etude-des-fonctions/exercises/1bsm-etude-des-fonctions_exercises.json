@@ -1,0 +1,18 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Étude de fonction rationnelle",
+      "statement": "Soit $f(x) = \\frac{x^3}{x^2-1}$.",
+      "sub_questions": [
+        { "text": "Déterminer le domaine de définition.", "questionNumber": "1" },
+        { "text": "Montrer que $C_f$ admet une asymptote oblique.", "questionNumber": "2" }
+      ],
+      "solution": [
+        "$D_f = \\mathbb{R} \\setminus \\{-1, 1\\}$.",
+        "Division euclidienne : $x^3 = x(x^2-1) + x$. Donc $f(x) = x + \\frac{x}{x^2-1}$.",
+        "$\\lim_{x \\to \\infty} \\frac{x}{x^2-1} = 0$. Donc $y=x$ est asymptote oblique."
+      ]
+    }
+  ]
+}

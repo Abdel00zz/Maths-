@@ -1,0 +1,29 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Formes indéterminées rationnelles",
+      "statement": "Calculer les limites suivantes.",
+      "sub_questions": [
+        { "text": "$\\lim_{x \\to +\\infty} \\frac{2x^2 - x + 1}{3x^2 + 5}$", "questionNumber": "1" },
+        { "text": "$\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$", "questionNumber": "2" }
+      ],
+      "solution": [
+        "1. En $+\\infty$, on garde les termes de plus haut degré : $\\frac{2x^2}{3x^2} = \\frac{2}{3}$.",
+        "2. Forme $\\frac{0}{0}$. On factorise : $\\frac{(x-2)(x+2)}{x-2} = x+2$. Limite : $2+2=4$."
+      ]
+    },
+    {
+      "id": "ex2",
+      "title": "Limites avec racines",
+      "statement": "Calculer $\\lim_{x \\to +\\infty} (\\sqrt{x^2+x} - x)$.",
+      "sub_questions": [
+        { "text": "Utiliser l'expression conjuguée.", "questionNumber": "1" }
+      ],
+      "solution": [
+        "$\\sqrt{x^2+x} - x = \\frac{(\\sqrt{x^2+x}-x)(\\sqrt{x^2+x}+x)}{\\sqrt{x^2+x}+x} = \\frac{x^2+x-x^2}{\\sqrt{x^2(1+1/x)}+x} = \\frac{x}{x(\\sqrt{1+1/x}+1)} = \\frac{1}{\\sqrt{1+1/x}+1}$.",
+        "Limite : $\\frac{1}{\\sqrt{1}+1} = \\frac{1}{2}$."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quelle condition est suffisante pour affirmer que l'équation $f(x)=0$ admet une unique solution sur $[a, b]$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$f$ est continue et $f(a) \\cdot f(b) < 0$",
+          "is_correct": false,
+          "explanation": "Cela garantit l'existence d'au moins une solution, mais pas l'unicité."
+        },
+        {
+          "text": "$f$ est continue, strictement monotone et $f(a) \\cdot f(b) < 0$",
+          "is_correct": true,
+          "explanation": "La stricte monotonie assure l'unicité de la solution."
+        },
+        {
+          "text": "$f$ est dérivable sur $[a, b]$",
+          "is_correct": false,
+          "explanation": "La dérivabilité implique la continuité mais ne dit rien sur les solutions de $f(x)=0$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Si $f$ est une bijection continue strictement croissante, quel est le sens de variation de $f^{-1}$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "Strictement décroissante",
+          "is_correct": false,
+          "explanation": ""
+        },
+        {
+          "text": "Strictement croissante",
+          "is_correct": true,
+          "explanation": "La fonction réciproque conserve le sens de variation de la fonction directe."
+        },
+        {
+          "text": "Constante",
+          "is_correct": false,
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Quelle est la limite de $f(x) = \\frac{x^2-1}{x-1}$ quand $x$ tend vers $1$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$0$",
+          "is_correct": false,
+          "explanation": ""
+        },
+        {
+          "text": "$1$",
+          "is_correct": false,
+          "explanation": ""
+        },
+        {
+          "text": "$2$",
+          "is_correct": true,
+          "explanation": "Pour $x \\neq 1$, $\\frac{(x-1)(x+1)}{x-1} = x+1$. Quand $x \\to 1$, cela tend vers $1+1=2$."
+        }
+      ]
+    }
+  ]
+}

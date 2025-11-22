@@ -1,0 +1,17 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Calcul simple",
+      "statement": "Calculer $I = \\int_0^1 2x dx$.",
+      "sub_questions": [
+        { "text": "Trouver une primitive de $2x$.", "questionNumber": "1" },
+        { "text": "Calculer l'intégrale.", "questionNumber": "2" }
+      ],
+      "solution": [
+        "Primitive de $2x$ est $x^2$.",
+        "$I = [x^2]_0^1 = 1^2 - 0^2 = 1$."
+      ]
+    }
+  ]
+}

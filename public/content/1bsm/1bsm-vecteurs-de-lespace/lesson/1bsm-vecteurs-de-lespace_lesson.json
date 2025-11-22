@@ -1,0 +1,62 @@
+{
+  "header": {
+    "title": "Vecteurs de l'Espace",
+    "subtitle": "Géométrie vectorielle en 3D",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 11",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Vecteurs et Opérations",
+      "subsections": [
+        {
+          "title": "Définitions",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Un vecteur de l'espace est défini par une direction, un sens et une norme, comme dans le plan. Toutes les règles de calcul (Chasles, somme, multiplication par un réel) restent valables."
+            }
+          ]
+        },
+        {
+          "title": "Colinéarité et Coplanarité",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Coplanarité",
+              "content": "Trois vecteurs $\\vec{u}, \\vec{v}, \\vec{w}$ sont **coplanaires** si l'un peut s'écrire comme combinaison linéaire des deux autres (si $\\vec{u}, \\vec{v}$ non colinéaires) :\n$$ \\vec{w} = \\alpha \\vec{u} + \\beta \\vec{v} $$"
+            },
+            {
+              "type": "theorem-box",
+              "content": "Quatre points $A, B, C, D$ sont coplanaires si et seulement si les vecteurs $\\vec{AB}, \\vec{AC}, \\vec{AD}$ sont coplanaires."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Repérage dans l'Espace",
+      "subsections": [
+        {
+          "title": "Base et Repère",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": [
+                "Une **base** de l'espace est un triplet $(\\vec{i}, \\vec{j}, \\vec{k})$ de vecteurs non coplanaires.",
+                "Un **repère** est un quadruplet $(O, \\vec{i}, \\vec{j}, \\vec{k})$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "theorem-box",
+              "title": "Décomposition unique",
+              "content": "Pour tout vecteur $\\vec{u}$, il existe un unique triplet $(x, y, z)$ tel que :\n$$ \\vec{u} = x\\vec{i} + y\\vec{j} + z\\vec{k} $$"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

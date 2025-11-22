@@ -1,0 +1,48 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quel est un vecteur normal au plan d'équation $3x - z + 5 = 0$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$\\vec{n}(3, -1, 5)$",
+          "is_correct": false,
+          "explanation": "Attention, le coefficient de y est 0, pas -1 (c'est z qui a -1)."
+        },
+        {
+          "text": "$\\vec{n}(3, 0, -1)$",
+          "is_correct": true,
+          "explanation": "Les coefficients de x, y, z sont respectivement 3, 0, -1."
+        },
+        {
+          "text": "$\\vec{n}(3, 1, 0)$",
+          "is_correct": false,
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Quelle est la condition pour que deux plans soient perpendiculaires ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "Leurs vecteurs normaux sont colinéaires",
+          "is_correct": false,
+          "explanation": "Cela signifierait que les plans sont parallèles."
+        },
+        {
+          "text": "Leurs vecteurs normaux sont orthogonaux",
+          "is_correct": true,
+          "explanation": "L'angle entre les plans est le même que l'angle entre leurs normales."
+        },
+        {
+          "text": "Leur produit scalaire vaut 1",
+          "is_correct": false,
+          "explanation": ""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Calcul dans C",
+      "statement": "Calculer $(2+i)(3-2i)$.",
+      "sub_questions": [
+        { "text": "Développer l'expression.", "questionNumber": "1" }
+      ],
+      "solution": [
+        "$6 - 4i + 3i - 2i^2 = 6 - i - 2(-1) = 6 - i + 2 = 8 - i$."
+      ]
+    }
+  ]
+}

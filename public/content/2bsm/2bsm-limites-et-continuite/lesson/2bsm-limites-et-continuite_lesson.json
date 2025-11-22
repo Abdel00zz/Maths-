@@ -1,0 +1,139 @@
+{
+  "header": {
+    "title": "Limites et Continuité",
+    "subtitle": "Fondements de l'analyse et fonctions réciproques",
+    "classe": "2ème Bac Sciences Mathématiques",
+    "chapter": "Chapitre 1",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Continuité d'une Fonction",
+      "subsections": [
+        {
+          "title": "Continuité en un Point",
+          "elements": [
+            {
+              "type": "definition-box",
+              "preamble": "**Définition** :",
+              "content": "Soit $f$ une fonction définie sur un intervalle ouvert $I$ contenant $a$.\nOn dit que $f$ est **continue en $a$** si la limite de $f$ en $a$ existe et vaut $f(a)$ :\n\n$$\\lim_{x \\to a} f(x) = f(a)$$"
+            },
+            {
+              "type": "example-box",
+              "preamble": "**Exemple de vérification** :",
+              "content": "Soit $f(x) = x^2 - 3x + 1$. Étudions la continuité en $x_0 = 2$.\n\n1. Image : $f(2) = 2^2 - 3(2) + 1 = 4 - 6 + 1 = ___-1___$.\n2. Limite : $\\lim_{x \\to 2} (x^2 - 3x + 1) = ___-1___$.\n\nPuisque la limite est égale à l'image, $f$ est continue en $2$."
+            },
+            {
+              "type": "remark-box",
+              "content": "!> **Attention** : Si la fonction n'est pas définie en $a$, on ne peut pas parler de continuité en $a$."
+            }
+          ]
+        },
+        {
+          "title": "Continuité sur un Intervalle",
+          "elements": [
+            {
+              "type": "property-box",
+              "preamble": "**Opérations** :",
+              "content": [
+                "Les fonctions polynômes, rationnelles, trigonométriques (sin, cos) sont continues sur tout intervalle de leur ensemble de définition.",
+                "La somme, le produit et la composée de fonctions continues sont des fonctions continues."
+              ],
+              "listType": "bullet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Théorèmes Globaux",
+      "subsections": [
+        {
+          "title": "Image d'un Intervalle",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": "L'image d'un intervalle par une fonction continue est un intervalle.\n\nSi $f$ est continue sur un segment $[a, b]$, alors $f([a, b]) = [m, M]$ où $m$ et $M$ sont respectivement le minimum et le maximum de $f$ sur $[a, b]$."
+            },
+            {
+               "type": "example-box",
+               "content": "Soit $f(x) = x^2$ sur $[-2, 3]$.\n$f$ est continue. Le minimum est $0$ (en $x=0$) et le maximum est $___9___$ (en $x=3$).\nDonc $f([-2, 3]) = [0, 9]$."
+            }
+          ]
+        },
+        {
+          "title": "Théorème des Valeurs Intermédiaires (TVI)",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "preamble": "**TVI** :",
+              "content": "Soit $f$ une fonction continue sur $[a, b]$.\nPour tout réel $\\lambda$ compris entre $f(a)$ et $f(b)$, l'équation $f(x) = \\lambda$ admet **au moins une solution** dans $[a, b]$."
+            },
+            {
+              "type": "consequence-box",
+              "preamble": "**Corollaire (Bijection)** :",
+              "content": "Si $f$ est continue et **strictement monotone** sur $[a, b]$, alors pour tout $\\lambda$ entre $f(a)$ et $f(b)$, l'équation $f(x) = \\lambda$ admet une **unique** solution."
+            },
+            {
+              "type": "practice-box",
+              "statement": "Montrer que l'équation $x^3 + x - 1 = 0$ admet une unique solution $\\alpha$ sur $[0, 1]$.",
+              "listType": "numbered",
+              "content": [
+                "Calculer $f(0)$ et $f(1)$ pour $f(x) = x^3 + x - 1$.",
+                "Étudier les variations de $f$.",
+                "Conclure avec le TVI."
+              ],
+              "solution": [
+                "$f(0) = -1$ et $f(1) = 1$. On remarque que $0$ est compris entre $-1$ et $1$.",
+                "$f'(x) = 3x^2 + 1$. Pour tout $x$, $f'(x) > 0$, donc $f$ est strictement croissante sur $[0, 1]$.",
+                "$f$ est continue, strictement croissante et $f(0) < 0 < f(1)$. D'après le TVI, il existe un unique $\\alpha \\in ]0, 1[$ tel que $f(\\alpha) = 0$."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fonctions Réciproques",
+      "subsections": [
+        {
+          "title": "Théorème de la Bijection",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": "Si $f$ est une fonction continue et strictement monotone sur un intervalle $I$, alors $f$ réalise une bijection de $I$ sur l'intervalle image $J = f(I)$.\n\nLa fonction réciproque $f^{-1}$ est définie sur $J$ à valeurs dans $I$."
+            },
+            {
+              "type": "property-box",
+              "preamble": "**Propriétés de $f^{-1}$** :",
+              "listType": "bullet",
+              "content": [
+                "$f^{-1}$ est continue sur $J$.",
+                "$f^{-1}$ a le même sens de variation que $f$.",
+                "Les courbes $(C_f)$ et $(C_{f^{-1}})$ sont symétriques par rapport à la droite d'équation $y = x$ (première bissectrice)."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Fonction Racine n-ième",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Pour tout entier $n \\geq 1$, la fonction $x \\mapsto x^n$ est une bijection de $\\mathbb{R}^+$ sur $\\mathbb{R}^+$.\nSa réciproque est appelée **fonction racine n-ième**, notée $\\sqrt[n]{x}$."
+            },
+            {
+              "type": "example-box",
+              "content": [
+                "$\\sqrt[3]{8} = ___2___$ car $2^3 = 8$.",
+                "$\\lim_{x \\to +\\infty} \\sqrt[n]{x} = +\\infty$.",
+                "Pour tout $x, y \\in \\mathbb{R}^+$, $\\sqrt[n]{x} = y \\iff x = y^n$."
+              ],
+              "listType": "bullet"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

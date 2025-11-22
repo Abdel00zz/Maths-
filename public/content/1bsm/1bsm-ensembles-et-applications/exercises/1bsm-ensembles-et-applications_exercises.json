@@ -1,0 +1,48 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Égalité d'ensembles",
+      "statement": "Soient $A, B, C$ trois parties d'un ensemble $E$. Montrer que $(A \\cup B) \\cap (A \\cup C) = A \\cup (B \\cap C)$.",
+      "sub_questions": [
+        {
+          "text": "Montrer l'inclusion $\\supset$.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Montrer l'inclusion $\\subset$.",
+          "questionNumber": "2"
+        }
+      ],
+      "hint": [
+        {
+          "text": "Utilisez la distributivité du 'OU' sur le 'ET'.",
+          "questionNumber": "1"
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "title": "Injectivité et Surjectivité",
+      "statement": "Soit $f : \\mathbb{R} \\setminus \\{1\\} \\to \\mathbb{R} \\setminus \\{2\\}$ définie par $f(x) = \\frac{2x+1}{x-1}$.",
+      "sub_questions": [
+        {
+          "text": "Montrer que $f$ est injective.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Montrer que $f$ est surjective.",
+          "questionNumber": "2"
+        },
+        {
+          "text": "Déterminer la bijection réciproque $f^{-1}$.",
+          "questionNumber": "3"
+        }
+      ],
+      "solution": [
+        "Injectivité : $f(a)=f(b) \\implies \\frac{2a+1}{a-1} = \\frac{2b+1}{b-1} \\implies (2a+1)(b-1) = (2b+1)(a-1) \\implies ... \\implies a=b$.",
+        "Surjectivité : On résout $y = \\frac{2x+1}{x-1} \\iff y(x-1) = 2x+1 \\iff yx - 2x = y+1 \\iff x(y-2) = y+1 \\iff x = \\frac{y+1}{y-2}$. Comme $y \\neq 2$, $x$ existe toujours."
+      ]
+    }
+  ]
+}

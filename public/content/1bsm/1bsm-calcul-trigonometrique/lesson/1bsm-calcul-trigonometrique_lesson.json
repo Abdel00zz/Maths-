@@ -1,0 +1,115 @@
+{
+  "header": {
+    "title": "Calcul Trigonométrique",
+    "subtitle": "Formules de transformation et équations",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 5",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Formules d'Addition",
+      "subsections": [
+        {
+          "title": "Formules Fondamentales",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": [
+                "$\\cos(a-b) = \\cos a \\cos b + \\sin a \\sin b$",
+                "$\\cos(a+b) = \\cos a \\cos b - \\sin a \\sin b$",
+                "$\\sin(a+b) = \\sin a \\cos b + \\cos a \\sin b$",
+                "$\\sin(a-b) = \\sin a \\cos b - \\cos a \\sin b$"
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "example-box",
+              "preamble": "Calcul de $\\cos(\\frac{\\pi}{12})$",
+              "content": [
+                "On remarque que $\\frac{\\pi}{12} = \\frac{\\pi}{3} - \\frac{\\pi}{4}$.",
+                "$\\cos(\\frac{\\pi}{3} - \\frac{\\pi}{4}) = \\cos \\frac{\\pi}{3} \\cos \\frac{\\pi}{4} + \\sin \\frac{\\pi}{3} \\sin \\frac{\\pi}{4}$",
+                "$= \\frac{1}{2} \\cdot \\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{3}}{2} \\cdot \\frac{\\sqrt{2}}{2} = \\frac{\\sqrt{2} + \\sqrt{6}}{4}$."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Formules de Duplication et Linéarisation",
+      "subsections": [
+        {
+          "title": "Angle Double",
+          "elements": [
+            {
+              "type": "property-box",
+              "content": [
+                "$\\cos(2x) = \\cos^2 x - \\sin^2 x = 2\\cos^2 x - 1 = 1 - 2\\sin^2 x$",
+                "$\\sin(2x) = 2 \\sin x \\cos x$",
+                "$\\tan(2x) = \\dfrac{2 \\tan x}{1 - \\tan^2 x}$"
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "method-box",
+              "title": "Linéarisation (Carrés)",
+              "listType": "numbered",
+              "content": [
+                ">>Pour intégrer ou primitive, il faut souvent linéariser.",
+                "$\\cos^2 x = \\dfrac{1 + \\cos(2x)}{2}$",
+                "$\\sin^2 x = \\dfrac{1 - \\cos(2x)}{2}$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Transformation en Tangente de l'arc moitié",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": [
+                "En posant $t = \\tan(\\frac{x}{2})$, on a :",
+                "$\\cos x = \\dfrac{1-t^2}{1+t^2} \\quad ; \\quad \\sin x = \\dfrac{2t}{1+t^2} \\quad ; \\quad \\tan x = \\dfrac{2t}{1-t^2}$"
+              ],
+              "listType": "bullet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Équations Trigonométriques",
+      "subsections": [
+        {
+          "title": "Équation $a \\cos x + b \\sin x = c$",
+          "elements": [
+            {
+              "type": "method-box",
+              "title": "Méthode de l'angle auxiliaire",
+              "listType": "numbered",
+              "content": [
+                ">>On factorise par $R = \\sqrt{a^2 + b^2}$.",
+                "$a \\cos x + b \\sin x = R \\left( \\frac{a}{R} \\cos x + \\frac{b}{R} \\sin x \\right)$",
+                "On cherche $\\alpha$ tel que $\\cos \\alpha = \\frac{a}{R}$ et $\\sin \\alpha = \\frac{b}{R}$.",
+                "L'équation devient $R \\cos(x - \\alpha) = c$, soit $\\cos(x - \\alpha) = \\frac{c}{R}$."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "statement": "Résoudre $\\cos x + \\sin x = 1$.",
+              "solution": [
+                "$a=1, b=1$, donc $R = \\sqrt{1^2+1^2} = \\sqrt{2}$.",
+                "$\\sqrt{2} (\\frac{1}{\\sqrt{2}} \\cos x + \\frac{1}{\\sqrt{2}} \\sin x) = 1$",
+                "$\\sqrt{2} (\\cos \\frac{\\pi}{4} \\cos x + \\sin \\frac{\\pi}{4} \\sin x) = 1$",
+                "$\\cos(x - \\frac{\\pi}{4}) = \\frac{1}{\\sqrt{2}} = \\cos \\frac{\\pi}{4}$",
+                "Deux cas : $x - \\frac{\\pi}{4} = \\frac{\\pi}{4} [2\\pi]$ ou $x - \\frac{\\pi}{4} = -\\frac{\\pi}{4} [2\\pi]$.",
+                "Solutions : $x \\equiv \\frac{\\pi}{2} [2\\pi]$ ou $x \\equiv 0 [2\\pi]$."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

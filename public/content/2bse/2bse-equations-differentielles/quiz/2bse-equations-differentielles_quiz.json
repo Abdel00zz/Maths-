@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quelle est la solution générale de $y' = y$ ?",
+      "type": "mcq",
+      "options": [
+        { "text": "$y = x + k$", "is_correct": false, "explanation": "" },
+        { "text": "$y = k e^x$", "is_correct": true, "explanation": "Ici a=1, b=0." },
+        { "text": "$y = e^{kx}$", "is_correct": false, "explanation": "" }
+      ]
+    }
+  ]
+}

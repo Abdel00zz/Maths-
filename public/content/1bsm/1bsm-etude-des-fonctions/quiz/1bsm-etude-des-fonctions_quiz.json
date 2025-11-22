@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Si $\\lim_{x \\to +\\infty} \\frac{f(x)}{x} = 0$, la courbe admet :",
+      "type": "mcq",
+      "options": [
+        { "text": "Une asymptote horizontale", "is_correct": false, "explanation": "" },
+        { "text": "Une branche parabolique de direction (Ox)", "is_correct": true, "explanation": "La courbe s'éloigne moins vite que la droite y=x." },
+        { "text": "Une asymptote oblique", "is_correct": false, "explanation": "" }
+      ]
+    }
+  ]
+}

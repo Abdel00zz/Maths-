@@ -1,0 +1,15 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Calcul de dérivée",
+      "statement": "Calculer la fonction dérivée de $f(x) = (2x+1)^3$.",
+      "sub_questions": [
+        { "text": "Identifier la forme $u^n$ et appliquer la formule.", "questionNumber": "1" }
+      ],
+      "solution": [
+        "$f'(x) = 3 \\times (2x+1)' \\times (2x+1)^2 = 3 \\times 2 \\times (2x+1)^2 = 6(2x+1)^2$."
+      ]
+    }
+  ]
+}

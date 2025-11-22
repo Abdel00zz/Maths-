@@ -1,0 +1,15 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Simplification",
+      "statement": "Simplifier l'expression $A = \\frac{e^{2x} \\times e^{-3}}{e^{x}}$.",
+      "sub_questions": [
+        { "text": "Utiliser les propriétés des puissances.", "questionNumber": "1" }
+      ],
+      "solution": [
+        "$A = e^{2x-3-x} = e^{x-3}$."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quelle est l'expression analytique de $\\vec{u} \\cdot \\vec{v}$ dans un repère orthonormé ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$xx' - yy'$",
+          "is_correct": false,
+          "explanation": ""
+        },
+        {
+          "text": "$xx' + yy'$",
+          "is_correct": true,
+          "explanation": "C'est la somme des produits des coordonnées homologues."
+        },
+        {
+          "text": "$xy' - x'y$",
+          "is_correct": false,
+          "explanation": "C'est le déterminant (utile pour la colinéarité)."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Quel est un vecteur normal à la droite $3x - 2y + 5 = 0$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$\\vec{n}(3; 2)$",
+          "is_correct": false,
+          "explanation": ""
+        },
+        {
+          "text": "$\\vec{n}(2; 3)$",
+          "is_correct": false,
+          "explanation": "Ceci est un vecteur directeur."
+        },
+        {
+          "text": "$\\vec{n}(3; -2)$",
+          "is_correct": true,
+          "explanation": "Les coefficients de x et y donnent directement un vecteur normal $\\vec{n}(a; b)$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "L'équation $x^2 + y^2 - 2x = 0$ représente :",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "Une parabole",
+          "is_correct": false,
+          "explanation": ""
+        },
+        {
+          "text": "Un cercle de centre $(1; 0)$ et rayon $1$",
+          "is_correct": true,
+          "explanation": "$(x-1)^2 - 1 + y^2 = 0 \\iff (x-1)^2 + y^2 = 1$."
+        },
+        {
+          "text": "Le point origine",
+          "is_correct": false,
+          "explanation": ""
+        }
+      ]
+    }
+  ]
+}

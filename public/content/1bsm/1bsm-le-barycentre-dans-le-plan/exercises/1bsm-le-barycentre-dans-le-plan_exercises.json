@@ -1,0 +1,17 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Construction de Barycentre",
+      "statement": "Soit $A$ et $B$ deux points tels que $AB = 5cm$. Construire $G = bar\{(A, 2), (B, 3)\}$.",
+      "sub_questions": [
+        {
+          "text": "Calculer $\\overrightarrow{AG}$ en fonction de $\\overrightarrow{AB}$"
+        },
+        {
+          "text": "Placer le point G"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Que vaut $\\ln(e)$ ?",
+      "type": "mcq",
+      "options": [
+        { "text": "0", "is_correct": false, "explanation": "ln(1) = 0" },
+        { "text": "1", "is_correct": true, "explanation": "Car e est la base du logarithme népérien." },
+        { "text": "e", "is_correct": false, "explanation": "" }
+      ]
+    }
+  ]
+}

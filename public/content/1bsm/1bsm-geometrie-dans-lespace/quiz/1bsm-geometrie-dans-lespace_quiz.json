@@ -1,0 +1,22 @@
+
+{
+  "questions": [
+    {
+      "id": "q_placeholder",
+      "question": "Ce quiz est-il disponible ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "Non, pas encore",
+          "is_correct": true,
+          "explanation": "Le contenu est en cours de création."
+        },
+        {
+          "text": "Oui",
+          "is_correct": false,
+          "explanation": ""
+        }
+      ]
+    }
+  ]
+}

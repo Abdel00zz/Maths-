@@ -1,0 +1,92 @@
+{
+  "header": {
+    "title": "Nombres Complexes",
+    "subtitle": "L'ensemble C, calculs et géométrie",
+    "classe": "2ème Bac Sciences Expérimentales",
+    "chapter": "Chapitre 7",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Forme Algébrique",
+      "subsections": [
+        {
+          "title": "Définition et Opérations",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Un nombre complexe $z$ s'écrit de manière unique $z = a + ib$ avec $a, b \\in \\mathbb{R}$ et $i^2 = -1$.\n$\\bullet$ $a = \\text{Re}(z)$ est la partie réelle.\n$\\bullet$ $b = \\text{Im}(z)$ est la partie imaginaire."
+            },
+            {
+              "type": "method-box",
+              "title": "Calcul dans C",
+              "listType": "numbered",
+              "content": [
+                "**Addition :** On ajoute les parties réelles entre elles et les imaginaires entre elles.",
+                "**Multiplication :** On développe comme dans $\\mathbb{R}$ en remplaçant $i^2$ par $-1$.",
+                "**Inverse :** Pour calculer $\\frac{1}{z}$, on multiplie haut et bas par le conjugué $\\bar{z}$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Produit de complexes",
+              "content": [
+                "Soit $z_1 = 2 + 3i$ et $z_2 = 1 - 4i$. Calculons $z_1 z_2$.",
+                "$$\\begin{aligned} z_1 z_2 &= (2 + 3i)(1 - 4i) \\\\ &= 2 - 8i + 3i - 12i^2 \\\\ &= 2 - 5i - 12(-1) \\\\ &= 2 - 5i + 12 \\\\ &= ___14 - 5i___ \\end{aligned}$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Conjugué et Module",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": [
+                "**Conjugué :** Si $z = a + ib$, son conjugué est $\\bar{z} = a - ib$.",
+                "**Module :** Le module de $z$ est le réel positif $|z| = \\sqrt{z\\bar{z}} = \\sqrt{a^2 + b^2}$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "property-box",
+              "content": "$\\overline{z + z'} = \\bar{z} + \\bar{z'} \\quad ; \\quad \\overline{z z'} = \\bar{z} \\bar{z'} \\quad ; \\quad |zz'| = |z||z'|$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Équations du Second Degré",
+      "subsections": [
+        {
+          "title": "Résolution dans C",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": [
+                "Soit l'équation $az^2 + bz + c = 0$ avec $a,b,c \\in \\mathbb{R}$.",
+                "On calcule $\\Delta = b^2 - 4ac$.",
+                "$\\bullet$ Si $\\Delta > 0$ : 2 solutions réelles.",
+                "$\\bullet$ Si $\\Delta = 0$ : 1 solution réelle double.",
+                "$\\bullet$ Si $\\Delta < 0$ : 2 solutions complexes conjuguées :",
+                "$$ z_1 = \\dfrac{-b - i\\sqrt{|\\Delta|}}{2a} \\quad \\text{et} \\quad z_2 = \\dfrac{-b + i\\sqrt{|\\Delta|}}{2a} $$"
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "practice-box",
+              "statement": "Résoudre dans $\\mathbb{C}$ l'équation $z^2 - 2z + 5 = 0$.",
+              "solution": [
+                "$\\Delta = (-2)^2 - 4(1)(5) = 4 - 20 = -16$.",
+                "Comme $\\Delta < 0$, il y a deux solutions complexes.",
+                "On a $i\\sqrt{16} = 4i$.",
+                "$$z_1 = \\dfrac{2 - 4i}{2} = 1 - 2i \\quad ; \\quad z_2 = \\dfrac{2 + 4i}{2} = 1 + 2i$$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

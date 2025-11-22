@@ -1,0 +1,23 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quelle est la limite de $\\frac{1}{x}$ quand $x \\to 0^+$ ?",
+      "type": "mcq",
+      "options": [
+        { "text": "$+\\infty$", "is_correct": true, "explanation": "L'inverse d'un nombre positif très petit est très grand." },
+        { "text": "$-\\infty$", "is_correct": false, "explanation": "" },
+        { "text": "$0$", "is_correct": false, "explanation": "" }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "La forme $\\frac{\\infty}{\\infty}$ est :",
+      "type": "mcq",
+      "options": [
+        { "text": "Toujours égale à 1", "is_correct": false, "explanation": "" },
+        { "text": "Une forme indéterminée", "is_correct": true, "explanation": "On doit lever l'indétermination pour conclure." }
+      ]
+    }
+  ]
+}

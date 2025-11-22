@@ -1,0 +1,105 @@
+{
+  "header": {
+    "title": "La Dérivation",
+    "subtitle": "Étude des variations et problèmes d'optimisation",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 8",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Nombre Dérivé et Tangente",
+      "subsections": [
+        {
+          "title": "Approche Limite",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Une fonction $f$ est dérivable en $a$ si la limite du taux d'accroissement existe et est finie.\n$$\\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h} = f'(a)$$"
+            },
+            {
+              "type": "theorem-box",
+              "title": "Équation de la Tangente",
+              "content": "Si $f$ est dérivable en $a$, la courbe $(C_f)$ admet au point $A(a, f(a))$ une tangente $(T)$ d'équation :\n$$y = f'(a)(x-a) + f(a)$$"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Calcul de Dérivées",
+      "subsections": [
+        {
+          "title": "Opérations Algébriques",
+          "elements": [
+            {
+              "type": "property-box",
+              "content": [
+                "$(u+v)' = u' + v'$",
+                "$(uv)' = u'v + uv'$",
+                "$(\\frac{u}{v})' = \\frac{u'v - uv'}{v^2}$",
+                "$(\\frac{1}{v})' = -\\frac{v'}{v^2}$"
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "example-box",
+              "title": "Dérivée d'un quotient",
+              "content": [
+                "Soit $f(x) = \\frac{2x+1}{x-3}$. On pose $u=2x+1, v=x-3$.",
+                "$u'=2, v'=1$.",
+                "$f'(x) = \\frac{2(x-3) - 1(2x+1)}{(x-3)^2} = \\frac{2x-6-2x-1}{(x-3)^2} = \\frac{___-7___}{(x-3)^2}$."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Fonctions Composées",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": [
+                "La dérivée de $f(ax+b)$ est $a \\times f'(ax+b)$.",
+                "Plus généralement : $(v \\circ u)' = u' \\times (v' \\circ u)$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "practice-box",
+              "statement": "Calculer la dérivée de $f(x) = \\sqrt{3x^2+1}$.",
+              "solution": [
+                "Forme $\\sqrt{u}$ avec $u = 3x^2+1$.",
+                "Dérivée $(\\sqrt{u})' = \\frac{u'}{2\\sqrt{u}}$.",
+                "Ici $u' = 6x$.",
+                "$f'(x) = \\frac{6x}{2\\sqrt{3x^2+1}} = \\frac{3x}{\\sqrt{3x^2+1}}$."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Applications",
+      "subsections": [
+        {
+          "title": "Sens de Variation",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": [
+                "Si $f'(x) > 0$ sur $I$, alors $f$ est **strictement croissante** sur $I$.",
+                "Si $f'(x) < 0$ sur $I$, alors $f$ est **strictement décroissante** sur $I$.",
+                "Si $f'(x) = 0$ sur $I$, alors $f$ est **constante**."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "warning-box",
+              "content": "Attention : $f'$ positive ne veut pas dire $f$ positive ! Le signe de la dérivée donne les *variations* de la fonction, pas son signe."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

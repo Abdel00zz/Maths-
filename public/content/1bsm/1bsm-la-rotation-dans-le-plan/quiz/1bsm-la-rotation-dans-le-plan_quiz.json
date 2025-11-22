@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "L'image d'un segment [AB] par une rotation est :",
+      "type": "mcq",
+      "options": [
+        { "text": "Une droite", "is_correct": false, "explanation": "" },
+        { "text": "Un segment [A'B'] de même longueur", "is_correct": true, "explanation": "La rotation est une isométrie." },
+        { "text": "Un cercle", "is_correct": false, "explanation": "" }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Si $r(A)=B$ et $r(B)=C$ avec un angle de $\\pi/3$ et $A, B, C$ distincts, le triangle $ABC$ est :",
+      "type": "mcq",
+      "options": [
+        { "text": "Quelconque", "is_correct": false, "explanation": "" },
+        { "text": "Isocèle en B", "is_correct": true, "explanation": "Car BA = BC (conservation distance)." },
+        { "text": "Rectangle", "is_correct": false, "explanation": "" }
+      ]
+    }
+  ]
+}

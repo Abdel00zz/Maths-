@@ -1,0 +1,100 @@
+{
+  "header": {
+    "title": "Dérivation et Applications",
+    "subtitle": "Étude des variations et optimisation",
+    "classe": "2ème Bac Sciences Expérimentales",
+    "chapter": "Chapitre 2",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Calcul de Dérivées",
+      "subsections": [
+        {
+          "title": "Rappels et Formules",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Une fonction $f$ est dérivable en $x_0$ si la limite du taux d'accroissement existe et est finie :\n$$ \\lim_{h \\to 0} \\dfrac{f(x_0+h) - f(x_0)}{h} = f'(x_0) $$"
+            },
+            {
+              "type": "theorem-box",
+              "title": "Dérivée d'une fonction composée",
+              "content": "Si $u$ est dérivable sur $I$ et $v$ dérivable sur $u(I)$, alors la composée $v \\circ u$ est dérivable sur $I$ et :\n$$\\boxed{(v \\circ u)'(x) = u'(x) \\times v'(u(x))}$$"
+            },
+            {
+              "type": "example-box",
+              "title": "Calcul détaillé : Forme puissance",
+              "content": [
+                "Calculons la dérivée de $f(x) = (3x^2 + 1)^4$.",
+                "C'est de la forme $u^n$ avec $u(x) = 3x^2 + 1$ et $n=4$.",
+                ">>1. Dérivée de u :",
+                "$u'(x) = 6x$.",
+                ">>2. Application de la formule $(u^n)' = n u' u^{n-1}$ :",
+                "$$\\begin{aligned} f'(x) &= 4 \\times (6x) \\times (3x^2 + 1)^{4-1} \\\\ &= 24x (3x^2 + 1)^3 \\end{aligned}$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Dérivée de la fonction réciproque",
+          "elements": [
+            {
+              "type": "property-box",
+              "content": [
+                "Si $f$ est dérivable en $x_0$ et si $f'(x_0) \\neq 0$, alors $f^{-1}$ est dérivable en $y_0 = f(x_0)$.",
+                "Formule : $$(f^{-1})'(y_0) = \\dfrac{1}{f'(x_0)} \\quad \\text{où } x_0 = f^{-1}(y_0)$$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Applications à l'Étude de Fonctions",
+      "subsections": [
+        {
+          "title": "Sens de Variation",
+          "elements": [
+            {
+              "type": "property-box",
+              "title": "Lien Dérivée / Monotonie",
+              "content": [
+                "$\\bullet$ Si $f'(x) > 0$ sur $I$, alors $f$ est **strictement croissante** sur $I$.",
+                "$\\bullet$ Si $f'(x) < 0$ sur $I$, alors $f$ est **strictement décroissante** sur $I$.",
+                "$\\bullet$ Si $f'(x) = 0$ sur $I$, alors $f$ est **constante** sur $I$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "method-box",
+              "title": "Plan d'étude des variations",
+              "listType": "numbered",
+              "content": [
+                "**Dérivabilité :** Justifier que la fonction est dérivable sur son domaine.",
+                "**Calcul :** Calculer $f'(x)$ et factoriser au maximum.",
+                "**Signe :** Étudier le signe de chaque facteur pour déterminer le signe de $f'(x)$.",
+                "**Tableau :** Dresser le tableau de variations complet avec les limites."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Étude complète : Fonction rationnelle",
+              "content": [
+                "Soit $f(x) = \\dfrac{2x}{x^2 + 1}$ définie sur $\\mathbb{R}$.",
+                ">>1. Calcul de la dérivée :",
+                "Forme $\\frac{u}{v}$. $u=2x \\Rightarrow u'=2$ et $v=x^2+1 \\Rightarrow v'=2x$.",
+                "$$\\begin{aligned} f'(x) &= \\dfrac{2(x^2+1) - 2x(2x)}{(x^2+1)^2} \\\\ &= \\dfrac{2x^2 + 2 - 4x^2}{(x^2+1)^2} \\\\ &= \\dfrac{2 - 2x^2}{(x^2+1)^2} \\\\ &= \\dfrac{2(1-x)(1+x)}{(x^2+1)^2} \\end{aligned}$$",
+                ">>2. Étude du signe :",
+                "Le dénominateur est toujours positif. Le signe dépend de $(1-x)(1+x)$.",
+                "S'annule en $-1$ et $1$. Positif entre les racines.",
+                ">>3. Conclusion :",
+                "$f$ est croissante sur $[-1, 1]$ et décroissante sur $]-\\infty, -1]$ et $[1, +\\infty[$."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

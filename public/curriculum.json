@@ -1,0 +1,101 @@
+{
+  "version": "2.0.2",
+  "levels": {
+    "tcs": {
+      "title": "Tronc Commun Scientifique",
+      "chapters": [
+        { "id": "tcs-les-ensembles-de-nombres-n-z-q-d-et-r", "title": "Les ensembles de nombres N, Z, Q, D et R", "isActive": false, "version": "1.0" },
+        { "id": "tcs-arithmetique-dans-n", "title": "Arithmétique dans N", "isActive": false, "version": "1.0" },
+        { "id": "tcs-calcul-vectoriel-dans-le-plan", "title": "Calcul vectoriel dans le plan", "isActive": false, "version": "1.0" },
+        { "id": "tcs-la-projection-dans-le-plan", "title": "La projection dans le plan", "isActive": false, "version": "1.0" },
+        { "id": "tcs-lordre-dans-r", "title": "L'ordre dans R", "isActive": false, "version": "1.0" },
+        { "id": "tcs-la-droite-dans-le-plan", "title": "La droite dans le plan", "isActive": false, "version": "1.0" },
+        { "id": "tcs-les-polynomes", "title": "Les polynômes", "isActive": false, "version": "1.0" },
+        { "id": "tcs-equations-inequations-et-systemes", "title": "Équations, inéquations et systèmes", "isActive": false, "version": "1.0" },
+        { "id": "tcs-trigonometrie-1-regles-du-calcul-trigonometrique", "title": "Trigonométrie 1: Règles du calcul", "isActive": false, "version": "1.0" },
+        { "id": "tcs-trigonometrie-2-equations-et-inequations-trigonometriques", "title": "Trigonométrie 2: Équations et inéquations", "isActive": false, "version": "1.0" },
+        { "id": "tcs-generalites-sur-les-fonctions", "title": "Généralités sur les fonctions", "isActive": false, "version": "1.0" },
+        { "id": "tcs-geometrie-dans-lespace", "title": "Géométrie dans l'espace", "isActive": false, "version": "1.0" }
+      ]
+    },
+    "1bse": {
+      "title": "1ère Bac Sciences Expérimentales",
+      "chapters": [
+        { "id": "1bse-generalites-sur-les-fonctions", "title": "Généralités sur les fonctions", "isActive": false, "version": "1.0" },
+        { "id": "1bse-le-barycentre-dans-le-plan", "title": "Le barycentre dans le plan", "isActive": false, "version": "1.0" },
+        { "id": "1bse-le-produit-scalaire-dans-le-plan", "title": "Le produit scalaire dans le plan", "isActive": false, "version": "1.0" },
+        { "id": "1bse-calcul-trigonometrique", "title": "Calcul trigonométrique", "isActive": false, "version": "1.0" },
+        { "id": "1bse-les-suites-numeriques", "title": "Les suites numériques", "isActive": false, "version": "1.0" },
+        { "id": "1bse-limites-dune-fonction", "title": "Limites d'une fonction", "isActive": false, "version": "1.0" },
+        { "id": "1bse-la-derivation", "title": "La dérivation", "isActive": false, "version": "1.0" },
+        { "id": "1bse-etude-des-fonctions", "title": "Étude des fonctions", "isActive": false, "version": "1.0" },
+        { "id": "1bse-geometrie-dans-lespace", "title": "Géométrie dans l'espace", "isActive": false, "version": "1.0" },
+        { "id": "1bse-statistiques", "title": "Statistiques", "isActive": false, "version": "1.0" }
+      ]
+    },
+    "1bsm": {
+      "title": "1ère Bac Sciences Mathématiques",
+      "chapters": [
+        { 
+          "id": "1bsm-logique-mathematique", 
+          "title": "Logique mathématique", 
+          "isActive": true, 
+          "version": "1.0",
+          "session_dates": ["2025-11-25T20:00:00Z"]
+        },
+        { "id": "1bsm-ensembles-et-applications", "title": "Ensembles et applications", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-generalites-sur-les-fonctions", "title": "Généralités sur les fonctions", "isActive": true, "version": "1.1" },
+        { "id": "1bsm-le-barycentre-dans-le-plan", "title": "Le barycentre dans le plan", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-le-produit-scalaire-dans-le-plan", "title": "Le produit scalaire dans le plan", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-calcul-trigonometrique", "title": "Calcul trigonométrique", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-les-suites-numeriques", "title": "Les suites numériques", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-limites-dune-fonction", "title": "Limites d'une fonction", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-la-rotation-dans-le-plan", "title": "La rotation dans le plan", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-la-derivation", "title": "La dérivation", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-etude-des-fonctions", "title": "Étude des fonctions", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-vecteurs-de-lespace", "title": "Vecteurs de l'espace", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-geometrie-dans-lespace", "title": "Géométrie dans l'espace", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-denombrement", "title": "Dénombrement", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-le-produit-scalaire-dans-lespace", "title": "Le produit scalaire dans l'espace", "isActive": true, "version": "1.0" },
+        { "id": "1bsm-arithmetique-dans-z", "title": "Arithmétique dans $\\mathbb{Z}$", "isActive": true, "version": "1.0" }
+      ]
+    },
+    "2bse": {
+      "title": "2ème Bac Sciences Expérimentales",
+      "chapters": [
+        { "id": "2bse-limites-et-continuite", "title": "Limites et continuité", "isActive": true, "version": "1.0" },
+        { "id": "2bse-derivation-et-applications", "title": "Dérivation et applications", "isActive": true, "version": "1.0" },
+        { "id": "2bse-fonctions-logarithmes", "title": "Fonctions logarithmes", "isActive": true, "version": "1.0" },
+        { "id": "2bse-fonctions-exponentielles", "title": "Fonctions exponentielles", "isActive": true, "version": "1.0" },
+        { "id": "2bse-calcul-integral", "title": "Calcul intégral", "isActive": true, "version": "1.0" },
+        { "id": "2bse-equations-differentielles", "title": "Équations différentielles", "isActive": true, "version": "1.0" },
+        { "id": "2bse-nombres-complexes", "title": "Nombres complexes", "isActive": true, "version": "1.0" },
+        { "id": "2bse-calcul-de-probabilites", "title": "Calcul de probabilités", "isActive": true, "version": "1.0" },
+        { "id": "2bse-limites-des-suites-numeriques", "title": "Limites des suites numériques", "isActive": true, "version": "1.0" }
+      ]
+    },
+    "2bsm": {
+      "title": "2ème Bac Sciences Mathématiques",
+      "chapters": [
+        { 
+          "id": "2bsm-limites-et-continuite", 
+          "title": "Limites et continuité", 
+          "isActive": true, 
+          "version": "1.0",
+          "session_dates": ["2025-11-27T11:00:00Z", "2025-12-04T11:00:00Z"]
+        },
+        { "id": "2bsm-suites-numeriques", "title": "Suites numériques", "isActive": true, "version": "1.0" },
+        { "id": "2bsm-derivation-et-etude-des-fonctions", "title": "Dérivation et étude des fonctions", "isActive": false, "version": "1.0" },
+        { "id": "2bsm-fonctions-logarithmiques", "title": "Fonctions logarithmiques", "isActive": false, "version": "1.0" },
+        { "id": "2bsm-fonctions-exponentielles", "title": "Fonctions exponentielles", "isActive": false, "version": "1.0" },
+        { "id": "2bsm-nombres-complexes", "title": "Nombres complexes", "isActive": false, "version": "1.0" },
+        { "id": "2bsm-calcul-integral", "title": "Calcul intégral", "isActive": false, "version": "1.0" },
+        { "id": "2bsm-equations-differentielles", "title": "Équations différentielles", "isActive": false, "version": "1.0" },
+        { "id": "2bsm-arithmetique-dans-z", "title": "Arithmétique dans Z", "isActive": false, "version": "1.0" },
+        { "id": "2bsm-structures-algebriques", "title": "Structures algébriques", "isActive": false, "version": "1.0" },
+        { "id": "2bsm-espaces-vectoriels", "title": "Espaces vectoriels", "isActive": false, "version": "1.0" },
+        { "id": "2bsm-calcul-de-probabilites", "title": "Calcul de probabilités", "isActive": false, "version": "1.0" }
+      ]
+    }
+  }
+}

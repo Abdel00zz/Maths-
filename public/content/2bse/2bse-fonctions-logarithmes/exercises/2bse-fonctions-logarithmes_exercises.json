@@ -1,0 +1,17 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Équations logarithmiques",
+      "statement": "Résoudre dans $\\mathbb{R}$ : $\\ln(x+1) + \\ln(x-1) = \\ln 3$.",
+      "sub_questions": [
+        { "text": "Déterminer le domaine de définition de l'équation.", "questionNumber": "1" },
+        { "text": "Résoudre l'équation.", "questionNumber": "2" }
+      ],
+      "solution": [
+        "Il faut $x+1>0$ et $x-1>0$, soit $x>1$. Domaine : $]1, +\\infty[$.",
+        "$\\ln((x+1)(x-1)) = \\ln 3 \\iff x^2 - 1 = 3 \\iff x^2 = 4$. Solutions $-2$ et $2$. Seul $2 \\in D$. S={2}."
+      ]
+    }
+  ]
+}

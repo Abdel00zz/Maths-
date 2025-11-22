@@ -1,0 +1,26 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Soit $A$ et $B$ deux points distincts. Quel est le barycentre de $\{(A, 2), (B, 2)\}$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "Le point A",
+          "is_correct": false,
+          "explanation": "Le barycentre serait A si le poids de B était 0."
+        },
+        {
+          "text": "Le milieu de [AB]",
+          "is_correct": true,
+          "explanation": "Les poids étant égaux, G est l'isobarycentre, donc le milieu du segment."
+        },
+        {
+          "text": "N'existe pas",
+          "is_correct": false,
+          "explanation": "La somme des poids est 4 ≠ 0, donc il existe."
+        }
+      ]
+    }
+  ]
+}

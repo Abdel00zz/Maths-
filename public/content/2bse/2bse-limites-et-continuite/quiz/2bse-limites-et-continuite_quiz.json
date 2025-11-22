@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Pour montrer qu'une équation $f(x)=0$ admet une unique solution sur $[a, b]$, quelle condition est INUTILE ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$f$ est continue sur $[a, b]$",
+          "is_correct": false,
+          "explanation": "La continuité est nécessaire pour appliquer le TVI."
+        },
+        {
+          "text": "$f$ est strictement monotone",
+          "is_correct": false,
+          "explanation": "La stricte monotonie est nécessaire pour l'unicité."
+        },
+        {
+          "text": "$f$ est positive sur $[a, b]$",
+          "is_correct": true,
+          "explanation": "Si $f$ est strictement positive, elle ne peut pas s'annuler ($f(x)=0$). Il faut que $f$ change de signe ($f(a)f(b) < 0$)."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Quelle est la limite de $\\sqrt{x^2+1} - x$ en $+ \\infty$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$0$",
+          "is_correct": true,
+          "explanation": "Il faut multiplier par l'expression conjuguée : $\\frac{(\\sqrt{x^2+1}-x)(\\sqrt{x^2+1}+x)}{\\sqrt{x^2+1}+x} = \\frac{1}{\\sqrt{x^2+1}+x}$. Quand $x \\to +\\infty$, le dénominateur tend vers $+\\infty$, donc la fraction tend vers $0$."
+        },
+        {
+          "text": "$+\\infty$",
+          "is_correct": false,
+          "explanation": "C'est une forme indéterminée $\\infty - \\infty$."
+        },
+        {
+          "text": "$1$",
+          "is_correct": false,
+          "explanation": ""
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Si $f$ est continue sur $[-2, 5]$ et $f([-2, 5]) = [1, 4]$, alors :",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "L'équation $f(x) = 0$ a une solution",
+          "is_correct": false,
+          "explanation": "0 n'est pas dans l'intervalle image $[1, 4]$."
+        },
+        {
+          "text": "Le maximum de $f$ est 4",
+          "is_correct": true,
+          "explanation": "L'image d'un intervalle est $[min, max]$. Ici le max est 4."
+        },
+        {
+          "text": "$f$ est strictement croissante",
+          "is_correct": false,
+          "explanation": "On ne peut pas conclure sur la monotonie juste avec l'image."
+        }
+      ]
+    }
+  ]
+}

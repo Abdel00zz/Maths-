@@ -1,0 +1,70 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quelle est la définition d'une suite définie par récurrence d'ordre 1 ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$u_n = f(n)$",
+          "is_correct": false,
+          "explanation": "Ceci est la définition d'une suite explicite."
+        },
+        {
+          "text": "$u_{n+1} = f(u_n)$ avec $u_0$ donné",
+          "is_correct": true,
+          "explanation": "Chaque terme se calcule à partir du précédent."
+        },
+        {
+          "text": "$u_{n+2} = u_{n+1} + u_n$",
+          "is_correct": false,
+          "explanation": "C'est une récurrence d'ordre 2 (comme Fibonacci)."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Pour étudier la monotonie d'une suite $(u_n)$, quelle méthode fonctionne dans tous les cas ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "Calculer $u_{n+1} / u_n$",
+          "is_correct": false,
+          "explanation": "Cette méthode ne fonctionne que si les termes sont strictement positifs."
+        },
+        {
+          "text": "Étudier le signe de $u_{n+1} - u_n$",
+          "is_correct": true,
+          "explanation": "C'est la méthode fondamentale. Si la différence est positive, la suite est croissante."
+        },
+        {
+          "text": "Dériver la suite",
+          "is_correct": false,
+          "explanation": "On ne dérive pas une suite (variable discrète n), on dérive la fonction associée si elle existe."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "Une suite majorée par 5 vérifie :",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "Tous ses termes sont égaux à 5",
+          "is_correct": false,
+          "explanation": ""
+        },
+        {
+          "text": "Pour tout $n$, $u_n \\leq 5$",
+          "is_correct": true,
+          "explanation": "5 est un majorant, aucun terme ne le dépasse."
+        },
+        {
+          "text": "La suite tend vers 5",
+          "is_correct": false,
+          "explanation": "Elle peut être majorée sans converger vers son majorant (ex: -1, -2, -3... majorée par 5)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Tirage simultané",
+      "statement": "Une urne contient 3 boules blanches et 2 boules noires. On tire simultanément 2 boules.",
+      "sub_questions": [
+        { "text": "Calculer le cardinal de l'univers $\\Omega$.", "questionNumber": "1" },
+        { "text": "Calculer la probabilité d'avoir 2 boules blanches.", "questionNumber": "2" }
+      ],
+      "solution": [
+        "$Card(\\Omega) = C_5^2 = 10$.",
+        "Cas favorables : $C_3^2 = 3$. Proba = $3/10$."
+      ]
+    }
+  ]
+}

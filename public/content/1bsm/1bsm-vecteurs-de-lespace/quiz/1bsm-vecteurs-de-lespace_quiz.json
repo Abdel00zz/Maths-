@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Trois vecteurs sont coplanaires si :",
+      "type": "mcq",
+      "options": [
+        { "text": "Ils sont orthogonaux deux à deux", "is_correct": false, "explanation": "" },
+        { "text": "L'un est combinaison linéaire des autres", "is_correct": true, "explanation": "C'est la définition de la coplanarité vectorielle." },
+        { "text": "Ils ont la même norme", "is_correct": false, "explanation": "" }
+      ]
+    }
+  ]
+}

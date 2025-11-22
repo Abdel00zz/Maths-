@@ -1,0 +1,26 @@
+
+{
+  "header": {
+    "title": "Géométrie dans l'espace",
+    "subtitle": "Plans, droites et visualisations 3D",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 11",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Positions relatives",
+      "subsections": [
+        {
+          "title": "Visualisation des plans",
+          "elements": [
+            {
+              "type": "p",
+              "content": "Il est souvent difficile de visualiser des intersections de plans et de droites en 3D sur une feuille de papier."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

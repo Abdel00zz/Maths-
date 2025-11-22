@@ -1,0 +1,105 @@
+{
+  "header": {
+    "title": "Fonctions Exponentielles",
+    "subtitle": "Réciproque du logarithme et croissance exponentielle",
+    "classe": "2ème Bac Sciences Expérimentales",
+    "chapter": "Chapitre 4",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "La fonction Exponentielle",
+      "subsections": [
+        {
+          "title": "Définition et Lien avec ln",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "La fonction exponentielle, notée $\\exp$ ou $x \\mapsto e^x$, est la fonction réciproque de la fonction $\\ln$.\nElle est définie, continue et strictement croissante sur $\\mathbb{R}$ à valeurs dans $]0, +\\infty[$."
+            },
+            {
+              "type": "property-box",
+              "title": "Équivalences fondamentales",
+              "content": [
+                "Pour tout réel $x$ et tout réel $y > 0$ :",
+                "$$ y = e^x \\iff x = \\ln(y) $$",
+                "Identités :",
+                "$\\ln(e^x) = x$ (pour tout $x$)",
+                "$e^{\\ln(x)} = x$ (pour $x > 0$)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Propriétés Algébriques",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": [
+                "Pour tous réels $a$ et $b$ et tout entier $n$ :",
+                "$\\bullet \\; e^{a+b} = e^a \\times e^b$",
+                "$\\bullet \\; e^{-a} = \\dfrac{1}{e^a}$",
+                "$\\bullet \\; e^{a-b} = \\dfrac{e^a}{e^b}$",
+                "$\\bullet \\; (e^a)^n = e^{na}$"
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "example-box",
+              "title": "Simplification",
+              "content": [
+                "Simplifions $B = \\dfrac{(e^x)^3 \\times e^{-2x+1}}{e}$.",
+                ">>Calcul :",
+                "$$\\begin{aligned} B &= \\dfrac{e^{3x} \\times e^{-2x+1}}{e^1} \\\\ &= e^{3x + (-2x+1) - 1} \\\\ &= e^{x} \\end{aligned}$$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Étude Analytique",
+      "subsections": [
+        {
+          "title": "Limites et Dérivée",
+          "elements": [
+            {
+              "type": "property-box",
+              "title": "Limites aux bornes et croissances comparées",
+              "content": [
+                "$\\lim_{x \\to +\\infty} e^x = +\\infty$",
+                "$\\lim_{x \\to -\\infty} e^x = 0$ (Asymptote horizontale $y=0$)",
+                "$\\lim_{x \\to +\\infty} \\dfrac{e^x}{x} = +\\infty$ (L'exponentielle l'emporte)",
+                "$\\lim_{x \\to -\\infty} x e^x = 0$"
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "theorem-box",
+              "title": "Dérivation",
+              "content": [
+                "La fonction $e^x$ est dérivable sur $\\mathbb{R}$ et $(e^x)' = e^x$.",
+                "**Formule composée :** Si $u$ est dérivable, alors $(e^u)' = u' \\times e^u$."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "statement": "Étudier les variations de $f(x) = x e^{-x}$.",
+              "solution": [
+                ">>1. Dérivée :",
+                "C'est un produit $u \\times v$ avec $u=x, v=e^{-x}$.",
+                "$u'=1$ et $v'=-e^{-x}$.",
+                "$$\\begin{aligned} f'(x) &= 1 \\cdot e^{-x} + x(-e^{-x}) \\\\ &= e^{-x}(1-x) \\end{aligned}$$",
+                ">>2. Signe :",
+                "Comme $e^{-x} > 0$ toujours, le signe est celui de $1-x$.",
+                "Positif sur $]-\\infty, 1[$, Négatif sur $]1, +\\infty[$.",
+                ">>3. Variations :",
+                "$f$ est croissante jusqu'à 1, puis décroissante. Maximum en $f(1) = e^{-1} = 1/e$."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

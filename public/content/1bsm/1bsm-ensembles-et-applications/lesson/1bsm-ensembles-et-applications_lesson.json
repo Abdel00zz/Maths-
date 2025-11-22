@@ -1,0 +1,139 @@
+{
+  "header": {
+    "title": "Ensembles et Applications",
+    "subtitle": "Le langage universel des mathématiques",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 2",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Théorie des Ensembles",
+      "subsections": [
+        {
+          "title": "Appartenance et Inclusion",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": [
+                "**Appartenance ($\\in$)** : Relie un élément à un ensemble. Ex: $2 \\in \\mathbb{N}$.",
+                "**Inclusion ($\\subset$)** : Relie deux ensembles. $A \\subset B$ si tout élément de $A$ est aussi élément de $B$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "warning-box",
+              "content": "Ne pas confondre $\\in$ et $\\subset$. On écrit $\\{1\\} \\subset \\{1, 2\\}$ mais $1 \\in \\{1, 2\\}$."
+            },
+            {
+              "type": "definition-box",
+              "title": "Ensemble des parties",
+              "content": "L'ensemble des sous-ensembles de $E$ est noté $\\mathcal{P}(E)$.\nSi $card(E) = n$, alors $card(\\mathcal{P}(E)) = 2^n$."
+            },
+            {
+              "type": "example-box",
+              "content": [
+                "Soit $E = \\{a, b\\}$.",
+                "Les parties de $E$ sont : $\\emptyset, \\{a\\}, \\{b\\}, \\{a, b\\}$.",
+                "Il y a $2^2 = ___4___$ parties."
+              ],
+              "listType": "bullet"
+            }
+          ]
+        },
+        {
+          "title": "Opérations sur les ensembles",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": [
+                "**Réunion ($\\cup$)** : $x \\in A \\cup B \\iff x \\in A$ ou $x \\in B$.",
+                "**Intersection ($\\cap$)** : $x \\in A \\cap B \\iff x \\in A$ et $x \\in B$.",
+                "**Différence ($\\setminus$)** : $x \\in A \\setminus B \\iff x \\in A$ et $x \\notin B$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "theorem-box",
+              "title": "Lois de Morgan",
+              "content": [
+                "Le complémentaire de la réunion est l'intersection des complémentaires :",
+                "$$\\overline{A \\cup B} = \\overline{A} \\cap \\overline{B}$$",
+                "Le complémentaire de l'intersection est la réunion des complémentaires :",
+                "$$\\overline{A \\cap B} = \\overline{A} \\cup \\overline{B}$$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Applications",
+      "subsections": [
+        {
+          "title": "Définitions Générales",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Une application $f : E \\to F$ associe à **chaque** élément $x \\in E$ un **unique** élément $y \\in F$."
+            },
+            {
+              "type": "definition-box",
+              "title": "Image Directe et Réciproque",
+              "content": [
+                "Soit $A \\subset E$. L'image directe est $f(A) = \\{ f(x) \\mid x \\in A \\}$.",
+                "Soit $B \\subset F$. L'image réciproque est $f^{-1}(B) = \\{ x \\in E \\mid f(x) \\in B \\}$."
+              ],
+              "listType": "bullet"
+            }
+          ]
+        },
+        {
+          "title": "Injectivité, Surjectivité, Bijectivité",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Injectivité (Au plus un)",
+              "content": "$\\forall (x, x') \\in E^2, f(x) = f(x') \\implies x = x'$."
+            },
+            {
+              "type": "method-box",
+              "title": "Prouver l'injectivité",
+              "listType": "numbered",
+              "content": [
+                ">>Soient $x_1, x_2 \\in E$.",
+                "On suppose que $f(x_1) = f(x_2)$.",
+                "On résout l'équation pour montrer que nécessairement $x_1 = x_2$."
+              ]
+            },
+            {
+              "type": "definition-box",
+              "title": "Surjectivité (Au moins un)",
+              "content": "$\\forall y \\in F, \\exists x \\in E, f(x) = y$."
+            },
+            {
+              "type": "definition-box",
+              "title": "Bijectivité (Exactement un)",
+              "content": "$f$ est bijective si elle est à la fois injective et surjective.\nTout élément de l'arrivée a un unique antécédent."
+            },
+            {
+              "type": "practice-box",
+              "title": "Étude d'une application",
+              "statement": "Soit $f : \\mathbb{R} \\to \\mathbb{R}$ définie par $f(x) = 2x + 3$. Est-elle bijective ?",
+              "solution": [
+                ">>Injectivité :",
+                "Soient $x_1, x_2$ tels que $f(x_1) = f(x_2)$.",
+                "$2x_1 + 3 = 2x_2 + 3 \\implies 2x_1 = 2x_2 \\implies x_1 = x_2$. Elle est injective.",
+                ">>Surjectivité :",
+                "Soit $y \\in \\mathbb{R}$. On cherche $x$ tel que $2x+3=y$.",
+                "$2x = y-3 \\implies x = \\frac{y-3}{2}$. La solution existe toujours.",
+                ">>Conclusion :",
+                "Elle est bijective."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

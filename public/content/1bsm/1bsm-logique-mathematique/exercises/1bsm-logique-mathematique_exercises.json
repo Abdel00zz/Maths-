@@ -1,0 +1,46 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Tables de vérité",
+      "statement": "Construire la table de vérité de la proposition suivante : $(P \\land Q) \\implies P$.",
+      "sub_questions": [
+        {
+          "text": "Dresser le tableau pour les 4 cas possibles de P et Q.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Que peut-on conclure sur cette proposition ?",
+          "questionNumber": "2"
+        }
+      ],
+      "hint": [
+        {
+          "text": "Une proposition toujours vraie s'appelle une tautologie.",
+          "questionNumber": "2"
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "title": "Négation et Quantificateurs",
+      "statement": "Donner la négation des propositions suivantes :",
+      "sub_questions": [
+        {
+          "text": "$P_1 : \\forall x \\in \\mathbb{R}, \\exists y \\in \\mathbb{R}, x + y = 0$",
+          "questionNumber": "1"
+        },
+        {
+          "text": "$P_2 : \\exists n \\in \\mathbb{N}, n^2 = n$",
+          "questionNumber": "2"
+        }
+      ],
+       "hint": [
+        {
+          "text": "Intervertissez les quantificateurs et niez l'égalité finale.",
+          "questionNumber": "1"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+{
+  "header": {
+    "title": "Généralités sur les Fonctions Numériques",
+    "subtitle": "Approfondissement, Rigueur et Méthodes",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 3",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Ensemble de Définition & Parité",
+      "subsections": [
+        {
+          "title": "Domaine de Définition",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Définition du Domaine $D_f$",
+              "content": [
+                "L'ensemble de définition $D_f$ est l'ensemble des réels $x$ pour lesquels le calcul de $f(x)$ est **possible**.",
+                "$$D_f = \\{ x \\in \\mathbb{R} \\mid f(x) \\in \\mathbb{R} \\}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Cas Complexe : Racine et Quotient",
+              "content": [
+                "Soit la fonction $f$ définie par : $$\\displaystyle f(x) = \\dfrac{\\sqrt{x+1}}{x^2 - 4}$$",
+                ">>Conditions d'existence :",
+                "1. La racine impose : $x + 1 \\ge ___0___ \\iff x \\ge -1$.",
+                "2. Le dénominateur impose : $x^2 - 4 \\neq ___0___ \\iff x \\neq 2 \\text{ et } x \\neq ___-2___$.",
+                ">>Synthèse des contraintes :",
+                "On cherche l'intersection de $[-1, +\\infty[$ et $\\mathbb{R} \\setminus \\{-2, 2\\}$.",
+                "Comme $-2$ n'est pas dans $[-1, +\\infty[$, la seule valeur à exclure est $___2___$.",
+                "$$D_f = [-1 ; 2[ \\cup ]___2___ ; +\\infty[$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Parité (Symétries)",
+          "elements": [
+            {
+              "type": "method-box",
+              "title": "Démontrer la Parité Rigoureusement",
+              "listType": "numbered",
+              "content": [
+                ">>Soit $x \\in D_f$. Vérifier d'abord que $-x \\in D_f$ (symétrie du domaine).",
+                "Calculer $f(-x)$ en remplaçant chaque $x$ par $(-x)$.",
+                "Simplifier l'expression (attention aux puissances paires/impaires).",
+                "Comparer le résultat avec $f(x)$ ou $-f(x)$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Etude d'une fonction impaire",
+              "content": [
+                "Soit $f(x) = \\dfrac{x^3}{x^2 + 1}$ définie sur $\\mathbb{R}$.",
+                ">>Calcul de l'image de l'opposé :",
+                "$$\\begin{aligned} f(-x) &= \\dfrac{(-x)^3}{(-x)^2 + 1} \\\\ &= \\dfrac{___-x^3___}{x^2 + 1} \\\\ &= - \\left( \\dfrac{x^3}{___x^2+1___} \\right) \\\\ &= ___-f(x)___ \\end{aligned}$$",
+                ">>Conclusion :",
+                "Puisque $f(-x) = -f(x)$, la fonction est **impaire**.",
+                "Graphiquement, sa courbe admet l'___origine O___ comme centre de symétrie."
+              ],
+              "geogebra": {
+                "title": "Symétrie Centrale",
+                "width": 800,
+                "height": 600,
+                "showAlgebraInput": false,
+                "showToolBar": false,
+                "showMenuBar": false,
+                "commands": [
+                  "f(x) = x^3 / (x^2 + 1)",
+                  "SetColor(f, \"#1e40af\")",
+                  "SetLineThickness(f, 5)",
+                  "SetCaption(f, \"$\\mathcal{C}_f$\")",
+                  "ShowLabel(f, true)",
+                  "O = (0,0)",
+                  "SetPointStyle(O, 0)",
+                  "SetPointSize(O, 5)",
+                  "SetColor(O, \"black\")",
+                  "SetCaption(O, \"$O$\")",
+                  "ShowLabel(O, true)",
+                  "A = Point(f)",
+                  "SetCoords(A, 2, 1.6)",
+                  "SetColor(A, \"#dc2626\")",
+                  "SetPointSize(A, 5)",
+                  "SetCaption(A, \"$M(x, f(x))$\")",
+                  "ShowLabel(A, true)",
+                  "B = (-x(A), -y(A))",
+                  "SetColor(B, \"#dc2626\")",
+                  "SetPointSize(B, 5)",
+                  "SetCaption(B, \"$M'(-x, -f(x))$\")",
+                  "ShowLabel(B, true)",
+                  "s = Segment(A, B)",
+                  "SetLineStyle(s, 2)",
+                  "SetColor(s, \"gray\")",
+                  "Ax = Segment(A, (x(A), 0))",
+                  "Ay = Segment(A, (0, y(A)))",
+                  "SetLineStyle(Ax, 3)",
+                  "SetLineStyle(Ay, 3)",
+                  "SetColor(Ax, \"#9ca3af\")",
+                  "SetColor(Ay, \"#9ca3af\")",
+                  "Bx = Segment(B, (x(B), 0))",
+                  "By = Segment(B, (0, y(B)))",
+                  "SetLineStyle(Bx, 3)",
+                  "SetLineStyle(By, 3)",
+                  "SetColor(Bx, \"#9ca3af\")",
+                  "SetColor(By, \"#9ca3af\")",
+                  "SetCoordSystem(-4, 4, -3, 3)",
+                  "SetGridVisible(true)",
+                  "SetAxesVisible(true, true)"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "La méthode du Taux",
+      "subsections": [
+        {
+          "title": "Taux d'Accroissement",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Taux de Variation",
+              "content": [
+                "Soient $x_1$ et $x_2$ deux réels distincts de $D_f$.",
+                "Le taux de variation est le rapport :",
+                "$$T(x_1, x_2) = \\dfrac{f(x_1) - f(x_2)}{x_1 - x_2}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Variation de la fonction Carrée",
+              "content": [
+                "Soit $f(x) = x^2$ sur l'intervalle $]-\\infty ; 0]$. Soient $a \\neq b$ deux réels de cet intervalle.",
+                ">>Simplification du Taux :",
+                "$$\\begin{aligned} T &= \\dfrac{a^2 - b^2}{a - b} \\\\ &= \\dfrac{(a - b)(___a + b___)}{a - b} \\\\ &= ___a + b___ \\end{aligned}$$",
+                ">>Étude du signe sur $]-\\infty ; 0]$ :",
+                "Puisque $a \\le 0$ et $b \\le 0$, alors leur somme $a+b$ est ___négative___.",
+                "Donc le taux $T$ est $\\le 0$.",
+                ">>Conclusion :",
+                "Le taux est négatif, donc la fonction est ___décroissante___ sur $]-\\infty ; 0]$."
+              ],
+              "graph2d": {
+                "title": "Monotonie de x²",
+                "xDomain": [-3, 1],
+                "yDomain": [-1, 5],
+                "functions": [
+                  { "fn": "x^2", "color": "#0056D2" }
+                ]
+              }
+            },
+            {
+              "type": "remark-box",
+              "title": "Interprétation Graphique",
+              "content": "Visualisation : La courbe est décroissante pour $x<0$ (descendante) et croissante pour $x>0$ (montante). C'est une parabole."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fonctions Usuelles : Le Second Degré",
+      "subsections": [
+        {
+          "title": "Forme Canonique et Sommet",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Sommet et Axe de Symétrie",
+              "content": [
+                "La fonction $f(x) = ax^2 + bx + c$ admet un extremum en $x = \\alpha$.",
+                "$$\\alpha = \\dfrac{-b}{2a} \\quad ; \\quad \\beta = f(\\alpha)$$",
+                "La courbe est symétrique par rapport à la droite verticale $x = ___\\alpha___$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Analyse d'un trinôme",
+              "content": [
+                "Soit $f(x) = 2x^2 - 8x + 5$. Ici $a = 2$, $b = -8$.",
+                ">>1. Coordonnées du sommet :",
+                "Abscisse $\\alpha = \\dfrac{-(-8)}{2 \\times 2} = \\dfrac{8}{4} = ___2___$.",
+                "Ordonnée $\\beta = f(2) = 2(2)^2 - 8(2) + 5 = 8 - 16 + 5 = ___-3___$.",
+                ">>2. Variations :",
+                "Comme $a = 2 > 0$, la parabole est tournée vers le ___haut___.",
+                "La fonction est donc ___décroissante___ sur $]-\\infty ; 2]$ puis ___croissante___ sur $[2 ; +\\infty[$.",
+                ">>3. Tableau :",
+                "Le minimum est $___-3___$ atteint en $x = 2$."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fonctions Usuelles : L'Homographique",
+      "subsections": [
+        {
+          "title": "Déterminant et Hyperbole",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Variations et Déterminant",
+              "content": [
+                "Pour $f(x) = \\dfrac{ax+b}{cx+d}$, le sens de variation dépend du signe de $\\Delta$ :",
+                "$$\\Delta = \\begin{vmatrix} a & b \\\\ c & d \\end{vmatrix} = ad - ___bc___$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Exemple d'Étude Complète",
+              "content": [
+                "Soit $h(x) = \\dfrac{2x+1}{x-3}$.",
+                ">>1. Calcul du déterminant :",
+                "$\\Delta = (2 \\times -3) - (1 \\times 1) = -6 - 1 = ___-7___$.",
+                ">>2. Interprétation :",
+                "Puisque $\\Delta < 0$, la fonction est strictement ___décroissante___ sur son domaine.",
+                ">>3. Asymptotes (Limites visuelles) :",
+                "Asymptote Verticale (valeur interdite) : $x = ___3___$.",
+                "Asymptote Horizontale (quotient des $x$) : $y = \\dfrac{2}{1} = ___2___$."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

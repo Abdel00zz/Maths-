@@ -1,0 +1,49 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Tirage de boules",
+      "statement": "Une urne contient 5 boules rouges, 4 boules vertes et 3 boules noires. On tire 3 boules.",
+      "sub_questions": [
+        {
+          "text": "Dénombrer les tirages possibles si le tirage est **simultané**.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Dénombrer les tirages possibles si le tirage est **successif avec remise**.",
+          "questionNumber": "2"
+        },
+        {
+          "text": "Dans le cas simultané, combien de tirages contiennent exactement 2 boules rouges ?",
+          "questionNumber": "3"
+        }
+      ],
+      "solution": [
+        "Simultané = Combinaison. Total boules = 12. Nombre = $C_{12}^3 = \\frac{12 \\times 11 \\times 10}{3 \\times 2 \\times 1} = 220$.",
+        "Successif avec remise = p-liste. Nombre = $12^3 = 1728$.",
+        "Il faut choisir 2 rouges parmi 5 ($C_5^2$) ET 1 autre boule parmi les 7 restantes ($C_7^1$).\nTotal = $C_5^2 \\times C_7^1 = 10 \\times 7 = 70$."
+      ]
+    },
+    {
+      "id": "ex2",
+      "title": "Le Code Secret",
+      "statement": "Un digicode comporte les touches 0 à 9 et les lettres A et B.",
+      "sub_questions": [
+        {
+          "text": "Combien de codes à 4 caractères peut-on former ?",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Combien de codes comportent au moins une lettre ?",
+          "questionNumber": "2"
+        }
+      ],
+      "hint": [
+        {
+          "text": "Utilisez le complémentaire pour la question 2 : Total - (Codes sans lettres).",
+          "questionNumber": "2"
+        }
+      ]
+    }
+  ]
+}

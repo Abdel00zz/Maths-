@@ -1,0 +1,43 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quelle est la valeur de vérité de la proposition $P: (2+2=4) \\implies (3 \\times 0 = 3)$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "Vraie",
+          "is_correct": false,
+          "explanation": "Dans une implication $A \\implies B$, si A est Vrai et B est Faux, alors l'implication est Fausse. Ici $2+2=4$ est Vrai, mais $3 \\times 0 = 3$ est Faux."
+        },
+        {
+          "text": "Fausse",
+          "is_correct": true,
+          "explanation": "L'hypothèse est Vraie mais la conclusion est Fausse, donc l'implication est Fausse."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Quelle est la négation de $\\forall x \\in \\mathbb{R}, x^2 \\geq 0$ ?",
+      "type": "mcq",
+      "options": [
+        {
+          "text": "$\\forall x \\in \\mathbb{R}, x^2 < 0$",
+          "is_correct": false,
+          "explanation": "La négation de \"Pour tout\" est \"Il existe\"."
+        },
+        {
+          "text": "$\\exists x \\in \\mathbb{R}, x^2 < 0$",
+          "is_correct": true,
+          "explanation": "La négation de $\\forall$ est $\\exists$ et la négation de $\\geq$ est $<$. (Notez que cette proposition est mathématiquement fausse, mais c'est bien la négation syntaxique)."
+        },
+        {
+          "text": "$\\exists x \\in \\mathbb{R}, x^2 \\geq 0$",
+          "is_correct": false,
+          "explanation": "Il faut aussi nier la condition."
+        }
+      ]
+    }
+  ]
+}

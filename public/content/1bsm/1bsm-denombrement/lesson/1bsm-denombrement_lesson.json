@@ -1,0 +1,631 @@
+{
+  "header": {
+    "title": "Dénombrement",
+    "subtitle": "Compter avec Méthode et Rigueur",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 13",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Ensemble Fini - Cardinal d'un Ensemble",
+      "subsections": [
+        {
+          "title": "Ensemble Fini",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Ensemble Fini et Cardinal",
+              "content": [
+                "Un ensemble $E$ non vide est un **ensemble fini** s'il existe un entier naturel $n$ tel qu'il existe une bijection de $\\{1, 2, \\ldots, n\\}$ dans $E$.",
+                "Dans ce cas, on dit que le **cardinal** de $E$ est $n$, et l'on note :",
+                "$$\\text{Card}(E) = n$$",
+                "Le cardinal de l'ensemble vide est $0$ : $\\text{Card}(\\emptyset) = ___0___$."
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Qu'est-ce que Dénombrer ?",
+              "listType": "bullet",
+              "content": [
+                "**Dénombrer** un ensemble fini $E$, c'est déterminer son **cardinal**, c'est-à-dire compter le nombre exact de ses éléments.",
+                ">>Trois règles d'or pour un dénombrement correct :",
+                "Ne compter **que** les éléments de $E$ (pas d'intrus).",
+                "Ne pas **oublier** d'éléments.",
+                "Ne pas compter certains éléments **plusieurs fois** (pas de doublons)."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Application : Ensemble et Surjection",
+              "content": [
+                "Soit $E = \\{x \\in \\mathbb{R} \\mid x^2 - 5x + 6 = 0\\}$.",
+                ">>Résolution de l'équation :",
+                "On factorise :",
+                "$$x^2 - 5x + 6 = (x - 2)(x - ___3___) = 0$$",
+                "Les solutions sont : $x = ___2___$ et $x = 3$.",
+                ">>Conclusion :",
+                "$$E = \\{2, 3\\} \\quad \\text{et} \\quad \\text{Card}(E) = ___2___$$",
+                "L'ensemble $E$ est bien **fini** avec $2$ éléments."
+              ]
+            },
+            {
+              "type": "activity-box",
+              "title": "Situation : Surjection et Cardinal",
+              "content": [
+                "Soient $A$ et $B$ deux ensembles finis. On pose :",
+                "$$\\text{Card}(A) = p \\quad \\text{et} \\quad \\text{Card}(B) = n$$",
+                "Soit $f : A \\to B$ une application **surjective** telle que pour tout $y \\in B$ :",
+                "$$\\text{Card}(f^{-1}(\\{y\\})) = k \\quad \\text{(constant)}$$",
+                ">>Question : Montrer que $p = kn$.",
+                ">>Raisonnement :",
+                "Chaque élément de $B$ possède exactement $___k___$ antécédents dans $A$.",
+                "Comme $B$ contient $n$ éléments, le nombre total d'éléments de $A$ est :",
+                "$$p = k \\times ___n___$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Propriétés du Calcul sur les Cardinaux",
+          "elements": [
+            {
+              "type": "property-box",
+              "title": "Opérations sur les Cardinaux",
+              "listType": "numbered",
+              "content": [
+                "**Union :** Si $A$ et $B$ sont deux ensembles finis, alors $A \\cup B$ et $A \\cap B$ sont finis et : $$\\text{Card}(A \\cup B) = \\text{Card}(A) + \\text{Card}(B) - \\text{Card}(A \\cap B)$$",
+                "**Cas particulier (ensembles disjoints) :** Si $A \\cap B = \\emptyset$, alors : $$\\text{Card}(A \\cup B) = \\text{Card}(A) + \\text{Card}(B)$$",
+                "**Inclusion :** Tout sous-ensemble $A$ d'un ensemble fini $B$ est fini et : $$\\text{Card}(A) \\le \\text{Card}(B)$$",
+                "**Différence :** Si $A \\subset B$, alors : $$\\text{Card}(B \\setminus A) = \\text{Card}(B) - \\text{Card}(A)$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Généralisation",
+              "content": [
+                "Si $A_1, A_2, \\ldots, A_n$ sont des ensembles finis **deux à deux disjoints**, alors :",
+                "$$\\text{Card}(A_1 \\cup A_2 \\cup \\cdots \\cup A_n) = \\text{Card}(A_1) + \\text{Card}(A_2) + \\cdots + \\text{Card}(A_n)$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Étude de Langues dans une Classe",
+              "content": [
+                "Dans une classe de $38$ élèves, on dispose des données suivantes :",
+                "$$\\begin{aligned} \\text{Anglais (A)} &: 31 \\text{ élèves} \\\\ \\text{Espagnol (E)} &: 24 \\text{ élèves} \\\\ \\text{Allemand (G)} &: 17 \\text{ élèves} \\\\ \\text{A et G} &: 12 \\text{ élèves} \\\\ \\text{E et G} &: 9 \\text{ élèves} \\\\ \\text{A et E et G} &: 4 \\text{ élèves} \\end{aligned}$$",
+                ">>Nombre d'élèves étudiant anglais **et** espagnol :",
+                "Notons $x = \\text{Card}(A \\cap E)$ le nombre cherché.",
+                "Formule d'inclusion-exclusion pour trois ensembles :",
+                "$$\\text{Card}(A \\cup E \\cup G) = \\text{Card}(A) + \\text{Card}(E) + \\text{Card}(G)$$",
+                "$$- \\text{Card}(A \\cap E) - \\text{Card}(A \\cap G) - \\text{Card}(E \\cap G) + \\text{Card}(A \\cap E \\cap G)$$",
+                "En remplaçant les valeurs :",
+                "$$38 = 31 + 24 + 17 - x - 12 - 9 + 4$$",
+                "$$38 = 55 - x \\quad \\Rightarrow \\quad x = ___17___$$",
+                ">>Nombre d'élèves étudiant anglais **ou** espagnol :",
+                "$$\\text{Card}(A \\cup E) = \\text{Card}(A) + \\text{Card}(E) - \\text{Card}(A \\cap E)$$",
+                "$$\\text{Card}(A \\cup E) = 31 + 24 - 17 = ___38___$$",
+                "Tous les élèves de la classe étudient au moins l'anglais ou l'espagnol.",
+                ">>Élèves étudiant **uniquement** l'allemand :",
+                "Ce sont ceux dans $G$ mais ni dans $A$ ni dans $E$ :",
+                "$$\\text{Card}(G \\setminus (A \\cup E)) = \\text{Card}(G) - \\text{Card}(G \\cap (A \\cup E))$$",
+                "Or : $\\text{Card}(G \\cap (A \\cup E)) = 12 + 9 - 4 = ___17___$",
+                "Donc : $17 - 17 = ___0___$ élève."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "À vous de jouer",
+              "statement": "Soit $E = \\{a, b, c, d, e\\}$ où les éléments sont deux à deux distincts. Calculer le cardinal de $F = \\{\\{a, b\\}, \\{a, c\\}, \\{b, c\\}\\}$.",
+              "solution": [
+                "L'ensemble $F$ contient trois éléments (ce sont des parties de $E$).",
+                "Donc : $\\text{Card}(F) = ___3___$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Principe Fondamental de Dénombrement",
+      "subsections": [
+        {
+          "title": "Principe Fondamental",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Principe Fondamental du Dénombrement",
+              "content": [
+                "Si une situation nécessite $k$ choix successifs et si :",
+                "$$\\begin{aligned} \\text{Le } 1^{\\text{er}} \\text{ choix} &: n_1 \\text{ résultats possibles} \\\\ \\text{Le } 2^{\\text{e}} \\text{ choix} &: n_2 \\text{ résultats possibles} \\\\ & \\vdots \\\\ \\text{Le } k^{\\text{e}} \\text{ choix} &: n_k \\text{ résultats possibles} \\end{aligned}$$",
+                ">>Alors le nombre total de situations possibles est :",
+                "$$N = n_1 \\times n_2 \\times \\cdots \\times n_k$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Formation de Nombres à Trois Chiffres",
+              "content": [
+                "On dispose des chiffres : $\\{5, 6, 7, 2, 3\\}$.",
+                "On veut former des entiers naturels de **trois chiffres distincts**.",
+                ">>Nombre total de cas possibles :",
+                "$$\\begin{aligned} \\text{1}^{\\text{er}} \\text{ chiffre} &: ___5___ \\text{ choix} \\\\ \\text{2}^{\\text{e}} \\text{ chiffre} &: ___4___ \\text{ choix (un déjà utilisé)} \\\\ \\text{3}^{\\text{e}} \\text{ chiffre} &: ___3___ \\text{ choix (deux déjà utilisés)} \\end{aligned}$$",
+                "$$\\text{Nombre total} = 5 \\times 4 \\times 3 = ___60___$$",
+                ">>Nombres **pairs** :",
+                "Un nombre est pair si son dernier chiffre est $2$ ou $6$.",
+                "$$\\begin{aligned} \\text{3}^{\\text{e}} \\text{ chiffre (unités)} &: ___2___ \\text{ choix } (2 \\text{ ou } 6) \\\\ \\text{1}^{\\text{er}} \\text{ chiffre} &: ___4___ \\text{ choix (parmi les 4 restants)} \\\\ \\text{2}^{\\text{e}} \\text{ chiffre} &: ___3___ \\text{ choix} \\end{aligned}$$",
+                "$$\\text{Nombres pairs} = 2 \\times 4 \\times 3 = ___24___$$",
+                ">>Multiples de $5$ :",
+                "Un nombre est multiple de $5$ si son dernier chiffre est $5$.",
+                "$$\\begin{aligned} \\text{3}^{\\text{e}} \\text{ chiffre (unités)} &: ___1___ \\text{ choix (seulement 5)} \\\\ \\text{1}^{\\text{er}} \\text{ chiffre} &: ___4___ \\text{ choix} \\\\ \\text{2}^{\\text{e}} \\text{ chiffre} &: ___3___ \\text{ choix} \\end{aligned}$$",
+                "$$\\text{Multiples de 5} = 1 \\times 4 \\times 3 = ___12___$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cardinal d'un Produit Cartésien",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Cardinal d'un Produit",
+              "content": [
+                "Soient $A$ et $B$ deux ensembles finis et non vides.",
+                "Alors le produit cartésien $A \\times B$ est fini et :",
+                "$$\\text{Card}(A \\times B) = \\text{Card}(A) \\times \\text{Card}(B)$$"
+              ]
+            },
+            {
+              "type": "consequence-box",
+              "title": "Généralisation",
+              "content": [
+                "Pour $n$ ensembles finis $E_1, E_2, \\ldots, E_n$ :",
+                "$$\\text{Card}(E_1 \\times E_2 \\times \\cdots \\times E_n) = \\text{Card}(E_1) \\times \\text{Card}(E_2) \\times \\cdots \\times \\text{Card}(E_n)$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Numéros de Téléphone Mobile",
+              "content": [
+                "Un numéro de téléphone mobile au Maroc commence par $061$ suivi de $7$ chiffres.",
+                "$$\\text{Format : } 0\\;6\\;1\\;\\boxed{\\;\\;\\;}\\;\\boxed{\\;\\;\\;}\\;\\boxed{\\;\\;\\;}\\;\\boxed{\\;\\;\\;}\\;\\boxed{\\;\\;\\;}\\;\\boxed{\\;\\;\\;}\\;\\boxed{\\;\\;\\;}$$",
+                ">>Combien de numéros différents sont possibles ?",
+                ">>Raisonnement :",
+                "Les $3$ premiers chiffres sont fixés : $0$, $6$, $1$",
+                "Pour chacun des $7$ chiffres restants : $___10___$ choix (de $0$ à $9$)",
+                ">>Résultat :",
+                "$$\\text{Nombre total} = 10^7 = ___10\\,000\\,000___$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Nombre d'Applications entre Ensembles",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Applications d'un Ensemble dans un Autre",
+              "content": [
+                "Soient $E$ et $F$ deux ensembles finis non vides tels que :",
+                "$$\\text{Card}(E) = p \\quad \\text{et} \\quad \\text{Card}(F) = n$$",
+                "Le nombre d'applications de $E$ dans $F$ est :",
+                "$$\\boxed{n^p}$$",
+                "**Intuition :** Chaque élément de $E$ peut être envoyé vers l'un des $n$ éléments de $F$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Applications entre Deux Ensembles",
+              "content": [
+                "Soient les ensembles :",
+                "$$E = \\{x \\in \\mathbb{N} \\mid 5 < x < 16\\} \\quad \\text{et} \\quad F = \\{x \\in \\mathbb{Z} \\mid |x| < 5\\}$$",
+                ">>Calcul des cardinaux :",
+                "$$E = \\{6, 7, 8, 9, 10, 11, 12, 13, 14, 15\\} \\quad \\Rightarrow \\quad \\text{Card}(E) = ___10___$$",
+                "$$F = \\{-4, -3, -2, -1, 0, 1, 2, 3, 4\\} \\quad \\Rightarrow \\quad \\text{Card}(F) = ___9___$$",
+                ">>Nombre d'applications de $E$ dans $F$ :",
+                "$$(\\text{Card}(F))^{\\text{Card}(E)} = 9^{10}$$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Lancers de Dé",
+              "statement": "On lance un dé cubique (faces numérotées de $1$ à $6$) trois fois de suite. On obtient un triplet $(a, b, c)$. Combien y a-t-il de triplets possibles comportant uniquement des chiffres impairs ?",
+              "solution": [
+                "Les chiffres impairs sont : $\\{1, 3, 5\\}$, soit $___3___$ possibilités par lancer.",
+                "Pour trois lancers indépendants avec $3$ choix chacun :",
+                "$$\\text{Nombre de triplets} = 3 \\times 3 \\times 3 = 3^3 = ___27___$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Nombre de Parties d'un Ensemble",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Ensemble des Parties",
+              "content": [
+                "Soit $E$ un ensemble fini de cardinal $n$.",
+                "L'ensemble $\\mathcal{P}(E)$ (ensemble de toutes les parties de $E$) a pour cardinal :",
+                "$$\\text{Card}(\\mathcal{P}(E)) = 2^n$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Justification Intuitive",
+              "content": [
+                "Pour chaque élément de $E$, on a **deux choix** : le prendre ou ne pas le prendre dans une partie.",
+                "Avec $n$ éléments et $2$ choix par élément :",
+                "$$2 \\times 2 \\times \\cdots \\times 2 = ___2^n___$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Application Concrète",
+              "content": [
+                "Soit $E = \\{a, b, c\\}$ avec $\\text{Card}(E) = 3$.",
+                ">>Liste des parties de $E$ :",
+                "$$\\mathcal{P}(E) = \\{\\emptyset, \\{a\\}, \\{b\\}, \\{c\\}, \\{a,b\\}, \\{a,c\\}, \\{b,c\\}, \\{a,b,c\\}\\}$$",
+                "On compte : $___8___$ parties.",
+                ">>Vérification avec la formule :",
+                "$$\\text{Card}(\\mathcal{P}(E)) = 2^3 = ___8___$$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Techniques de Dénombrement",
+      "subsections": [
+        {
+          "title": "Arrangements avec Répétition",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Arrangement avec Répétition (p-liste)",
+              "content": [
+                "Soit $E$ un ensemble fini de cardinal $n \\ge 1$ et $p \\in \\mathbb{N}^*$.",
+                "Tout élément $(x_1, x_2, \\ldots, x_p)$ du produit cartésien :",
+                "$$E^p = E \\times E \\times \\cdots \\times E$$",
+                "s'appelle un **arrangement avec répétition** de $p$ éléments de $E$ (ou une **p-liste**)."
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Situation Caractéristique",
+              "listType": "bullet",
+              "content": [
+                "Un arrangement avec répétition correspond à un **tirage avec remise** :",
+                "On tire $p$ boules **successivement** (l'ordre compte)",
+                "**Avec remise** dans une urne contenant $n$ boules",
+                "Les répétitions sont **autorisées**"
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Nombre d'Arrangements avec Répétition",
+              "content": [
+                "Le nombre d'arrangements avec répétition de $p$ éléments parmi $n$ est :",
+                "$$\\boxed{n^p}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Codes PIN",
+              "content": [
+                "Un code PIN bancaire comporte $4$ chiffres (de $0$ à $9$), avec répétitions autorisées.",
+                ">>Combien de codes différents sont possibles ?",
+                ">>Raisonnement :",
+                "$$\\begin{aligned} \\text{Ensemble} &: E = \\{0, 1, 2, \\ldots, 9\\} \\text{ avec } n = ___10___ \\\\ \\text{Nombre de positions} &: p = ___4___ \\\\ \\text{Répétitions} &: \\text{autorisées} \\end{aligned}$$",
+                ">>Résultat :",
+                "$$\\text{Nombre de codes} = 10^4 = ___10\\,000___$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Arrangements sans Répétition",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Arrangement sans Répétition",
+              "content": [
+                "Soit $E$ un ensemble fini de cardinal $n \\ge 1$ et $p \\in \\mathbb{N}^*$ tel que $p \\le n$.",
+                "Un **arrangement sans répétition** de $p$ éléments de $E$ est un $p$-uplet $(x_1, x_2, \\ldots, x_p)$ d'éléments de $E$ **deux à deux distincts**."
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Situation Caractéristique",
+              "listType": "bullet",
+              "content": [
+                "Un arrangement sans répétition correspond à un **tirage sans remise** :",
+                "On tire $p$ boules **successivement** (l'ordre compte)",
+                "**Sans remise** dans une urne contenant $n$ boules",
+                "Les répétitions sont **interdites**"
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Nombre d'Arrangements sans Répétition",
+              "content": [
+                "Le nombre d'arrangements sans répétition de $p$ éléments parmi $n$ est noté $A_n^p$ et vaut :",
+                "$$A_n^p = \\dfrac{n!}{(n-p)!} = n \\times (n-1) \\times (n-2) \\times \\cdots \\times (n-p+1)$$",
+                "C'est le produit de $p$ entiers consécutifs décroissants à partir de $n$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Tirage de Boules Colorées",
+              "content": [
+                "Une urne contient :",
+                "$$\\begin{aligned} &\\bullet \\; 10 \\text{ boules noires (numérotées 1 à 10)} \\\\ &\\bullet \\; 5 \\text{ boules blanches (numérotées 11 à 15)} \\\\ &\\bullet \\; 3 \\text{ boules rouges (numérotées 16 à 18)} \\end{aligned}$$",
+                "On tire $5$ boules **successivement sans remise**.",
+                ">>Nombre total de séries possibles :",
+                "$$\\begin{aligned} \\text{Total de boules} &: n = 10 + 5 + 3 = ___18___ \\\\ \\text{Boules tirées} &: p = ___5___ \\end{aligned}$$",
+                "$$A_{18}^5 = \\dfrac{18!}{13!} = 18 \\times 17 \\times 16 \\times 15 \\times 14 = ___1\\,028\\,160___$$",
+                ">>Séries commençant par une rouge ET composées uniquement de boules paires :",
+                "$$\\begin{aligned} \\text{Boules rouges paires} &: 16 \\text{ ou } 18 \\rightarrow ___2___ \\text{ choix} \\\\ \\text{Boules paires restantes} &: \\{2, 4, 6, 8, 10, 12, 14\\} \\rightarrow ___7___ \\text{ boules} \\end{aligned}$$",
+                "Pour les $4$ positions suivantes :",
+                "$$A_7^4 = 7 \\times 6 \\times 5 \\times 4 = ___840___$$",
+                ">>Résultat :",
+                "$$\\text{Nombre de séries} = 2 \\times 840 = ___1\\,680___$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Lien avec les Applications Injectives",
+              "content": [
+                "Le nombre d'applications **injectives** d'un ensemble à $p$ éléments vers un ensemble à $n$ éléments ($p \\le n$) est :",
+                "$$A_n^p = \\dfrac{n!}{(n-p)!}$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Permutations",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Permutation d'un Ensemble",
+              "content": [
+                "Soit $E$ un ensemble fini de cardinal $n$.",
+                "Une **permutation** de $E$ est toute bijection de $E$ dans lui-même.",
+                "C'est un arrangement sans répétition de **tous** les éléments de $E$."
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Situation Caractéristique",
+              "listType": "bullet",
+              "content": [
+                "Une permutation correspond à un **tirage exhaustif sans remise** :",
+                "On tire **toutes** les $n$ boules successivement",
+                "L'ordre compte",
+                "C'est un rangement ou une disposition des $n$ éléments"
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Nombre de Permutations",
+              "content": [
+                "Le nombre de permutations d'un ensemble à $n$ éléments est noté $n!$ (factorielle $n$) et vaut :",
+                "$$n! = n \\times (n-1) \\times (n-2) \\times \\cdots \\times 2 \\times 1$$",
+                "**Conventions :** $0! = 1$ et $1! = ___1___$"
+              ]
+            },
+            {
+              "type": "consequence-box",
+              "title": "Relation Importante",
+              "content": [
+                "Pour tout $n \\in \\mathbb{N}^*$ :",
+                "$$A_n^p = \\dfrac{n!}{(n-p)!}$$",
+                "En particulier : $A_n^1 = n$ et $A_n^n = ___n!___$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Coloriage d'un Motif",
+              "content": [
+                "On dispose de $4$ couleurs : **vert**, **jaune**, **rouge** et **bleu**.",
+                "On veut colorier $4$ cases alignées avec des couleurs **distinctes** :",
+                "$$\\boxed{\\phantom{AAA}} \\; \\boxed{\\phantom{AAA}} \\; \\boxed{\\phantom{AAA}} \\; \\boxed{\\phantom{AAA}}$$",
+                ">>Combien de coloriages différents sont possibles ?",
+                ">>Raisonnement :",
+                "C'est une permutation des $4$ couleurs (ordre important, toutes utilisées).",
+                ">>Résultat :",
+                "$$\\text{Nombre de coloriages} = 4! = 4 \\times 3 \\times 2 \\times 1 = ___24___$$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Organisation d'une File",
+              "statement": "De combien de façons peut-on ranger $7$ personnes en file indienne ?",
+              "solution": [
+                "C'est une permutation de $7$ éléments.",
+                "$$\\text{Nombre de façons} = 7! = 7 \\times 6 \\times 5 \\times 4 \\times 3 \\times 2 \\times 1 = ___5\\,040___$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Combinaisons",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Combinaison de p éléments parmi n",
+              "content": [
+                "Soit $E$ un ensemble fini de cardinal $n \\ge 1$ et $p \\in \\mathbb{N}$ tel que $p \\le n$.",
+                "Une **combinaison** de $p$ éléments pris parmi les $n$ éléments de $E$ est une **partie** de $E$ dont le cardinal est $p$."
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Situation Caractéristique",
+              "listType": "bullet",
+              "content": [
+                "Une combinaison correspond à un **tirage simultané** :",
+                "On tire $p$ boules **en même temps** dans une urne contenant $n$ boules",
+                "**L'ordre ne compte pas** (c'est un ensemble, pas une liste)",
+                "Les répétitions sont **interdites**"
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Nombre de Combinaisons",
+              "content": [
+                "Le nombre de combinaisons de $p$ éléments parmi $n$ éléments est noté $C_n^p$ (ou $\\binom{n}{p}$) et vaut :",
+                "$$C_n^p = \\dfrac{A_n^p}{p!} = \\dfrac{n!}{p!(n-p)!}$$",
+                "**Intuition :** Pour chaque combinaison (ensemble), il existe $p!$ arrangements (ordres différents)."
+              ]
+            },
+            {
+              "type": "theorem-box",
+              "title": "Propriétés des Coefficients Binomiaux",
+              "listType": "bullet",
+              "content": [
+                "**Symétrie :** $C_n^p = C_n^{n-p}$",
+                "**Formule de Pascal :** $C_n^p + C_n^{p+1} = C_{n+1}^{p+1}$",
+                "**Valeurs particulières :** $C_n^0 = ___1___$ et $C_n^n = ___1___$ et $C_n^1 = ___n___$"
+              ]
+            },
+            {
+              "type": "activity-box",
+              "title": "Triangle de Pascal",
+              "content": [
+                "La formule de Pascal permet de calculer les coefficients binomiaux par **récurrence**.",
+                "Pour obtenir un coefficient, on fait la somme de celui qui est au-dessus de lui et de celui qui est à gauche de ce dernier.",
+                "$$\\begin{array}{ccccccccc} & & & & 1 & & & & \\\\ & & & 1 & & 1 & & & \\\\ & & 1 & & 2 & & 1 & & \\\\ & 1 & & 3 & & 3 & & 1 & \\\\ 1 & & 4 & & 6 & & 4 & & 1 \\end{array}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Comité de Délégués",
+              "content": [
+                "Une classe de $30$ élèves doit élire un comité de $5$ délégués.",
+                ">>Combien de comités différents sont possibles ?",
+                ">>Raisonnement :",
+                "L'ordre n'a pas d'importance : un comité $\\{A, B, C, D, E\\}$ est identique à $\\{E, D, C, B, A\\}$.",
+                "C'est donc une **combinaison** de $p = ___5___$ éléments parmi $n = ___30___$.",
+                ">>Calcul :",
+                "$$C_{30}^5 = \\dfrac{30!}{5! \\times 25!} = \\dfrac{30 \\times 29 \\times 28 \\times 27 \\times 26}{5 \\times 4 \\times 3 \\times 2 \\times 1}$$",
+                "$$C_{30}^5 = \\dfrac{17\\,100\\,720}{120} = ___142\\,506___$$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Main de Poker",
+              "statement": "Dans un jeu de $52$ cartes, combien peut-on former de mains de $5$ cartes ?",
+              "solution": [
+                "L'ordre des cartes dans une main n'a pas d'importance.",
+                "$$C_{52}^5 = \\dfrac{52!}{5! \\times 47!} = \\dfrac{52 \\times 51 \\times 50 \\times 49 \\times 48}{120} = ___2\\,598\\,960___$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Formule du Binôme de Newton",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Formule du Binôme de Newton",
+              "content": [
+                "Soient $a$ et $b$ deux réels et $n$ un entier naturel non nul.",
+                "On a la formule suivante :",
+                "$$\\boxed{(a + b)^n = \\displaystyle\\sum_{k=0}^{n} C_n^k a^k b^{n-k}}$$",
+                "En développé :",
+                "$$(a+b)^n = C_n^0 b^n + C_n^1 ab^{n-1} + C_n^2 a^2b^{n-2} + \\cdots + C_n^n a^n$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Cas Particulier Important",
+              "content": [
+                "Pour tous réels $a$ et $b$ :",
+                "$$(a - b)^n = (a + (-b))^n = \\displaystyle\\sum_{k=0}^{n} C_n^k (-1)^k a^{n-k} b^k$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Développements Classiques",
+              "content": [
+                ">>Développer $(a + b)^6$ :",
+                "$$\\begin{aligned} (a+b)^6 &= C_6^0 b^6 + C_6^1 ab^5 + C_6^2 a^2b^4 + C_6^3 a^3b^3 \\\\[0.3em] &\\quad + C_6^4 a^4b^2 + C_6^5 a^5b + C_6^6 a^6 \\end{aligned}$$",
+                "En utilisant le triangle de Pascal :",
+                "$$C_6^0 = ___1___ \\quad C_6^1 = 6 \\quad C_6^2 = ___15___ \\quad C_6^3 = 20$$",
+                "$$(a+b)^6 = b^6 + 6ab^5 + 15a^2b^4 + 20a^3b^3 + 15a^4b^2 + 6a^5b + a^6$$",
+                ">>Développer $(a - b)^7$ :",
+                "Les signes alternent : $+$, $-$, $+$, $-$, ...",
+                "$$\\begin{aligned} (a-b)^7 &= a^7 - 7a^6b + 21a^5b^2 - 35a^4b^3 \\\\[0.3em] &\\quad + 35a^3b^4 - 21a^2b^5 + 7ab^6 - b^7 \\end{aligned}$$",
+                ">>Développer $(a - 2b)^5$ :",
+                "On remplace $b$ par $(-2b)$ :",
+                "$$\\begin{aligned} (a-2b)^5 &= C_5^0 a^5 + C_5^1 a^4(-2b) + C_5^2 a^3(-2b)^2 \\\\[0.3em] &\\quad + C_5^3 a^2(-2b)^3 + C_5^4 a(-2b)^4 + C_5^5(-2b)^5 \\end{aligned}$$",
+                "$$(a-2b)^5 = a^5 - 10a^4b + 40a^3b^2 - 80a^2b^3 + 80ab^4 - ___32b^5___$$"
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Identités Remarquables avec Sommes",
+              "listType": "bullet",
+              "content": [
+                "En posant $a = b = 1$ dans la formule du binôme : $$\\displaystyle\\sum_{k=0}^{n} C_n^k = 2^n$$",
+                "En posant $a = 1$ et $b = -1$ : $$\\displaystyle\\sum_{k=0}^{n} (-1)^k C_n^k = 0$$",
+                "Somme avec coefficients : $$\\displaystyle\\sum_{k=0}^{n} k \\cdot C_n^k = n \\cdot 2^{n-1}$$",
+                "Somme avec $k+1$ : $$\\displaystyle\\sum_{k=0}^{n} (k+1) C_n^k = (n+2) \\cdot 2^{n-1}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Calcul de Sommes",
+              "content": [
+                ">>Calculer $S_1 = C_8^0 + C_8^1 + C_8^2 + \\cdots + C_8^8$ :",
+                "C'est la somme de tous les coefficients binomiaux pour $n = 8$.",
+                "$$S_1 = 2^8 = ___256___$$",
+                ">>Calculer $S_2 = C_7^0 - C_7^1 + C_7^2 - C_7^3 + \\cdots - C_7^7$ :",
+                "C'est la somme alternée :",
+                "$$S_2 = \\displaystyle\\sum_{k=0}^{7} (-1)^k C_7^k = ___0___$$",
+                ">>Calculer $S_3 = 1 \\cdot C_5^1 + 2 \\cdot C_5^2 + 3 \\cdot C_5^3 + 4 \\cdot C_5^4 + 5 \\cdot C_5^5$ :",
+                "$$S_3 = \\displaystyle\\sum_{k=1}^{5} k \\cdot C_5^k = 5 \\times 2^4 = 5 \\times 16 = ___80___$$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Coefficient d'un Terme",
+              "statement": "Quel est le coefficient de $a^7b^3$ dans le développement de $(a - b)^{10}$ ?",
+              "solution": [
+                "Le terme général est : $C_{10}^k (-1)^k a^{10-k} b^k$",
+                "Pour avoir $a^7b^3$ : $10 - k = 7$ donc $k = ___3___$",
+                "Le coefficient est : $C_{10}^3 \\times (-1)^3 = -C_{10}^3$",
+                "$$C_{10}^3 = \\dfrac{10!}{3! \\times 7!} = \\dfrac{10 \\times 9 \\times 8}{6} = ___120___$$",
+                "Le coefficient est donc $___-120___$"
+              ]
+            },
+            {
+              "type": "warning-box",
+              "title": "Attention aux Erreurs Fréquentes",
+              "listType": "bullet",
+              "content": [
+                "Ne pas confondre **arrangement** (ordre important) et **combinaison** (ordre non important)",
+                "Pour $(a-b)^n$, ne pas oublier les signes alternés $(-1)^k$",
+                "Dans une combinaison, $C_n^p$ n'existe que si $p \\le n$",
+                "Factorielle : $0! = 1$ (par convention, ce n'est pas $0$)"
+              ]
+            },
+            {
+              "type": "method-box",
+              "title": "Stratégie de Résolution",
+              "listType": "numbered",
+              "content": [
+                "**Identifier le type de problème :** Tirage avec/sans remise ? Ordre important ou non ?",
+                "**Choisir la formule appropriée :** $n^p$ (avec répét.), $A_n^p$ (arrangement), $n!$ (permutation), $C_n^p$ (combinaison)",
+                "**Vérifier les contraintes :** S'assurer que les conditions d'application sont respectées",
+                "**Calculer méthodiquement :** Simplifier les factorielles avant de calculer"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

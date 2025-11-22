@@ -1,0 +1,317 @@
+{
+  "header": {
+    "title": "Le Barycentre dans le Plan",
+    "subtitle": "Pondération, Équilibre et Lignes de Niveau",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 4",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Notion de Système Pondéré",
+      "subsections": [
+        {
+          "title": "Approche Physique : Le Levier",
+          "elements": [
+            {
+              "type": "activity-box",
+              "title": "Activité 1 : L'Équilibre",
+              "content": [
+                "Sur une barre rigide de longueur 1m, on place une masse de $500g$ en $A$ et $350g$ en $B$.",
+                "Pour trouver le point d'équilibre $G$, la loi des moments indique que la somme vectorielle des forces pondérées doit être nulle.",
+                "Cela se traduit par la relation : $500 \\overrightarrow{GA} + 350 \\overrightarrow{GB} = \\vec{0}$."
+              ],
+              "image": {
+                "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Lever_Principle_3D.png/640px-Lever_Principle_3D.png",
+                "alt": "Levier d'Archimède",
+                "caption": "Point d'équilibre G",
+                "position": "right",
+                "width": "40%",
+                "transparent": true
+              }
+            },
+            {
+              "type": "definition-box",
+              "title": "Vocabulaire",
+              "content": [
+                "Soit $A$ un point du plan et $\\alpha$ un réel non nul.",
+                "Le couple $(A, \\alpha)$ est appelé **point pondéré**.",
+                "Un ensemble de points pondérés $\\{(A, \\alpha); (B, \\beta)\\}$ est un **système pondéré**."
+              ],
+              "listType": "bullet"
+            }
+          ]
+        },
+        {
+          "title": "Cas de la Somme des Coefficients Nulle",
+          "elements": [
+            {
+              "type": "warning-box",
+              "content": "Si $\\alpha + \\beta = 0$, le barycentre **n'existe pas**. On ne peut pas diviser par zéro."
+            },
+            {
+              "type": "property-box",
+              "title": "Vecteur Constant",
+              "content": [
+                "Si $\\alpha + \\beta = 0$ (donc $\\beta = -\\alpha$), alors la somme vectorielle est constante et ne dépend pas du point $M$.",
+                "Pour tout point $M$ :",
+                "$$ \\alpha \\overrightarrow{MA} + \\beta \\overrightarrow{MB} = \\alpha \\overrightarrow{MA} - \\alpha \\overrightarrow{MB} = \\alpha (\\overrightarrow{MA} + \\overrightarrow{BM}) = \\alpha \\overrightarrow{BA} $$",
+                "Ce vecteur est constant."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Barycentre de Deux Points",
+      "subsections": [
+        {
+          "title": "Définition et Existence",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Théorème fondamental",
+              "content": [
+                "Soit $\\Sigma = \\{(A, \\alpha); (B, \\beta)\\}$ un système pondéré tel que $\\alpha + \\beta \\neq 0$.",
+                "Il existe un **unique** point $G$ appelé barycentre de $\\Sigma$ vérifiant :",
+                "$$ \\alpha \\overrightarrow{GA} + \\beta \\overrightarrow{GB} = \\vec{0} $$"
+              ]
+            },
+            {
+              "type": "demo-box",
+              "title": "Preuve (Via la fonction de Leibniz)",
+              "listType": "numbered",
+              "content": [
+                ">>Considérons l'application (Fonction vectorielle de Leibniz) :",
+                "$f : P \\to \\mathcal{V}$ définie par $f(M) = \\alpha \\overrightarrow{MA} + \\beta \\overrightarrow{MB}$.",
+                ">>Transformons l'écriture avec Chasles (origine A) :",
+                "$f(M) = \\alpha \\overrightarrow{MA} + \\beta (\\overrightarrow{MA} + \\overrightarrow{AB}) = (\\alpha + \\beta) \\overrightarrow{MA} + \\beta \\overrightarrow{AB}$.",
+                ">>Recherche du point G :",
+                "On cherche $G$ tel que $f(G) = \\vec{0}$.",
+                "$(\\alpha + \\beta) \\overrightarrow{GA} + \\beta \\overrightarrow{AB} = \\vec{0} \\iff (\\alpha + \\beta) \\overrightarrow{AG} = \\beta \\overrightarrow{AB}$.",
+                "Comme $\\alpha + \\beta \\neq 0$, on a $\\overrightarrow{AG} = \\dfrac{\\beta}{\\alpha + \\beta} \\overrightarrow{AB}$.",
+                "Le vecteur étant unique, le point $G$ est unique."
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Homogénéité",
+              "content": [
+                "Le barycentre ne change pas si l'on multiplie tous les poids par un même réel $k$ non nul.",
+                "$$ Bar\\{(A, \\alpha); (B, \\beta)\\} = Bar\\{(A, k\\alpha); (B, k\\beta)\\} $$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Propriétés Géométriques",
+          "elements": [
+            {
+              "type": "property-box",
+              "title": "Alignement",
+              "content": [
+                "Si $G = Bar\\{(A, \\alpha); (B, \\beta)\\}$, alors les points $A, B$ et $G$ sont **alignés**.",
+                "Plus précisément, $G$ appartient à la droite $(AB)$."
+              ]
+            },
+            {
+              "type": "demo-box",
+              "content": [
+                "D'après la définition, $\\overrightarrow{AG} = \\dfrac{\\beta}{\\alpha+\\beta} \\overrightarrow{AB}$.",
+                "Les vecteurs $\\overrightarrow{AG}$ et $\\overrightarrow{AB}$ sont donc colinéaires, ce qui prouve l'alignement."
+              ]
+            },
+            {
+              "type": "theorem-box",
+              "title": "Propriété Caractéristique",
+              "content": [
+                "Pour tout point $M$ du plan :",
+                "$$ \\alpha \\overrightarrow{MA} + \\beta \\overrightarrow{MB} = (\\alpha + \\beta) \\overrightarrow{MG} $$",
+                "Cette relation permet de réduire des sommes vectorielles."
+              ]
+            },
+            {
+              "type": "method-box",
+              "title": "Coordonnées dans un repère",
+              "content": [
+                "Dans un repère $(O, \\vec{i}, \\vec{j})$, les coordonnées de $G(x_G, y_G)$ sont :",
+                "$$ x_G = \\dfrac{\\alpha x_A + \\beta x_B}{\\alpha + \\beta} \\quad ; \\quad y_G = \\dfrac{\\alpha y_A + \\beta y_B}{\\alpha + \\beta} $$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Position du Point G sur la Droite (AB)",
+          "elements": [
+            {
+              "type": "remark-box",
+              "content": [
+                "La position de $G$ dépend du signe des coefficients $\\alpha$ et $\\beta$.",
+                "On utilise la relation $\\overrightarrow{AG} = \\dfrac{\\beta}{\\alpha+\\beta} \\overrightarrow{AB}$."
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Analyse des positions",
+              "listType": "bullet",
+              "content": [
+                "Si $\\alpha$ et $\\beta$ sont de **même signe** (ex: 2 et 3), alors $\\frac{\\beta}{\\alpha+\\beta} \\in [0, 1]$. $G$ appartient au segment $[AB]$.",
+                "Si $\\alpha$ et $\\beta$ sont de **signes contraires** (ex: 5 et -2), alors $G$ est à l'extérieur du segment $[AB]$.",
+                "Si $\\alpha = \\beta$, alors $G$ est le **milieu** de $[AB]$ (Isobarycentre)."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Exemple visuel",
+              "content": [
+                "Soit $G = Bar\\{(A, 1); (B, 3)\\}$.",
+                "$\\overrightarrow{AG} = \\dfrac{3}{1+3} \\overrightarrow{AB} = \\dfrac{3}{4} \\overrightarrow{AB}$.",
+                "$G$ est situé aux trois-quarts du segment en partant de A (plus proche de B, le point le plus lourd)."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Barycentre de 3 et 4 Points",
+      "subsections": [
+        {
+          "title": "Extension et Associativité",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": [
+                "Pour 3 points pondérés avec $\\alpha + \\beta + \\gamma \\neq 0$, $G$ vérifie :",
+                "$$ \\alpha \\overrightarrow{GA} + \\beta \\overrightarrow{GB} + \\gamma \\overrightarrow{GC} = \\vec{0} $$"
+              ]
+            },
+            {
+              "type": "theorem-box",
+              "title": "Théorème d'Associativité (Barycentre Partiel)",
+              "content": [
+                "On peut remplacer un sous-groupe de points par leur barycentre partiel affecté de la somme de leurs poids.",
+                "Si $H = Bar\\{(A, \\alpha); (B, \\beta)\\}$, alors :",
+                "$$ Bar\\{(A, \\alpha); (B, \\beta); (C, \\gamma)\\} = Bar\\{(H, \\alpha+\\beta); (C, \\gamma)\\} $$"
+              ]
+            },
+            {
+              "type": "method-box",
+              "title": "Construction géométrique (Activité 2)",
+              "listType": "numbered",
+              "content": [
+                "Pour construire $G = Bar\\{(A, 2); (B, 3); (C, 1)\\}$, on utilise l'associativité.",
+                "On construit d'abord $K = Bar\\{(A, 2); (C, 1)\\}$.",
+                ">>Calcul de K :",
+                "$\\overrightarrow{AK} = \\dfrac{1}{2+1} \\overrightarrow{AC} = \\dfrac{1}{3} \\overrightarrow{AC}$.",
+                "On remplace $(A, 2)$ et $(C, 1)$ par $(K, 3)$.",
+                ">>Calcul de G :",
+                "Le problème revient à construire $G = Bar\\{(K, 3); (B, 3)\\}$.",
+                "Comme les poids sont égaux ($3$ et $3$), $G$ est le **milieu** du segment $[KB]$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Barycentre de 4 points (Quadrilatère)",
+              "content": [
+                "Soit $ABCD$ un quadrilatère. L'isobarycentre $G$ (poids égaux à 1) est le point de concours des segments joignant les milieux des côtés opposés.",
+                "Si $I$ milieu de $[AB]$ et $J$ milieu de $[CD]$ :",
+                "$G$ est le milieu de $[IJ]$."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Coordonnées et Centre de Gravité",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Formules Analytiques (3 points)",
+              "content": [
+                "Soient $A(x_A, y_A)$, $B(x_B, y_B)$, $C(x_C, y_C)$.",
+                "Si $G = Bar\\{(A, \\alpha); (B, \\beta); (C, \\gamma)\\}$, alors :",
+                "$$ x_G = \\dfrac{\\alpha x_A + \\beta x_B + \\gamma x_C}{\\alpha + \\beta + \\gamma} \\quad ; \\quad y_G = \\dfrac{\\alpha y_A + \\beta y_B + \\gamma y_C}{\\alpha + \\beta + \\gamma} $$"
+              ]
+            },
+            {
+              "type": "definition-box",
+              "title": "Centre de Gravité",
+              "content": [
+                "Le **Centre de Gravité** d'un triangle $ABC$ est l'isobarycentre des sommets (poids égaux).",
+                "Il correspond à l'intersection des médianes.",
+                "Ses coordonnées sont la moyenne arithmétique des coordonnées des sommets :",
+                "$$ x_G = \\dfrac{x_A + x_B + x_C}{3} $$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Lignes de Niveau (Ensembles de Points)",
+      "subsections": [
+        {
+          "title": "Applications des Normes",
+          "elements": [
+            {
+              "type": "method-box",
+              "title": "Réduction de somme vectorielle",
+              "listType": "numbered",
+              "content": [
+                ">>Pour déterminer l'ensemble des points $M$ vérifiant une égalité de normes :",
+                "Introduire le barycentre $G$ du système pour simplifier la somme :",
+                "$\\alpha \\overrightarrow{MA} + \\beta \\overrightarrow{MB} + \\gamma \\overrightarrow{MC} = (\\alpha+\\beta+\\gamma) \\overrightarrow{MG}$",
+                "Transformer l'équation vectorielle en équation de distance ($MG = k$ ou $MG = MK$)."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Exercice type : Cercle",
+              "statement": "Déterminer l'ensemble $(\\mathcal{C})$ des points $M$ tels que :\n$\\| 2 \\overrightarrow{MA} + \\overrightarrow{MB} \\| = 6$\nOn donne $AB = 4$.",
+              "solution": [
+                ">>1. Barycentre :",
+                "Soit $G = Bar\\{(A, 2); (B, 1)\\}$. Somme des poids : $2+1=3$.",
+                "On a $2 \\overrightarrow{MA} + \\overrightarrow{MB} = 3 \\overrightarrow{MG}$.",
+                ">>2. Simplification :",
+                "L'équation devient $\\| 3 \\overrightarrow{MG} \\| = 6 \\iff 3 MG = 6 \\iff MG = 2$.",
+                ">>3. Conclusion :",
+                "L'ensemble $(\\mathcal{C})$ est le **cercle** de centre $G$ et de rayon $2$."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Problèmes de Lieux Géométriques (Comparaison)",
+          "elements": [
+            {
+              "type": "method-box",
+              "title": "Égalité de deux normes",
+              "content": [
+                "Pour résoudre $\\| \\vec{u}(M) \\| = \\| \\vec{v}(M) \\|$ :",
+                "1. Réduire $\\vec{u}(M)$ en $k \\overrightarrow{MG}$.",
+                "2. Réduire $\\vec{v}(M)$ en $k' \\overrightarrow{MH}$ (ou un vecteur constant).",
+                "3. Si on obtient $k MG = k' MH$ (avec $k=k'$), c'est la **médiatrice** de $[GH]$.",
+                "4. Si on obtient $MG = R$ (constante), c'est un **cercle**."
+              ]
+            },
+            {
+              "type": "example-box",
+              "content": [
+                "Déterminer l'ensemble des points $M$ tels que :",
+                "$$ \\| \\overrightarrow{MA} + \\overrightarrow{MB} \\| = \\| \\overrightarrow{MA} - \\overrightarrow{MB} \\| $$",
+                ">>Membre de gauche :",
+                "Soit $I$ milieu de $[AB]$. $\\overrightarrow{MA} + \\overrightarrow{MB} = 2 \\overrightarrow{MI}$.",
+                ">>Membre de droite :",
+                "$\\overrightarrow{MA} - \\overrightarrow{MB} = \\overrightarrow{BA}$ (Vecteur constant, indépendant de M).",
+                ">>Équation :",
+                "$\\| 2 \\overrightarrow{MI} \\| = \\| \\overrightarrow{BA} \\| \\iff 2 MI = AB \\iff MI = \\frac{AB}{2}$.",
+                "C'est le **cercle** de centre $I$ et de rayon $AB/2$ (le cercle de diamètre $[AB]$)."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

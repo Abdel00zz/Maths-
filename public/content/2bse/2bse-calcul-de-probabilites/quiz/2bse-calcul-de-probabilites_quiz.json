@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Si A et B sont indépendants, alors $P(A \\cap B) =$ ?",
+      "type": "mcq",
+      "options": [
+        { "text": "$P(A) + P(B)$", "is_correct": false, "explanation": "" },
+        { "text": "$P(A) \\times P(B)$", "is_correct": true, "explanation": "C'est la définition de l'indépendance." },
+        { "text": "0", "is_correct": false, "explanation": "Ce serait l'incompatibilité." }
+      ]
+    }
+  ]
+}

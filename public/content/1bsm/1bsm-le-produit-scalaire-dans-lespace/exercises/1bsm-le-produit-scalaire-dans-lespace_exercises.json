@@ -1,0 +1,51 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Distance d'un point à un plan",
+      "statement": "On considère le plan $(P)$ d'équation $2x - 2y + z - 3 = 0$ et le point $A(1, 1, 2)$.",
+      "sub_questions": [
+        {
+          "text": "Calculer la distance $d(A, P)$.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Déterminer les coordonnées du projeté orthogonal de $A$ sur $(P)$.",
+          "questionNumber": "2"
+        }
+      ],
+      "hint": [
+        {
+          "text": "Formule de la distance : $d = \\frac{|ax_A + by_A + cz_A + d|}{\\sqrt{a^2+b^2+c^2}}$.",
+          "questionNumber": "1"
+        }
+      ],
+      "solution": [
+        "Numérateur : $|2(1) - 2(1) + 1(2) - 3| = |2 - 2 + 2 - 3| = |-1| = 1$.",
+        "Dénominateur (Norme de $\\vec{n}$) : $\\sqrt{2^2 + (-2)^2 + 1^2} = \\sqrt{9} = 3$.",
+        "Distance = $1/3$."
+      ]
+    },
+    {
+      "id": "ex2",
+      "title": "Sphère et Plan",
+      "statement": "Soit $(S)$ la sphère d'équation $x^2 + y^2 + z^2 - 4x + 2y = 0$ et $(P)$ le plan $z = 3$.",
+      "sub_questions": [
+        {
+          "text": "Déterminer le centre $\\Omega$ et le rayon $R$ de la sphère.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Étudier la position relative de $(S)$ et $(P)$.",
+          "questionNumber": "2"
+        }
+      ],
+      "solution": [
+        "Forme canonique : $(x-2)^2 - 4 + (y+1)^2 - 1 + z^2 = 0 \\implies (x-2)^2 + (y+1)^2 + z^2 = 5$.",
+        "Centre $\\Omega(2, -1, 0)$ et Rayon $R = \\sqrt{5}$.",
+        "Distance $d(\\Omega, P)$ : Le plan est $z-3=0$. $d = \\frac{|0-3|}{\\sqrt{0^2+0^2+1^2}} = 3$.",
+        "Comme $d=3 > R=\\sqrt{5}$, le plan et la sphère sont disjoints."
+      ]
+    }
+  ]
+}

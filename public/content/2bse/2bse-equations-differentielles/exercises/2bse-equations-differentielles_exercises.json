@@ -1,0 +1,17 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Condition initiale",
+      "statement": "Résoudre l'équation $y' = 2y$ avec $y(0) = 3$.",
+      "sub_questions": [
+        { "text": "Donner la forme générale.", "questionNumber": "1" },
+        { "text": "Trouver la constante.", "questionNumber": "2" }
+      ],
+      "solution": [
+        "$y(x) = k e^{2x}$.",
+        "$y(0) = k e^0 = k = 3$. Donc $y(x) = 3e^{2x}$."
+      ]
+    }
+  ]
+}

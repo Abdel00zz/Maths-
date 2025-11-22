@@ -1,0 +1,720 @@
+{
+  "header": {
+    "title": "Les Suites Numériques",
+    "subtitle": "Fondements et Applications",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 5",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Généralités sur les Suites Numériques",
+      "subsections": [
+        {
+          "title": "Définitions et Notations",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Suite Numérique",
+              "content": [
+                "On appelle **suite numérique** toute fonction de $\\mathbb{N}$ (ou une partie $I$ de $\\mathbb{N}$) à valeurs dans $\\mathbb{R}$.",
+                "L'image d'un entier $n$ de $\\mathbb{N}$ (ou de $I$) par la suite $u$ est notée $u_n$.",
+                "Le nombre $u_n$ s'appelle le **terme général** de la suite $u$, c'est aussi le terme de rang $n$ de la suite."
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Notations Importantes",
+              "listType": "bullet",
+              "content": [
+                "La notation $u_n$ se lit : « $u$ indice $n$ »",
+                "Il ne faut pas confondre la suite $(u_n)$ et son terme général $u_n$",
+                "Les suites sont souvent définies sur $\\mathbb{N}$ ou $\\mathbb{N}^*$",
+                "On peut ramener une suite $(u_n)_{n \\ge n_0}$ à une suite $(x_n)_{n \\in \\mathbb{N}}$ en posant : $x_n = u_{n+n_0}$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Exemples de Suites",
+              "content": [
+                ">>Suite définie explicitement :",
+                "Soit la suite $(u_n)$ définie par : $u_n = 2n + 3$ pour tout $n \\in \\mathbb{N}$",
+                "Calcul des premiers termes :",
+                "$$\\begin{aligned} u_0 &= 2(0) + 3 = ___3___ \\\\ u_1 &= 2(1) + 3 = ___5___ \\\\ u_2 &= 2(2) + 3 = ___7___ \\\\ u_3 &= 2(3) + 3 = ___9___ \\end{aligned}$$",
+                ">>Suite définie par une fonction :",
+                "Soit $f(x) = x^2 - 1$ et $(v_n)$ définie par $v_n = f(n)$ pour tout $n \\in \\mathbb{N}$",
+                "Donc : $v_n = n^2 - 1$",
+                "$$v_0 = ___-1___ \\quad v_1 = ___0___ \\quad v_2 = ___3___ \\quad v_3 = ___8___$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Modes de Génération d'une Suite",
+          "elements": [
+            {
+              "type": "method-box",
+              "title": "Deux Façons de Définir une Suite",
+              "listType": "numbered",
+              "content": [
+                "**Formulation explicite :** Le terme général est exprimé en fonction de $n$. Exemple : $u_n = 3n^2 + 1$",
+                "**Relation de récurrence :** On donne le(s) premier(s) terme(s) et une relation permettant de calculer $u_{n+1}$ à partir de $u_n$ (ou des termes précédents)"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Suite Définie par Récurrence",
+              "content": [
+                "Soit la suite $(u_n)$ définie par :",
+                "$$\\begin{cases} u_0 = 1 \\\\ u_{n+1} = 2u_n + 3 & \\text{pour tout } n \\in \\mathbb{N} \\end{cases}$$",
+                ">>Calcul des premiers termes :",
+                "$$\\begin{aligned} u_0 &= 1 \\text{ (donné)} \\\\ u_1 &= 2u_0 + 3 = 2(1) + 3 = ___5___ \\\\ u_2 &= 2u_1 + 3 = 2(5) + 3 = ___13___ \\\\ u_3 &= 2u_2 + 3 = 2(13) + 3 = ___29___ \\end{aligned}$$",
+                ">>Observation :",
+                "La suite semble croissante et les termes augmentent rapidement."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application",
+              "statement": "Soit $(u_n)$ définie par $u_0 = 2$ et $u_{n+1} = \\dfrac{u_n + 6}{2}$ pour tout $n \\in \\mathbb{N}$. Calculer $u_1$, $u_2$, $u_3$ et $u_4$.",
+              "solution": [
+                "$$\\begin{aligned} u_1 &= \\dfrac{u_0 + 6}{2} = \\dfrac{2 + 6}{2} = ___4___ \\\\ u_2 &= \\dfrac{u_1 + 6}{2} = \\dfrac{4 + 6}{2} = ___5___ \\\\ u_3 &= \\dfrac{u_2 + 6}{2} = \\dfrac{5 + 6}{2} = ___5.5___ \\\\ u_4 &= \\dfrac{u_3 + 6}{2} = \\dfrac{5.5 + 6}{2} = ___5.75___ \\end{aligned}$$",
+                "La suite semble converger vers $6$."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Suite Majorée - Minorée - Bornée",
+      "subsections": [
+        {
+          "title": "Définitions",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Suite Majorée",
+              "content": [
+                "On dit que la suite $(u_n)$ est **majorée** s'il existe un réel $M$ tel que :",
+                "$$\\forall n \\in \\mathbb{N}, \\quad u_n \\le M$$",
+                "Le réel $M$ est appelé un **majorant** de la suite."
+              ]
+            },
+            {
+              "type": "definition-box",
+              "title": "Suite Minorée",
+              "content": [
+                "On dit que la suite $(u_n)$ est **minorée** s'il existe un réel $m$ tel que :",
+                "$$\\forall n \\in \\mathbb{N}, \\quad u_n \\ge m$$",
+                "Le réel $m$ est appelé un **minorant** de la suite."
+              ]
+            },
+            {
+              "type": "definition-box",
+              "title": "Suite Bornée",
+              "content": [
+                "On dit que la suite $(u_n)$ est **bornée** si elle est à la fois majorée et minorée.",
+                "Autrement dit, il existe deux réels $m$ et $M$ tels que :",
+                "$$\\forall n \\in \\mathbb{N}, \\quad m \\le u_n \\le M$$"
+              ]
+            },
+            {
+              "type": "warning-box",
+              "title": "Attention aux Erreurs Fréquentes",
+              "listType": "bullet",
+              "content": [
+                "Les réels $M$ et $m$ sont des **constantes** qui ne dépendent pas de $n$",
+                "Dire que $u_n \\le n+1$ pour tout $n$ ne signifie PAS que la suite est majorée (car $n+1$ dépend de $n$)",
+                "S'il existe $K > 0$ tel que $|u_n| \\le K$ pour tout $n$, alors la suite est bornée"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Suite Bornée par un Encadrement",
+              "content": [
+                "Soit la suite $(u_n)$ définie par : $u_n = \\dfrac{2n + 1}{n + 2}$ pour tout $n \\in \\mathbb{N}$",
+                ">>Montrer que la suite est majorée par $2$ et minorée par $0$ :",
+                ">>Étude du minorant :",
+                "Pour tout $n \\in \\mathbb{N}$ : $2n + 1 > ___0___$ et $n + 2 > 0$",
+                "Donc : $u_n = \\dfrac{2n + 1}{n + 2} > ___0___$",
+                "La suite est minorée par $___0___$.",
+                ">>Étude du majorant :",
+                "$$u_n - 2 = \\dfrac{2n + 1}{n + 2} - 2 = \\dfrac{2n + 1 - 2(n + 2)}{n + 2}$$",
+                "$$u_n - 2 = \\dfrac{2n + 1 - 2n - 4}{n + 2} = \\dfrac{-3}{n + 2} < ___0___$$",
+                "Donc : $u_n < ___2___$ pour tout $n \\in \\mathbb{N}$",
+                ">>Conclusion :",
+                "$$0 \\le u_n < 2 \\quad \\text{pour tout } n \\in \\mathbb{N}$$",
+                "La suite est **bornée**."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Suite Définie par Récurrence",
+              "content": [
+                "Soit $(u_n)$ définie par $u_0 = 1$ et $u_{n+1} = \\dfrac{u_n + 2}{2}$ pour tout $n \\in \\mathbb{N}$",
+                ">>Montrer que : $\\forall n \\in \\mathbb{N}, \\; 1 \\le u_n \\le 2$",
+                ">>Initialisation ($n = 0$) :",
+                "$u_0 = 1$, donc : $1 \\le u_0 \\le 2$ ✓",
+                ">>Hérédité :",
+                "Supposons que $1 \\le u_n \\le 2$ pour un certain $n \\in \\mathbb{N}$.",
+                "On ajoute $2$ : $3 \\le u_n + 2 \\le ___4___$",
+                "On divise par $2$ : $\\dfrac{3}{2} \\le \\dfrac{u_n + 2}{2} \\le ___2___$",
+                "Or $\\dfrac{3}{2} > 1$, donc : $1 \\le u_{n+1} \\le 2$ ✓",
+                ">>Conclusion :",
+                "Par récurrence : $\\forall n \\in \\mathbb{N}, \\; 1 \\le u_n \\le 2$",
+                "La suite est **bornée**."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Suite avec Valeur Absolue",
+              "statement": "Soit $(u_n)$ définie par $u_n = \\dfrac{(-1)^n}{n+1}$ pour tout $n \\in \\mathbb{N}$. Montrer que la suite est bornée.",
+              "solution": [
+                "Pour tout $n \\in \\mathbb{N}$ :",
+                "$$|u_n| = \\left|\\dfrac{(-1)^n}{n+1}\\right| = \\dfrac{1}{n+1} \\le ___1___$$",
+                "Donc : $-1 \\le u_n \\le 1$ pour tout $n \\in \\mathbb{N}$",
+                "La suite est **bornée** par $-1$ et $1$."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Monotonie d'une Suite Numérique",
+      "subsections": [
+        {
+          "title": "Définitions de Monotonie",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Suite Croissante",
+              "content": [
+                "On dit que la suite $(u_n)$ est **croissante** si :",
+                "$$\\forall n \\in \\mathbb{N}, \\quad u_{n+1} \\ge u_n$$"
+              ]
+            },
+            {
+              "type": "definition-box",
+              "title": "Suite Décroissante",
+              "content": [
+                "On dit que la suite $(u_n)$ est **décroissante** si :",
+                "$$\\forall n \\in \\mathbb{N}, \\quad u_{n+1} \\le u_n$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Variations Strictes",
+              "listType": "bullet",
+              "content": [
+                "Une suite est **strictement croissante** si $u_{n+1} > u_n$ pour tout $n$",
+                "Une suite est **strictement décroissante** si $u_{n+1} < u_n$ pour tout $n$",
+                "Une suite est **monotone** si elle est croissante ou décroissante",
+                "Une suite **constante** vérifie $u_{n+1} = u_n$ pour tout $n$"
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Critères de Monotonie",
+              "listType": "bullet",
+              "content": [
+                "$(u_n)$ est croissante $\\iff$ $u_{n+1} - u_n \\ge 0$ pour tout $n$",
+                "$(u_n)$ est décroissante $\\iff$ $u_{n+1} - u_n \\le 0$ pour tout $n$",
+                "Si $u_n > 0$ pour tout $n$ : $(u_n)$ est croissante $\\iff$ $\\dfrac{u_{n+1}}{u_n} \\ge 1$",
+                "Si $u_n > 0$ pour tout $n$ : $(u_n)$ est décroissante $\\iff$ $\\dfrac{u_{n+1}}{u_n} \\le 1$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Méthodes d'Étude de Monotonie",
+          "elements": [
+            {
+              "type": "method-box",
+              "title": "Stratégie pour Étudier la Monotonie",
+              "listType": "numbered",
+              "content": [
+                "**Méthode de la différence :** Calculer $u_{n+1} - u_n$ et étudier son signe",
+                "**Méthode du quotient :** Si $u_n > 0$, calculer $\\dfrac{u_{n+1}}{u_n}$ et comparer à $1$",
+                "**Méthode fonctionnelle :** Si $u_n = f(n)$, étudier les variations de $f$",
+                "**Méthode par récurrence :** Pour les suites définies par récurrence complexes"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Méthode de la Différence",
+              "content": [
+                "Soit $(u_n)$ et $(v_n)$ définies par : $u_n = n^2 - 3n$ et $v_n = 2^n - n$",
+                ">>Étude de $(u_n)$ :",
+                "$$\\begin{aligned} u_{n+1} - u_n &= [(n+1)^2 - 3(n+1)] - [n^2 - 3n] \\\\ &= n^2 + 2n + 1 - 3n - 3 - n^2 + 3n \\\\ &= 2n - 2 = 2(n - ___1___) \\end{aligned}$$",
+                ">>Étude du signe :",
+                "$$\\begin{aligned} \\text{Si } n \\ge 1 &: u_{n+1} - u_n \\ge 0 \\Rightarrow (u_n) \\text{ croissante} \\\\ \\text{Si } n = 0 &: u_1 - u_0 = -2 < 0 \\end{aligned}$$",
+                ">>Conclusion :",
+                "La suite $(u_n)$ est **décroissante** sur $\\{0\\}$ puis **croissante** à partir de $n \\ge 1$.",
+                ">>Étude de $(v_n)$ :",
+                "$$v_{n+1} - v_n = 2^{n+1} - (n+1) - (2^n - n)$$",
+                "$$= 2 \\cdot 2^n - 2^n - 1 = 2^n - ___1___$$",
+                "Pour tout $n \\in \\mathbb{N}$ : $2^n \\ge 1$, donc $v_{n+1} - v_n \\ge 0$",
+                ">>Conclusion :",
+                "La suite $(v_n)$ est **croissante**."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Méthode du Quotient",
+              "content": [
+                "Soit $(u_n)$ définie par : $u_n = \\dfrac{3^n}{n!}$ pour tout $n \\ge 1$",
+                ">>Calcul du quotient :",
+                "$$\\dfrac{u_{n+1}}{u_n} = \\dfrac{\\dfrac{3^{n+1}}{(n+1)!}}{\\dfrac{3^n}{n!}} = \\dfrac{3^{n+1} \\cdot n!}{3^n \\cdot (n+1)!}$$",
+                "$$= \\dfrac{3 \\cdot 3^n \\cdot n!}{3^n \\cdot (n+1) \\cdot n!} = \\dfrac{3}{___n+1___}$$",
+                ">>Comparaison avec $1$ :",
+                "$$\\begin{aligned} \\dfrac{u_{n+1}}{u_n} \\le 1 &\\iff \\dfrac{3}{n+1} \\le 1 \\\\ &\\iff 3 \\le n+1 \\\\ &\\iff n \\ge ___2___ \\end{aligned}$$",
+                ">>Conclusion :",
+                "La suite est **décroissante** à partir de $n \\ge 2$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Suite Définie par Récurrence",
+              "content": [
+                "Soit $(u_n)$ définie par $u_0 = 3$ et $u_{n+1} = \\dfrac{2u_n + 1}{3}$ pour tout $n \\in \\mathbb{N}$",
+                ">>Montrer par récurrence que : $\\forall n \\in \\mathbb{N}, \\; u_n \\ge 1$",
+                "**Initialisation :** $u_0 = 3 \\ge 1$ ✓",
+                "**Hérédité :** Supposons $u_n \\ge 1$",
+                "Alors : $2u_n \\ge 2$, donc $2u_n + 1 \\ge ___3___$",
+                "D'où : $u_{n+1} = \\dfrac{2u_n + 1}{3} \\ge ___1___$ ✓",
+                ">>Étude de la monotonie :",
+                "$$u_{n+1} - u_n = \\dfrac{2u_n + 1}{3} - u_n = \\dfrac{2u_n + 1 - 3u_n}{3} = \\dfrac{1 - u_n}{3}$$",
+                ">>Étude du signe :",
+                "Comme $u_n \\ge 1$, on a : $1 - u_n \\le ___0___$",
+                "Donc : $u_{n+1} - u_n \\le 0$ pour tout $n \\in \\mathbb{N}$",
+                ">>Conclusion :",
+                "La suite $(u_n)$ est **décroissante** et minorée par $1$."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application Guidée",
+              "statement": "Soit $(u_n)$ définie par $u_0 = 1$ et $u_{n+1} = \\sqrt{2 + u_n}$ pour tout $n \\in \\mathbb{N}$. Montrer que la suite est croissante et majorée par $2$.",
+              "solution": [
+                "**Montrons d'abord que $u_n \\le 2$ par récurrence :**",
+                "Initialisation : $u_0 = 1 \\le 2$ ✓",
+                "Hérédité : Si $u_n \\le 2$, alors $2 + u_n \\le 4$, donc $u_{n+1} = \\sqrt{2 + u_n} \\le ___2___$ ✓",
+                "**Montrons que la suite est croissante :**",
+                "$$u_{n+1}^2 - u_n^2 = (2 + u_n) - u_n^2 = 2 + u_n - u_n^2$$",
+                "Comme $u_n \\le 2$ : $-u_n^2 \\ge -4$ et $2 + u_n \\ge 2$",
+                "On a : $u_{n+1}^2 - u_n^2 = -(u_n^2 - u_n - 2) = -(u_n - 2)(u_n + 1)$",
+                "Puisque $u_n \\le 2$ et $u_n \\ge 0$ : $(u_n - 2) \\le 0$ et $(u_n + 1) > 0$",
+                "Donc : $u_{n+1}^2 \\ge u_n^2$, d'où $u_{n+1} \\ge u_n$ (car tous positifs)",
+                "La suite est **croissante et majorée** par $2$."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Suites Arithmétiques",
+      "subsections": [
+        {
+          "title": "Définition et Propriétés",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Suite Arithmétique",
+              "content": [
+                "On dit que la suite $(u_n)$ est **arithmétique** s'il existe un réel $r$ (indépendant de $n$) tel que :",
+                "$$\\forall n \\in \\mathbb{N}, \\quad u_{n+1} = u_n + r$$",
+                "Le nombre $r$ est appelé la **raison** de la suite arithmétique."
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Caractérisation",
+              "content": [
+                "Pour que la suite $(u_n)$ soit arithmétique, il faut et il suffit que :",
+                "$$\\forall n \\in \\mathbb{N}, \\quad u_{n+1} - u_n = r \\quad \\text{(constante)}$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Termes Consécutifs",
+              "content": [
+                "Pour que trois réels $a$, $b$ et $c$, choisis dans cet ordre, soient des termes consécutifs d'une suite arithmétique, il faut et il suffit que :",
+                "$$b - a = c - b \\iff 2b = a + c \\iff b = \\dfrac{a + c}{2}$$",
+                "$b$ est la **moyenne arithmétique** de $a$ et $c$."
+              ]
+            },
+            {
+              "type": "theorem-box",
+              "title": "Terme Général d'une Suite Arithmétique",
+              "content": [
+                "Si $(u_n)$ est une suite arithmétique de raison $r$ et de premier terme $u_0$, alors :",
+                "$$\\boxed{u_n = u_0 + nr}$$",
+                "Plus généralement, pour tous entiers $n$ et $p$ :",
+                "$$u_n = u_p + (n - p)r$$"
+              ]
+            },
+            {
+              "type": "consequence-box",
+              "title": "Monotonie d'une Suite Arithmétique",
+              "listType": "bullet",
+              "content": [
+                "Si $r > 0$ : la suite est **strictement croissante**",
+                "Si $r < 0$ : la suite est **strictement décroissante**",
+                "Si $r = 0$ : la suite est **constante**"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Exemples et Applications",
+          "elements": [
+            {
+              "type": "example-box",
+              "title": "Suite Arithmétique Explicite",
+              "content": [
+                "Soit $(u_n)$ définie par : $u_n = 5n - 3$ pour tout $n \\in \\mathbb{N}$",
+                ">>Montrer que $(u_n)$ est arithmétique et déterminer sa raison :",
+                "$$\\begin{aligned} u_{n+1} - u_n &= [5(n+1) - 3] - [5n - 3] \\\\ &= 5n + 5 - 3 - 5n + 3 \\\\ &= ___5___ \\end{aligned}$$",
+                ">>Conclusion :",
+                "La suite est **arithmétique** de raison $r = ___5___$ et de premier terme $u_0 = ___-3___$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Suite Définie par Récurrence",
+              "content": [
+                "Soit $(u_n)$ définie par $u_0 = 7$ et $u_{n+1} = u_n - 4$ pour tout $n \\in \\mathbb{N}$",
+                ">>Identification :",
+                "La relation $u_{n+1} = u_n + (-4)$ montre que la suite est **arithmétique** de raison $r = ___-4___$",
+                ">>Terme général :",
+                "$$u_n = u_0 + nr = 7 + n \\times (-4) = ___7 - 4n___$$",
+                ">>Vérification :",
+                "$$\\begin{aligned} u_0 &= 7 - 4(0) = 7 \\; ✓ \\\\ u_1 &= 7 - 4(1) = 3 = u_0 - 4 \\; ✓ \\\\ u_2 &= 7 - 4(2) = -1 = u_1 - 4 \\; ✓ \\end{aligned}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Détermination de Termes",
+              "content": [
+                "Soit $(u_n)$ une suite arithmétique de raison $r$ telle que :",
+                "$$u_3 = 12 \\quad \\text{et} \\quad u_7 = 28$$",
+                ">>Déterminer $u_0$, $r$ et $u_{15}$ :",
+                "On utilise : $u_n = u_p + (n - p)r$",
+                "$$u_7 = u_3 + (7 - 3)r \\iff 28 = 12 + 4r$$",
+                "$$4r = 16 \\iff r = ___4___$$",
+                "Puis : $u_3 = u_0 + 3r \\iff 12 = u_0 + 3(4)$",
+                "$$u_0 = 12 - 12 = ___0___$$",
+                "Enfin : $u_{15} = u_0 + 15r = 0 + 15(4) = ___60___$"
+              ]
+            },
+            {
+              "type": "activity-box",
+              "title": "Transformation en Suite Arithmétique",
+              "content": [
+                "Soit $(u_n)$ définie par $u_0 = 1$ et $u_{n+1} = 3u_n + 2$ pour tout $n \\in \\mathbb{N}$",
+                "On pose : $v_n = u_n + 1$ pour tout $n \\in \\mathbb{N}$",
+                ">>Montrer que $(v_n)$ est arithmétique :",
+                "$$\\begin{aligned} v_{n+1} &= u_{n+1} + 1 \\\\ &= (3u_n + 2) + 1 \\\\ &= 3u_n + 3 \\\\ &= 3(u_n + 1) \\\\ &= ___3v_n___ \\end{aligned}$$",
+                "Donc $(v_n)$ est **géométrique** de raison $3$ (pas arithmétique !)",
+                ">>Autre essai avec $v_n = u_n + a$ :",
+                "Pour que $(v_n)$ soit arithmétique, on cherche $a$ tel que $v_{n+1} = v_n + r$",
+                "Cela nécessiterait : $u_{n+1} + a = u_n + a + r$",
+                "Or $u_{n+1} = 3u_n + 2$, ce qui ne peut donner une forme arithmétique.",
+                "Cette suite ne se ramène pas facilement à une suite arithmétique."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application",
+              "statement": "Soit $(u_n)$ une suite arithmétique telle que $u_2 + u_5 = 14$ et $u_1 + u_8 = 18$. Déterminer $r$ et $u_0$.",
+              "solution": [
+                "En utilisant $u_n = u_0 + nr$ :",
+                "$$\\begin{cases} u_2 + u_5 = 14 \\\\ u_1 + u_8 = 18 \\end{cases} \\iff \\begin{cases} (u_0 + 2r) + (u_0 + 5r) = 14 \\\\ (u_0 + r) + (u_0 + 8r) = 18 \\end{cases}$$",
+                "$$\\begin{cases} 2u_0 + 7r = 14 \\\\ 2u_0 + 9r = 18 \\end{cases}$$",
+                "Par soustraction : $2r = 4 \\iff r = ___2___$",
+                "Puis : $2u_0 + 7(2) = 14 \\iff 2u_0 = 0 \\iff u_0 = ___0___$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Somme de Termes Consécutifs",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Somme de Termes d'une Suite Arithmétique",
+              "content": [
+                "Soit $(u_n)$ une suite arithmétique. On pose :",
+                "$$S = u_p + u_{p+1} + \\cdots + u_n \\quad \\text{où } p \\le n$$",
+                "Alors :",
+                "$$\\boxed{S = \\dfrac{\\text{nombre de termes} \\times (\\text{premier terme} + \\text{dernier terme})}{2}}$$",
+                "$$S = \\dfrac{(n - p + 1)(u_p + u_n)}{2}$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Cas Particuliers Importants",
+              "listType": "bullet",
+              "content": [
+                "Somme des $n$ premiers termes (à partir de $u_0$) : $$S_n = u_0 + u_1 + \\cdots + u_n = \\dfrac{(n+1)(u_0 + u_n)}{2}$$",
+                "Somme à partir de $u_1$ : $$S = u_1 + u_2 + \\cdots + u_n = \\dfrac{n(u_1 + u_n)}{2}$$",
+                "Somme des $n$ premiers entiers : $$1 + 2 + 3 + \\cdots + n = \\dfrac{n(n+1)}{2}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Calcul de Somme",
+              "content": [
+                "Calculer : $S = 3 + 7 + 11 + 15 + \\cdots + 99$",
+                ">>Identification de la suite :",
+                "C'est une suite arithmétique de raison $r = 7 - 3 = ___4___$ et de premier terme $u_1 = 3$",
+                ">>Détermination du rang du dernier terme :",
+                "Terme général : $u_n = 3 + (n-1) \\times 4 = 4n - 1$",
+                "On cherche $n$ tel que $u_n = 99$ :",
+                "$$4n - 1 = 99 \\iff 4n = 100 \\iff n = ___25___$$",
+                ">>Calcul de la somme :",
+                "$$S = \\dfrac{\\text{nombre de termes} \\times (\\text{premier} + \\text{dernier})}{2}$$",
+                "$$S = \\dfrac{25 \\times (3 + 99)}{2} = \\dfrac{25 \\times 102}{2} = ___1275___$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Somme avec Expression Générale",
+              "content": [
+                "Soit $(u_n)$ une suite arithmétique de raison $r = 3$ telle que :",
+                "$$u_5 = 20 \\quad \\text{et} \\quad u_{10} = 35$$",
+                ">>Calculer $S = u_5 + u_6 + \\cdots + u_{20}$ :",
+                "Nombre de termes : de $5$ à $20$ → $20 - 5 + 1 = ___16___ $ termes",
+                "Premier terme de la somme : $u_5 = 20$",
+                "Dernier terme : $u_{20} = u_5 + (20 - 5) \\times 3 = 20 + 45 = ___65___$",
+                "$$S = \\dfrac{16 \\times (20 + 65)}{2} = \\dfrac{16 \\times 85}{2} = 8 \\times 85 = ___680___$$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application : Suite Définie par Somme",
+              "statement": "Soit $(u_n)$ définie par : $u_n = 1 + 3 + 5 + \\cdots + (2n+1)$ pour tout $n \\in \\mathbb{N}$. Exprimer $u_n$ en fonction de $n$.",
+              "solution": [
+                "La somme est celle d'une suite arithmétique de premier terme $1$, de dernier terme $2n+1$ et de raison $2$.",
+                "Nombre de termes : de $1$ à $2n+1$ avec un pas de $2$ → $n + 1$ termes",
+                "$$u_n = \\dfrac{(n+1)(1 + 2n + 1)}{2} = \\dfrac{(n+1)(2n+2)}{2}$$",
+                "$$u_n = \\dfrac{2(n+1)^2}{2} = ___(n+1)^2___$$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Suites Géométriques",
+      "subsections": [
+        {
+          "title": "Définition et Propriétés",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Suite Géométrique",
+              "content": [
+                "On dit que la suite $(u_n)$ est **géométrique** s'il existe un réel $q$ (indépendant de $n$) tel que :",
+                "$$\\forall n \\in \\mathbb{N}, \\quad u_{n+1} = q \\cdot u_n$$",
+                "Le nombre $q$ est appelé la **raison** de la suite géométrique."
+              ]
+            },
+            {
+              "type": "property-box",
+              "title": "Caractérisation",
+              "content": [
+                "Pour que la suite $(u_n)$ à termes non nuls soit géométrique, il faut et il suffit que :",
+                "$$\\forall n \\in \\mathbb{N}, \\quad \\dfrac{u_{n+1}}{u_n} = q \\quad \\text{(constante)}$$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Termes Consécutifs",
+              "content": [
+                "Pour que trois réels $a$, $b$ et $c$ non nuls, choisis dans cet ordre, soient des termes consécutifs d'une suite géométrique, il faut et il suffit que :",
+                "$$\\dfrac{b}{a} = \\dfrac{c}{b} \\iff b^2 = ac \\iff b = \\pm\\sqrt{ac}$$",
+                "$b$ est la **moyenne géométrique** de $a$ et $c$ (si tous positifs)."
+              ]
+            },
+            {
+              "type": "theorem-box",
+              "title": "Terme Général d'une Suite Géométrique",
+              "content": [
+                "Si $(u_n)$ est une suite géométrique de raison $q$ et de premier terme $u_0 \\neq 0$, alors :",
+                "$$\\boxed{u_n = u_0 \\cdot q^n}$$",
+                "Plus généralement, pour tous entiers $n$ et $p$ :",
+                "$$u_n = u_p \\cdot q^{n-p}$$"
+              ]
+            },
+            {
+              "type": "consequence-box",
+              "title": "Monotonie d'une Suite Géométrique",
+              "listType": "bullet",
+              "content": [
+                "Si $u_0 > 0$ et $q > 1$ : la suite est **strictement croissante**",
+                "Si $u_0 > 0$ et $0 < q < 1$ : la suite est **strictement décroissante**",
+                "Si $u_0 < 0$ et $q > 1$ : la suite est **strictement décroissante**",
+                "Si $u_0 < 0$ et $0 < q < 1$ : la suite est **strictement croissante**"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Exemples et Applications",
+          "elements": [
+            {
+              "type": "example-box",
+              "title": "Suite Géométrique Simple",
+              "content": [
+                "Soient $(u_n)$ et $(v_n)$ définies par : $u_n = 5 \\times 2^n$ et $v_n = 3 \\times \\left(\\dfrac{1}{2}\\right)^n$",
+                ">>Montrer que $(u_n)$ et $(v_n)$ sont géométriques :",
+                "**Pour $(u_n)$ :**",
+                "$$\\dfrac{u_{n+1}}{u_n} = \\dfrac{5 \\times 2^{n+1}}{5 \\times 2^n} = \\dfrac{2^{n+1}}{2^n} = ___2___$$",
+                "La suite $(u_n)$ est **géométrique** de raison $q = 2$ et de premier terme $u_0 = ___5___$",
+                "**Pour $(v_n)$ :**",
+                "$$\\dfrac{v_{n+1}}{v_n} = \\dfrac{3 \\times \\left(\\frac{1}{2}\\right)^{n+1}}{3 \\times \\left(\\frac{1}{2}\\right)^n} = \\dfrac{\\left(\\frac{1}{2}\\right)^{n+1}}{\\left(\\frac{1}{2}\\right)^n} = ___\\dfrac{1}{2}___$$",
+                "La suite $(v_n)$ est **géométrique** de raison $q = \\dfrac{1}{2}$ et de premier terme $v_0 = ___3___$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Suite Définie par Récurrence",
+              "content": [
+                "Soit $(u_n)$ définie par $u_0 = 2$ et $u_{n+1} = 3u_n$ pour tout $n \\in \\mathbb{N}$",
+                ">>Montrer par récurrence que : $u_n = 2 \\times 3^n$",
+                "**Initialisation ($n = 0$) :**",
+                "$u_0 = 2 = 2 \\times 3^0 = 2 \\times ___1___$ ✓",
+                "**Hérédité :**",
+                "Supposons $u_n = 2 \\times 3^n$",
+                "Alors : $u_{n+1} = 3u_n = 3 \\times (2 \\times 3^n) = 2 \\times 3^{n+1}$ ✓",
+                "**Conclusion :**",
+                "Par récurrence : $\\forall n \\in \\mathbb{N}, \\; u_n = 2 \\times ___3^n___$",
+                "C'est bien une suite **géométrique** de raison $3$."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Transformation en Suite Géométrique",
+              "content": [
+                "Soit $(u_n)$ définie par $u_0 = 1$ et $u_{n+1} = 2u_n + 3$ pour tout $n \\in \\mathbb{N}$",
+                "On pose : $v_n = u_n + a$ pour tout $n \\in \\mathbb{N}$, où $a$ est à déterminer",
+                ">>Recherche de $a$ pour que $(v_n)$ soit géométrique :",
+                "$$v_{n+1} = u_{n+1} + a = (2u_n + 3) + a = 2u_n + (3 + a)$$",
+                "Pour que $(v_n)$ soit géométrique de raison $2$ :",
+                "$$v_{n+1} = 2v_n \\iff 2u_n + (3 + a) = 2(u_n + a)$$",
+                "$$2u_n + 3 + a = 2u_n + 2a \\iff 3 + a = 2a \\iff a = ___3___$$",
+                ">>Avec $v_n = u_n + 3$ :",
+                "$$v_{n+1} = u_{n+1} + 3 = 2u_n + 3 + 3 = 2u_n + 6 = 2(u_n + 3) = ___2v_n___$$",
+                "$(v_n)$ est géométrique de raison $q = 2$ et $v_0 = u_0 + 3 = ___4___$",
+                ">>Expression de $u_n$ :",
+                "$$v_n = 4 \\times 2^n \\quad \\text{donc} \\quad u_n = v_n - 3 = 4 \\times 2^n - ___3___$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Détermination de Paramètres",
+              "content": [
+                "Soit $(u_n)$ une suite géométrique à termes positifs telle que :",
+                "$$u_2 = 12 \\quad \\text{et} \\quad u_5 = 96$$",
+                ">>Calculer la raison $q$ et le premier terme $u_0$ :",
+                "On utilise : $u_n = u_p \\cdot q^{n-p}$",
+                "$$u_5 = u_2 \\cdot q^{5-2} \\iff 96 = 12 \\cdot q^3$$",
+                "$$q^3 = 8 \\iff q = ___2___$$",
+                "Puis : $u_2 = u_0 \\cdot q^2 \\iff 12 = u_0 \\times 2^2$",
+                "$$u_0 = \\dfrac{12}{4} = ___3___$$",
+                ">>Préciser la monotonie :",
+                "Comme $u_0 = 3 > 0$ et $q = 2 > 1$, la suite est **strictement croissante**."
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Application",
+              "statement": "Soient $a$, $b$ et $c$ trois termes consécutifs d'une suite géométrique tels que : $a + b + c = 14$ et $abc = 64$. Déterminer $a$, $b$ et $c$.",
+              "solution": [
+                "Puisque $a$, $b$, $c$ sont en progression géométrique : $b^2 = ac$",
+                "De $abc = 64$ : $b \\times b^2 = 64 \\iff b^3 = 64 \\iff b = ___4___$",
+                "Alors $ac = b^2 = 16$",
+                "De $a + b + c = 14$ : $a + c = 14 - 4 = ___10___$",
+                "$a$ et $c$ sont solutions de : $X^2 - 10X + 16 = 0$",
+                "$$\\Delta = 100 - 64 = 36 \\iff X = \\dfrac{10 \\pm 6}{2}$$",
+                "Donc : $a = ___2___$ et $c = ___8___$ (ou l'inverse)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Somme de Termes Consécutifs",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Somme de Termes d'une Suite Géométrique",
+              "content": [
+                "Soit $(u_n)$ une suite géométrique de raison $q \\neq 1$.",
+                "On pose : $S = u_p + u_{p+1} + \\cdots + u_n$ où $p \\le n$",
+                "Alors :",
+                "$$\\boxed{S = u_p \\times \\dfrac{1 - q^{n-p+1}}{1 - q}}$$",
+                "Si $q = 1$ : $S = (n - p + 1) \\times u_p$"
+              ]
+            },
+            {
+              "type": "remark-box",
+              "title": "Formules Particulières",
+              "listType": "bullet",
+              "content": [
+                "Somme des $n+1$ premiers termes (de $u_0$ à $u_n$) : $$S_n = u_0 \\times \\dfrac{1 - q^{n+1}}{1 - q} = u_0 \\times \\dfrac{q^{n+1} - 1}{q - 1}$$",
+                "Somme de $u_1$ à $u_n$ : $$S = u_1 \\times \\dfrac{1 - q^n}{1 - q}$$",
+                "Formule mnémotechnique : $$S = \\text{premier terme} \\times \\dfrac{1 - q^{\\text{nombre de termes}}}{1 - q}$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Calcul de Somme Géométrique",
+              "content": [
+                "Calculer : $S = 2 + 6 + 18 + 54 + \\cdots + 4374$",
+                ">>Identification :",
+                "Raison : $q = \\dfrac{6}{2} = ___3___$",
+                "Premier terme : $u_0 = 2$",
+                "Terme général : $u_n = 2 \\times 3^n$",
+                ">>Rang du dernier terme :",
+                "$$2 \\times 3^n = 4374 \\iff 3^n = 2187 = 3^7 \\iff n = ___7___$$",
+                ">>Calcul de la somme :",
+                "$$S = 2 \\times \\dfrac{1 - 3^8}{1 - 3} = 2 \\times \\dfrac{1 - 6561}{-2}$$",
+                "$$S = 2 \\times \\dfrac{-6560}{-2} = ___6560___$$"
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Application avec Suite Auxiliaire",
+              "content": [
+                "Soit $(u_n)$ définie par $u_0 = 1$ et $u_{n+1} = 3u_n + 2$ pour tout $n \\in \\mathbb{N}$",
+                ">>On pose $v_n = u_n + 1$. Montrer que $(v_n)$ est géométrique :",
+                "$$v_{n+1} = u_{n+1} + 1 = 3u_n + 2 + 1 = 3u_n + 3 = 3(u_n + 1) = ___3v_n___$$",
+                "$(v_n)$ est géométrique de raison $q = 3$ et $v_0 = u_0 + 1 = ___2___$",
+                ">>Calculer $S_n = u_0 + u_1 + \\cdots + u_n$ :",
+                "$$S_n = (v_0 - 1) + (v_1 - 1) + \\cdots + (v_n - 1)$$",
+                "$$S_n = (v_0 + v_1 + \\cdots + v_n) - (n + 1)$$",
+                "$$S_n = 2 \\times \\dfrac{1 - 3^{n+1}}{1 - 3} - (n + 1)$$",
+                "$$S_n = 2 \\times \\dfrac{3^{n+1} - 1}{2} - (n + 1) = 3^{n+1} - 1 - n - 1$$",
+                "$$S_n = ___3^{n+1} - n - 2___$$"
+              ]
+            },
+            {
+              "type": "practice-box",
+              "title": "Somme Particulière",
+              "statement": "Calculer : $S = 1 + 2 + 4 + 8 + \\cdots + 2^{10}$",
+              "solution": [
+                "C'est une suite géométrique de premier terme $u_0 = 1$, de raison $q = 2$",
+                "Nombre de termes : de $2^0$ à $2^{10}$ → $___11___$ termes",
+                "$$S = 1 \\times \\dfrac{1 - 2^{11}}{1 - 2} = \\dfrac{1 - 2048}{-1} = ___2047___$$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

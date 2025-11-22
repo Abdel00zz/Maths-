@@ -1,0 +1,39 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Transformations",
+      "statement": "Transformer en produit l'expression $A = \\sin x + \\sin(3x)$.",
+      "sub_questions": [
+        {
+          "text": "Utiliser la formule $\\sin p + \\sin q = 2 \\sin\\frac{p+q}{2} \\cos\\frac{p-q}{2}$.",
+          "questionNumber": "1"
+        }
+      ],
+      "solution": [
+        "$A = 2 \\sin(\\frac{4x}{2}) \\cos(\\frac{-2x}{2}) = 2 \\sin(2x) \\cos(-x) = 2 \\sin(2x) \\cos x$."
+      ]
+    },
+    {
+      "id": "ex2",
+      "title": "Équation complexe",
+      "statement": "Résoudre dans $\\mathbb{R}$ : $\\cos(2x) = \\sin x$.",
+      "sub_questions": [
+        {
+          "text": "Transformer le $\\sin$ en $\\cos$ (angle complémentaire).",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Résoudre l'équation $\\cos U = \\cos V$.",
+          "questionNumber": "2"
+        }
+      ],
+      "solution": [
+        "$\\sin x = \\cos(\\frac{\\pi}{2} - x)$.",
+        "$\\cos(2x) = \\cos(\\frac{\\pi}{2} - x)$.",
+        "$2x = \\frac{\\pi}{2} - x + 2k\\pi \\implies 3x = \\frac{\\pi}{2} + 2k\\pi \\implies x = \\frac{\\pi}{6} + \\frac{2k\\pi}{3}$.",
+        "$2x = -(\\frac{\\pi}{2} - x) + 2k\\pi \\implies 2x = -\\frac{\\pi}{2} + x + 2k\\pi \\implies x = -\\frac{\\pi}{2} + 2k\\pi$."
+      ]
+    }
+  ]
+}

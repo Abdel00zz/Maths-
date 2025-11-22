@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quel est le conjugué de $z = 3 + 4i$ ?",
+      "type": "mcq",
+      "options": [
+        { "text": "$-3 - 4i$", "is_correct": false, "explanation": "C'est l'opposé." },
+        { "text": "$3 - 4i$", "is_correct": true, "explanation": "On change le signe de la partie imaginaire." },
+        { "text": "$-3 + 4i$", "is_correct": false, "explanation": "" }
+      ]
+    }
+  ]
+}

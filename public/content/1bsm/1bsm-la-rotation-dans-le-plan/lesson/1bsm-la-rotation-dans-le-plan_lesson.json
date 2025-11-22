@@ -1,0 +1,76 @@
+{
+  "header": {
+    "title": "La Rotation dans le Plan",
+    "subtitle": "Isométries, angles orientés et configurations",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 9",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Définition et Propriétés",
+      "subsections": [
+        {
+          "title": "Définition Géométrique",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": [
+                "Soit $\\Omega$ un point du plan et $\\theta$ un angle orienté.",
+                "La **rotation** $r$ de centre $\\Omega$ et d'angle $\\theta$ transforme tout point $M$ en $M'$ tel que :",
+                "1. $\\Omega M' = \\Omega M$ (Conservation de la distance au centre)",
+                "2. $(\\overrightarrow{\\Omega M}, \\overrightarrow{\\Omega M'}) \\equiv \\theta [2\\pi]$"
+              ],
+              "listType": "numbered"
+            },
+            {
+              "type": "remark-box",
+              "content": "Le centre $\\Omega$ est le seul point invariant (si $\\theta \\neq 2k\\pi$)."
+            }
+          ]
+        },
+        {
+          "title": "Propriétés de Conservation",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "content": [
+                "La rotation est une **isométrie** : elle conserve les distances ($A'B' = AB$).",
+                "Elle conserve les angles orientés : $(\\overrightarrow{A'B'}, \\overrightarrow{C'D'}) \\equiv (\\overrightarrow{AB}, \\overrightarrow{CD}) [2\\pi]$.",
+                "Elle conserve l'alignement, le barycentre et les milieux."
+              ],
+              "listType": "bullet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Images de Figures",
+      "subsections": [
+        {
+          "title": "Figures Usuelles",
+          "elements": [
+            {
+              "type": "property-box",
+              "content": [
+                "L'image d'une droite $(D)$ est une droite $(D')$ telle que l'angle $((D), (D')) = \\theta$.",
+                "L'image d'un cercle $(C)$ de centre $O$ est un cercle $(C')$ de même rayon et de centre $O' = r(O)$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "example-box",
+              "title": "Triangle Équilatéral",
+              "content": [
+                "Soit $ABC$ un triangle équilatéral direct de centre $O$.",
+                "La rotation de centre $O$ et d'angle $\\frac{2\\pi}{3}$ transforme :",
+                "$A \\to ___B___$, $B \\to ___C___$, $C \\to ___A___$."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

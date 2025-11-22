@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Que représente géométriquement $\\int_a^b f(x) dx$ pour une fonction positive ?",
+      "type": "mcq",
+      "options": [
+        { "text": "La longueur de la courbe", "is_correct": false, "explanation": "" },
+        { "text": "L'aire sous la courbe", "is_correct": true, "explanation": "L'aire délimitée par C_f, l'axe des abscisses et les droites x=a, x=b." },
+        { "text": "Le volume de révolution", "is_correct": false, "explanation": "" }
+      ]
+    }
+  ]
+}

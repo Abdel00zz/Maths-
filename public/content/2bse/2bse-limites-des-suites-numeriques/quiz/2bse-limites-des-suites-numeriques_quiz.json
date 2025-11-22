@@ -1,0 +1,24 @@
+{
+  "questions": [
+    {
+      "id": "q1",
+      "question": "Quelle est la limite de $(0,5)^n$ quand $n \\to +\\infty$ ?",
+      "type": "mcq",
+      "options": [
+        { "text": "$+\\infty$", "is_correct": false, "explanation": "" },
+        { "text": "0", "is_correct": true, "explanation": "C'est une suite géométrique de raison q = 0,5 (comprise entre -1 et 1)." },
+        { "text": "1", "is_correct": false, "explanation": "" }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "Si une suite est croissante et majorée, alors :",
+      "type": "mcq",
+      "options": [
+        { "text": "Elle tend vers +infini", "is_correct": false, "explanation": "" },
+        { "text": "Elle est convergente", "is_correct": true, "explanation": "Théorème de la convergence monotone." },
+        { "text": "Elle est constante", "is_correct": false, "explanation": "" }
+      ]
+    }
+  ]
+}

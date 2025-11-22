@@ -1,0 +1,17 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Tétraèdre",
+      "statement": "Soit ABCD un tétraèdre. On place I milieu de [AB] et J milieu de [CD].",
+      "sub_questions": [
+        { "text": "Exprimer $\\vec{IJ}$ en fonction de $\\vec{AC}$ et $\\vec{BD}$.", "questionNumber": "1" }
+      ],
+      "solution": [
+        "$\\vec{IJ} = \\vec{IA} + \\vec{AC} + \\vec{CJ} = -\\frac{1}{2}\\vec{AB} + \\vec{AC} + \\frac{1}{2}\\vec{CD}$.",
+        "Autre chemin : $\\vec{IJ} = \\vec{IB} + \\vec{BD} + \\vec{DJ} = \\frac{1}{2}\\vec{AB} + \\vec{BD} - \\frac{1}{2}\\vec{CD}$.",
+        "En sommant : $2\\vec{IJ} = \\vec{AC} + \\vec{BD}$. Donc $\\vec{IJ} = \\frac{1}{2}(\\vec{AC} + \\vec{BD})$."
+      ]
+    }
+  ]
+}

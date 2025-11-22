@@ -1,0 +1,17 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Construction d'image",
+      "statement": "Soit $ABC$ un triangle équilatéral direct. Construire l'image de ce triangle par la rotation de centre $A$ et d'angle $\\pi/3$.",
+      "sub_questions": [
+        { "text": "Quelle est l'image de A ?", "questionNumber": "1" },
+        { "text": "Quelle est l'image de B ?", "questionNumber": "2" }
+      ],
+      "solution": [
+        "$r(A) = A$ car A est le centre.",
+        "Le triangle est équilatéral direct, donc $AB=AC$ et $(\\vec{AB}, \\vec{AC}) = \\pi/3$. Donc $r(B) = C$."
+      ]
+    }
+  ]
+}

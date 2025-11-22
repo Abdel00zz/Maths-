@@ -1,0 +1,19 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Étude complète",
+      "statement": "Soit $f(x) = x^3 - 3x^2 + 2$.",
+      "sub_questions": [
+        { "text": "Calculer $f'(x)$ et étudier son signe.", "questionNumber": "1" },
+        { "text": "Dresser le tableau de variations de $f$.", "questionNumber": "2" },
+        { "text": "Déterminer l'équation de la tangente au point d'abscisse 1.", "questionNumber": "3" }
+      ],
+      "solution": [
+        "$f'(x) = 3x^2 - 6x = 3x(x-2)$. S'annule en 0 et 2.",
+        "Signe de $a=3$ (positif) à l'extérieur des racines. Croissante sur $]-\\infty, 0]$ et $[2, +\\infty[$.",
+        "$y = f'(1)(x-1) + f(1)$. $f'(1)=-3$, $f(1)=0$. Tangente : $y = -3(x-1) = -3x+3$."
+      ]
+    }
+  ]
+}

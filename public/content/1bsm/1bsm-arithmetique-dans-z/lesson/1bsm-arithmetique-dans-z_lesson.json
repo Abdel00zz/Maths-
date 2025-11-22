@@ -1,0 +1,301 @@
+{
+  "header": {
+    "title": "Arithmétique dans $\\mathbb{Z}$",
+    "subtitle": "Division euclidienne, PGCD, Bézout et Congruences",
+    "classe": "1ère Bac Sciences Mathématiques",
+    "chapter": "Chapitre 2",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Division euclidienne et pgcd",
+      "subsections": [
+        {
+          "title": "Divisibilité et division euclidienne",
+          "elements": [
+            {
+              "type": "p",
+              "content": "L'arithmétique est la branche des mathématiques qui étudie les propriétés des nombres entiers. Elle est fondamentale en cryptographie (sécurité informatique)."
+            },
+            {
+              "type": "image",
+              "image": {
+                "src": "/content/1bsm/1bsm-arithmetique-dans-z/lesson/pictures/euclid-div.png",
+                "alt": "Schéma de la division euclidienne",
+                "caption": "Représentation géométrique de la division euclidienne",
+                "position": "center",
+                "width": "50%",
+                "transparent": true
+              }
+            },
+            {
+              "type": "activity-box",
+              "preamble": "**Introduction : Cryptage RSA**",
+              "content": [
+                "Le système RSA repose sur la difficulté de factoriser de grands nombres.",
+                "On choisit deux nombres premiers $p$ et $q$ très grands.",
+                "On calcule $n = p \\times q$.",
+                "La clé de cryptage utilise l'algorithme d'Euclide et les coefficients de Bézout."
+              ],
+              "listType": "bullet",
+              "image": {
+                 "src": "/content/1bsm/1bsm-arithmetique-dans-z/lesson/pictures/rsa-schema.png",
+                 "alt": "Schéma RSA",
+                 "caption": "Principe du chiffrement",
+                 "position": "right",
+                 "transparent": true
+              }
+            },
+            {
+              "type": "definition-box",
+              "preamble": "Définition 1 : Divisibilité",
+              "content": "Soient $a, b \\in \\mathbb{Z}$. On dit que $b$ **divise** $a$ (noté $b|a$) s'il existe un entier $q \\in \\mathbb{Z}$ tel que :\n$$a = bq$$"
+            },
+            {
+              "type": "example-box",
+              "preamble": "Exemple 1",
+              "content": [
+                "$7|___21___$ car $21 = 7 \\times 3$.",
+                "$6|___48___$ car $48 = 6 \\times 8$.",
+                "$a$ est pair si et seulement si $___2___|a$.",
+                "Pour tout $a \\in \\mathbb{Z}$, $a|0$ et $1|a$.",
+                "Propriété de transitivité : Si $a|b$ et $b|c$, alors $___a___|c$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "theorem-box",
+              "preamble": "Théorème 1 : Division Euclidienne",
+              "content": "Soit $a \\in \\mathbb{Z}$ et $b \\in \\mathbb{N}^*$. Il existe un couple unique d'entiers $(q, r)$ tels que :\n$$a = bq + r \\quad \\text{et} \\quad 0 \\le r < b$$"
+            },
+            {
+              "type": "demo-box",
+              "preamble": "Preuve (Existence et Unicité)",
+              "content": [
+                "**Existence** : On considère l'ensemble $E = \\{ n \\in \\mathbb{Z} \\mid bn \\le a \\}$. Cet ensemble est majoré, donc il admet un plus grand élément, notons-le $q$. On pose alors $r = a - bq$.",
+                "**Unicité** : Si $a = bq + r = bq' + r'$, alors $b(q-q') = r' - r$.",
+                ">>Comme $|r' - r| < b$, le seul multiple de $b$ strictement inférieur à $b$ est 0. Donc $q=q'$ et $r=r'$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "example-box",
+              "preamble": "Exemple 2",
+              "content": "Division de $a = 6789$ par $b = 34$ :\n$$6789 = 34 \\times ___199___ + ___23___$$\nOn vérifie que le reste $23$ est bien strictement inférieur au diviseur $34$."
+            }
+          ]
+        },
+        {
+          "title": "PGCD de deux entiers",
+          "elements": [
+            {
+              "type": "definition-box",
+              "preamble": "Définition 2",
+              "content": "Le **plus grand diviseur commun** de deux entiers $a$ et $b$ (non tous deux nuls) est noté $\\text{pgcd}(a, b)$."
+            },
+            {
+              "type": "property-box",
+              "preamble": "Propriétés immédiates",
+              "content": [
+                "$\\text{pgcd}(a, 0) = |a|$",
+                "$\\text{pgcd}(a, 1) = 1$",
+                "Si $b|a$, alors $\\text{pgcd}(a, b) = |b|$"
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "method-box",
+              "preamble": "**Algorithme d'Euclide**",
+              "content": [
+                "Pour calculer $\\text{pgcd}(a, b)$, on effectue des divisions euclidiennes successives.",
+                ">>Lemme : $\\text{pgcd}(a, b) = \\text{pgcd}(b, r)$ où $r$ est le reste de la division de $a$ par $b$.",
+                "On continue jusqu'à obtenir un reste nul. Le pgcd est le **dernier reste non nul**."
+              ],
+              "listType": "numbered"
+            },
+            {
+              "type": "example-box",
+              "preamble": "Exemple 4 : pgcd(600, 124)",
+              "content": [
+                "Les étapes :",
+                ">>$$\\begin{aligned} 600 &= 124 \\times 4 + ___104___ \\\\ 124 &= 104 \\times 1 + ___20___ \\\\ 104 &= 20 \\times 5 + ___4___ \\\\ 20 &= 4 \\times 5 + 0 \\end{aligned}$$",
+                "Le dernier reste non nul est $___4___$. Donc $\\text{pgcd}(600, 124) = 4$."
+              ],
+              "listType": "bullet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Théorème de Bézout",
+      "subsections": [
+        {
+          "title": "Le Théorème",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "preamble": "Théorème 2 (Identité de Bézout)",
+              "content": "Soient $a, b \\in \\mathbb{Z}^*$. Il existe des entiers $u, v \\in \\mathbb{Z}$ tels que :\n$$au + bv = \\text{pgcd}(a, b)$$",
+              "statement": "Les entiers $u$ et $v$ sont appelés coefficients de Bézout."
+            },
+            {
+              "type": "method-box",
+              "preamble": "**Méthode de la Remontée**",
+              "content": [
+                "Pour trouver $u$ et $v$, on remonte l'algorithme d'Euclide.",
+                "Exemple avec $a=600, b=124, \\text{pgcd}=4$.",
+                "1. On isole le reste : $4 = 104 - 20 \\times 5$.",
+                "2. On substitue 20 par $(124 - 104 \\times 1)$ :",
+                ">>$$\\begin{aligned} 4 &= 104 - (124 - 104 \\times 1) \\times 5 \\\\ &= 104 \\times 6 - 124 \\times 5 \\end{aligned}$$",
+                "3. On substitue 104 par $(600 - 124 \\times 4)$ :",
+                ">>$$\\begin{aligned} 4 &= (600 - 124 \\times 4) \\times 6 - 124 \\times 5 \\\\ &= 600 \\times 6 - 124 \\times 24 - 124 \\times 5 \\\\ &= 600 \\times 6 - 124 \\times 29 \\end{aligned}$$",
+                "On identifie : $u = ___6___$ et $v = ___-29___$."
+              ],
+              "listType": "numbered"
+            }
+          ]
+        },
+        {
+          "title": "Corollaires et Théorème de Gauss",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "preamble": "Théorème de Gauss",
+              "content": "Si $a|bc$ et si $\\text{pgcd}(a, b) = 1$ (premiers entre eux), alors $a|c$."
+            },
+            {
+              "type": "consequence-box",
+              "content": "L'équation $ax + by = c$ admet des solutions entières si et seulement si $\\text{pgcd}(a, b)$ divise $c$."
+            },
+            {
+              "type": "example-box",
+              "preamble": "Résolution d'équation diophantienne",
+              "content": [
+                "Résoudre $161x + 368y = 115$.",
+                "1. $\\text{pgcd}(161, 368) = 23$. Comme $115 = 5 \\times 23$, des solutions existent.",
+                "2. Solution particulière (via Bézout) : $23 = 161(7) + 368(-3)$.",
+                "3. On multiplie par 5 : $115 = 161(___35___) + 368(___-15___)$.",
+                "4. Solutions générales : $x = 35 - 16k$, $y = -15 + 7k$."
+              ],
+              "listType": "numbered"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Nombres Premiers",
+      "subsections": [
+        {
+          "title": "Définition et Décomposition",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Un entier $p \\ge 2$ est **premier** s'il n'admet que deux diviseurs positifs : 1 et lui-même."
+            },
+            {
+              "type": "activity-box",
+              "preamble": "Crible d'Ératosthène",
+              "image": {
+                "src": "/content/1bsm/1bsm-arithmetique-dans-z/lesson/pictures/eratosthene.gif",
+                "alt": "Animation du Crible d'Ératosthène",
+                "caption": "Le Crible d'Ératosthène en action",
+                "position": "right",
+                "width": "40%"
+              },
+              "content": [
+                "Méthode pour trouver les nombres premiers inférieurs à $N$.",
+                ">>2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25",
+                "On barre les multiples de 2, puis de 3, puis de 5...",
+                "Premiers : $___2___, ___3___, ___5___, ___7___, ___11___, ___13___, ___17___, ___19___, ___23___$."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "theorem-box",
+              "preamble": "Théorème Fondamental de l'Arithmétique",
+              "content": "Tout entier $n \\ge 2$ se décompose de manière **unique** en produit de facteurs premiers :\n$$n = p_1^{\\alpha_1} \\times p_2^{\\alpha_2} \\times \\cdots \\times p_r^{\\alpha_r}$$"
+            },
+            {
+              "type": "example-box",
+              "content": [
+                "$504 = 2^3 \\times 3^2 \\times 7$",
+                "$300 = 2^2 \\times 3^1 \\times 5^2$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "PPCM (Plus Petit Commun Multiple)",
+          "elements": [
+            {
+              "type": "property-box",
+              "content": "Relation fondamentale : $\\text{pgcd}(a, b) \\times \\text{ppcm}(a, b) = |a \\times b|$."
+            },
+            {
+              "type": "method-box",
+              "preamble": "Calcul avec la décomposition",
+              "content": [
+                "PGCD : on prend les facteurs communs avec le plus **petit** exposant.",
+                "PPCM : on prend tous les facteurs avec le plus **grand** exposant.",
+                "Exemple pour 504 et 300 :",
+                ">>$\\text{pgcd} = 2^2 \\times 3^1 = ___12___$",
+                ">>$\\text{ppcm} = 2^3 \\times 3^2 \\times 5^2 \\times 7 = ___12600___$"
+              ],
+              "listType": "bullet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Congruences",
+      "subsections": [
+        {
+          "title": "Définition",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Soit $n \\ge 2$. On dit que $a$ est **congru à** $b$ modulo $n$ si $n$ divise $a - b$.\nOn note : $a \\equiv b \\pmod n$."
+            },
+            {
+              "type": "property-box",
+              "preamble": "Opérations compatibles",
+              "content": [
+                "Si $a \\equiv b \\pmod n$ et $c \\equiv d \\pmod n$, alors :",
+                ">> $a + c \\equiv b + d \\pmod n$",
+                ">> $a \\times c \\equiv b \\times d \\pmod n$",
+                ">> $a^k \\equiv b^k \\pmod n$ (pour $k \\in \\mathbb{N}$)"
+              ],
+              "listType": "bullet"
+            }
+          ]
+        },
+        {
+          "title": "Petit Théorème de Fermat",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "preamble": "Petit Théorème de Fermat",
+              "content": "Si $p$ est un nombre premier et si $a$ n'est pas divisible par $p$, alors :\n$$a^{p-1} \\equiv 1 \\pmod p$$"
+            },
+            {
+              "type": "example-box",
+              "preamble": "Calcul de puissance modulaire",
+              "content": [
+                "Calculons le reste de $14^{3141}$ modulo $17$.",
+                "17 est premier et $17 \\nmid 14$. D'après Fermat : $14^{16} \\equiv ___1___ \\pmod{17}$.",
+                "Division euclidienne de l'exposant : $3141 = 16 \\times 196 + 5$.",
+                ">>$$\\begin{aligned} 14^{3141} &\\equiv (14^{16})^{196} \\times 14^5 \\\\ &\\equiv 1^{196} \\times 14^5 \\\\ &\\equiv 14^5 \\pmod{17} \\end{aligned}$$",
+                "On calcule $14^5$ : $14 \\equiv -3 \\implies 14^2 \\equiv 9$.",
+                "$14^5 = (14^2)^2 \\times 14 \\equiv 81 \\times (-3) \\equiv 13 \\times (-3) \\equiv -39 \\equiv ___12___ \\pmod{17}$."
+              ],
+              "listType": "numbered"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "header": {
+    "title": "Limites et Continuité",
+    "subtitle": "Continuité, TVI et Fonctions Réciproques",
+    "classe": "2ème Bac Sciences Expérimentales",
+    "chapter": "Chapitre 1",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Continuité d'une Fonction",
+      "subsections": [
+        {
+          "title": "Continuité en un point",
+          "elements": [
+            {
+              "type": "definition-box",
+              "preamble": "**Définition formelle**",
+              "content": "Une fonction $f$ définie sur un intervalle ouvert $I$ contenant $x_0$ est dite **continue en $x_0$** si :\n$$\\lim_{x \\to x_0} f(x) = f(x_0)$$"
+            },
+            {
+              "type": "example-box",
+              "title": "Vérification de la continuité",
+              "content": [
+                "Soit $f$ la fonction définie par $f(x) = x^2 + 3x$ et étudions sa continuité en $x_0 = 1$.",
+                ">>1. Calcul de l'image :",
+                "$$f(1) = 1^2 + 3(1) = 1 + 3 = ___4___$$",
+                ">>2. Calcul de la limite :",
+                "$$\\begin{aligned} \\lim_{x \\to 1} f(x) &= \\lim_{x \\to 1} (x^2 + 3x) \\\\ &= 1^2 + 3(1) \\\\ &= ___4___ \\end{aligned}$$",
+                ">>Conclusion :",
+                "Puisque $\\lim_{x \\to 1} f(x) = f(1)$, la fonction $f$ est **continue** en $1$."
+              ]
+            },
+            {
+              "type": "remark-box",
+              "content": "Graphiquement, une fonction est continue sur un intervalle si l'on peut tracer sa courbe **sans lever le crayon**."
+            }
+          ]
+        },
+        {
+          "title": "Opérations sur les fonctions continues",
+          "elements": [
+            {
+              "type": "property-box",
+              "content": [
+                "**Somme & Produit :** Si $f$ et $g$ sont continues sur $I$, alors $f+g$ et $f \\times g$ sont continues sur $I$.",
+                "**Quotient :** Si $g(x) \\neq 0$ sur $I$, alors $\\dfrac{f}{g}$ est continue sur $I$.",
+                "**Composée :** La composée de fonctions continues est continue."
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "example-box",
+              "title": "Justification de continuité",
+              "content": [
+                "Soit $h(x) = \\sqrt{x^2 + 1}$.",
+                "La fonction $u : x \\mapsto x^2 + 1$ est continue sur $\\mathbb{R}$ (polynôme) et strictement positive.",
+                "La fonction $v : x \\mapsto \\sqrt{x}$ est continue sur $\\mathbb{R}^+$.",
+                "Par composition, $h = v \\circ u$ est **continue sur $\\mathbb{R}$**."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Théorème des Valeurs Intermédiaires",
+      "subsections": [
+        {
+          "title": "Le Théorème (TVI)",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "preamble": "**Énoncé du TVI**",
+              "content": "Soit $f$ une fonction continue sur un segment $[a, b]$.\nPour tout réel $k$ compris entre $f(a)$ et $f(b)$, l'équation $f(x) = k$ admet **au moins une solution** $c$ dans $[a, b]$."
+            },
+            {
+              "type": "consequence-box",
+              "preamble": "**Corollaire (Unicité)**",
+              "content": "Si $f$ est continue et **strictement monotone** sur $[a, b]$, alors pour tout $k$ compris entre $f(a)$ et $f(b)$, l'équation $f(x) = k$ admet une **unique** solution."
+            },
+            {
+              "type": "method-box",
+              "title": "Méthode : Montrer qu'une équation a une solution unique",
+              "listType": "numbered",
+              "content": [
+                "**Continuité :** Justifier que $f$ est continue sur l'intervalle $[a, b]$.",
+                "**Monotonie :** Calculer $f'(x)$ et montrer que $f$ est strictement monotone (croissante ou décroissante).",
+                "**Images :** Calculer $f(a)$ et $f(b)$ et vérifier que $k$ est compris entre ces valeurs (souvent $f(a) \\cdot f(b) < 0$ pour $f(x)=0$)."
+              ]
+            },
+            {
+              "type": "example-box",
+              "title": "Application directe",
+              "content": [
+                "Montrons que l'équation $x^3 + x - 1 = 0$ admet une unique solution $\\alpha$ sur $[0, 1]$.",
+                "Soit $f(x) = x^3 + x - 1$.",
+                ">>1. Continuité et Monotonie :",
+                "$f$ est un polynôme donc continu. $f'(x) = 3x^2 + 1$.",
+                "Pour tout $x$, $f'(x) > 0$, donc $f$ est **strictement croissante**.",
+                ">>2. Images aux bornes :",
+                "$$\\begin{aligned} f(0) &= 0^3 + 0 - 1 = -1 \\\\ f(1) &= 1^3 + 1 - 1 = 1 \\end{aligned}$$",
+                ">>3. Conclusion :",
+                "On a $f(0) < 0 < f(1)$. D'après le TVI, il existe un unique $\\alpha \\in ]0, 1[$ tel que $f(\\alpha) = 0$."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Fonctions Réciproques",
+      "subsections": [
+        {
+          "title": "Théorème de la Bijection",
+          "elements": [
+            {
+              "type": "theorem-box",
+              "title": "Existence de la fonction réciproque",
+              "content": "Si $f$ est une fonction continue et strictement monotone sur un intervalle $I$, alors $f$ réalise une bijection de $I$ vers $J = f(I)$.\nElle admet une fonction réciproque notée $f^{-1}$ définie sur $J$."
+            },
+            {
+              "type": "property-box",
+              "content": [
+                "**Symétrie :** Les courbes $\\mathcal{C}_f$ et $\\mathcal{C}_{f^{-1}}$ sont symétriques par rapport à la droite d'équation $y=x$.",
+                "**Variation :** $f^{-1}$ a le **même sens de variation** que $f$."
+              ],
+              "listType": "bullet"
+            }
+          ]
+        },
+        {
+          "title": "Fonction Racine n-ième",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "La fonction $x \\mapsto x^n$ (avec $n \\in \\mathbb{N}^*$) est une bijection de $\\mathbb{R}^+$ vers $\\mathbb{R}^+$.\nSa réciproque est la fonction **racine n-ième**, notée $\\sqrt[n]{x}$ ou $x^{1/n}$."
+            },
+            {
+              "type": "example-box",
+              "title": "Calculs avec radicaux",
+              "content": [
+                "$$\\sqrt[3]{27} = \\sqrt[3]{3^3} = ___3___$$",
+                "$$\\sqrt[4]{16} = \\sqrt[4]{2^4} = ___2___$$",
+                ">>Limite usuelle :",
+                "$$\\lim_{x \\to +\\infty} \\sqrt[n]{x} = +\\infty$$"
+              ],
+              "listType": "bullet"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Triangle et Hauteurs",
+      "statement": "Dans un repère orthonormé, on donne $A(-1; 2)$, $B(3; 1)$ et $C(2; 4)$.",
+      "sub_questions": [
+        {
+          "text": "Déterminer l'équation de la hauteur issue de $A$ dans le triangle $ABC$.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Calculer les coordonnées de l'orthocentre $H$.",
+          "questionNumber": "2"
+        }
+      ],
+      "solution": [
+        "La hauteur $(h_A)$ passe par $A$ et est perpendiculaire à $(BC)$. Vecteur normal $\\vec{BC}(-1; 3)$.\nÉquation : $-1(x - (-1)) + 3(y - 2) = 0 \\iff -x - 1 + 3y - 6 = 0 \\iff -x + 3y - 7 = 0$.",
+        "On cherche l'équation de la hauteur $(h_B)$ issue de $B$ ($\\| \\vec{AC}$). $\\vec{AC}(3; 2)$.\n$3(x-3) + 2(y-1) = 0 \\iff 3x + 2y - 11 = 0$.\nIntersection de $-x+3y=7$ et $3x+2y=11$. Système : $x=19/11, y=32/11$."
+      ]
+    },
+    {
+      "id": "ex2",
+      "title": "Puissance d'un point par rapport à un cercle",
+      "statement": "Soit le cercle $(C)$ d'équation $x^2 + y^2 - 4x + 2y - 4 = 0$ et le point $P(5; 2)$.",
+      "sub_questions": [
+        {
+          "text": "Déterminer le centre et le rayon de $(C)$.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Calculer la puissance de $P$ par rapport à $(C)$ définie par $p = d^2 - R^2$.",
+          "questionNumber": "2"
+        },
+        {
+          "text": "Interpréter le signe de la puissance.",
+          "questionNumber": "3"
+        }
+      ],
+      "hint": [
+        {
+          "text": "Utiliser la forme canonique pour trouver le centre.",
+          "questionNumber": "1"
+        }
+      ],
+      "solution": [
+        "$(x-2)^2 - 4 + (y+1)^2 - 1 - 4 = 0 \\iff (x-2)^2 + (y+1)^2 = 9$. Centre $\\Omega(2; -1)$, $R=3$.",
+        "$d^2 = \\Omega P^2 = (5-2)^2 + (2-(-1))^2 = 3^2 + 3^2 = 18$. Puissance $p = 18 - 9 = 9$.",
+        "$p > 0$, donc le point $P$ est à l'extérieur du cercle."
+      ]
+    }
+  ]
+}

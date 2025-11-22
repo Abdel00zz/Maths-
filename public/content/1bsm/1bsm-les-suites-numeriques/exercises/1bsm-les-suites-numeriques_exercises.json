@@ -1,0 +1,70 @@
+{
+  "exercises": [
+    {
+      "id": "ex1",
+      "title": "Calcul de termes (Fibonacci)",
+      "statement": "Soit la suite $(F_n)$ définie par $F_0 = 0$, $F_1 = 1$ et la relation de récurrence $F_{n+2} = F_{n+1} + F_n$.",
+      "sub_questions": [
+        {
+          "text": "Calculer les termes $F_2, F_3, F_4$ et $F_5$.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Vérifier que $F_5 = 5$.",
+          "questionNumber": "2"
+        }
+      ],
+      "solution": [
+        "$F_2 = 1+0 = 1$",
+        "$F_3 = 1+1 = 2$",
+        "$F_4 = 2+1 = 3$",
+        "$F_5 = 3+2 = 5$"
+      ]
+    },
+    {
+      "id": "ex2",
+      "title": "Étude de Monotonie (PDF Ex 6.13)",
+      "statement": "On considère la suite $(u_n)$ définie par $u_0 = 1$ et pour tout $n \\in \\mathbb{N}$, $u_{n+1} = u_n^2 + u_n + 1$.",
+      "sub_questions": [
+        {
+          "text": "Exprimer la différence $u_{n+1} - u_n$.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Déterminer le signe de cette différence sachant que $u_n$ est une somme de carrés.",
+          "questionNumber": "2"
+        },
+        {
+          "text": "En déduire le sens de variation de la suite.",
+          "questionNumber": "3"
+        }
+      ],
+      "solution": [
+        "$u_{n+1} - u_n = (u_n^2 + u_n + 1) - u_n = u_n^2 + 1$.",
+        "Pour tout réel $x$, $x^2 \\ge 0$, donc $x^2 + 1 \\ge 1 > 0$.",
+        "La différence est strictement positive, donc la suite est strictement croissante."
+      ]
+    },
+    {
+      "id": "ex3",
+      "title": "Suite Bornée",
+      "statement": "Soit la suite définie par $u_n = \\dfrac{2n+1}{n+3}$ pour $n \\ge 0$.",
+      "sub_questions": [
+        {
+          "text": "Montrer que pour tout $n \\ge 0$, $u_n < 2$.",
+          "questionNumber": "1"
+        },
+        {
+          "text": "Montrer que la suite est minorée par $\\frac{1}{3}$.",
+          "questionNumber": "2"
+        }
+      ],
+      "hint": [
+        {
+          "text": "Calculer $2 - u_n$ et étudier le signe.",
+          "questionNumber": "1"
+        }
+      ]
+    }
+  ]
+}

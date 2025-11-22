@@ -1,0 +1,84 @@
+{
+  "header": {
+    "title": "Calcul Intégral",
+    "subtitle": "Primitives, Intégration et calcul d'aires",
+    "classe": "2ème Bac Sciences Expérimentales",
+    "chapter": "Chapitre 5",
+    "academicYear": "2025-2026"
+  },
+  "sections": [
+    {
+      "title": "Intégrale d'une fonction continue",
+      "subsections": [
+        {
+          "title": "Définition et Lien avec les Primitives",
+          "elements": [
+            {
+              "type": "definition-box",
+              "content": "Soit $f$ une fonction continue sur un intervalle $I$, et $a, b$ deux réels de $I$.\nSi $F$ est une primitive quelconque de $f$ sur $I$, on appelle **intégrale de $a$ à $b$ de $f$** le réel :\n$$\\int_a^b f(x) dx = [F(x)]_a^b = F(b) - F(a)$$"
+            },
+            {
+              "type": "example-box",
+              "title": "Calcul élémentaire",
+              "content": [
+                "Calculons $I = \\displaystyle\\int_0^1 (2x + 3) dx$.",
+                ">>1. Recherche de primitive :",
+                "Une primitive de $f(x) = 2x+3$ est $F(x) = x^2 + 3x$.",
+                ">>2. Calcul :",
+                "$$\\begin{aligned} I &= [x^2 + 3x]_0^1 \\\\ &= (1^2 + 3(1)) - (0^2 + 3(0)) \\\\ &= 4 - 0 \\\\ &= ___4___ \\end{aligned}$$"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Propriétés de l'Intégrale",
+          "elements": [
+            {
+              "type": "property-box",
+              "title": "Linéarité et Chasles",
+              "content": [
+                "**Relation de Chasles :** $\\displaystyle\\int_a^b f(x)dx + \\int_b^c f(x)dx = \\int_a^c f(x)dx$",
+                "**Linéarité :** $\\displaystyle\\int_a^b (\\alpha f(x) + \\beta g(x))dx = \\alpha \\int_a^b f(x)dx + \\beta \\int_a^b g(x)dx$"
+              ],
+              "listType": "bullet"
+            },
+            {
+              "type": "theorem-box",
+              "title": "Intégration et Ordre",
+              "content": [
+                "Si $f(x) \\ge 0$ sur $[a, b]$ (avec $a < b$), alors $\\displaystyle\\int_a^b f(x) dx \\ge 0$.",
+                "Si $f(x) \\le g(x)$ sur $[a, b]$, alors $\\displaystyle\\int_a^b f(x) dx \\le \\int_a^b g(x) dx$."
+              ],
+              "listType": "bullet"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Applications",
+      "subsections": [
+        {
+          "title": "Calcul d'Aires",
+          "elements": [
+            {
+              "type": "definition-box",
+              "title": "Aire sous la courbe",
+              "content": "Si $f$ est continue et positive sur $[a, b]$, l'intégrale $\\displaystyle\\int_a^b f(x) dx$ est l'aire (en unités d'aire) du domaine délimité par la courbe $\\mathcal{C}_f$, l'axe des abscisses et les droites verticales $x=a$ et $x=b$."
+            },
+            {
+              "type": "practice-box",
+              "statement": "Calculer l'aire du domaine sous la parabole $y=x^2$ entre $0$ et $2$.",
+              "solution": [
+                "La fonction $x^2$ est positive sur $[0, 2]$.",
+                "Aire $\\mathcal{A} = \\int_0^2 x^2 dx$.",
+                "Primitive $F(x) = \\dfrac{x^3}{3}$.",
+                "$$\\mathcal{A} = \\left[\\dfrac{x^3}{3}\\right]_0^2 = \\dfrac{8}{3} - 0 = ___\\dfrac{8}{3}___ \\text{ u.a.}$$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
