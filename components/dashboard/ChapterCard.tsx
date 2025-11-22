@@ -12,9 +12,6 @@ import { getSessionStatus } from '../../utils/sessionHelpers.ts';
 import { SessionStatus } from './SessionStatus.tsx';
 import { MathRenderer } from '../MathRenderer.tsx';
 
-// Motif SVG "Blue Marin" Géométrique & Doux
-const CARD_PATTERN = `data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e3a8a' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E`;
-
 export const ChapterCard: React.FC<{ chapter: any; index: number }> = React.memo(({ chapter, index }) => {
     const navigate = useNavigate();
     const { state } = useAppContext();
@@ -57,11 +54,11 @@ export const ChapterCard: React.FC<{ chapter: any; index: number }> = React.memo
         if (isUnlocked) navigate(`/chapter/${chapter.id}`);
     };
 
-    // --- Style "Blue Marin Doux" avec SVG ---
-    // Fond très clair (#F0F7FF) avec motif, bordure Bleu Marine (blue-900)
+    // --- Style "Cadre Visible & Gras" (Néo-Brutaliste Chic) ---
+    // Si HIGHLIGHTED (Live ou Upcoming) : Style JAUNE BRILLANT & NOIR
     const containerClasses = isUnlocked 
         ? isHighlighted 
-            ? "bg-[#F0F7FF] border-[3px] border-blue-900 shadow-[0_8px_30px_rgb(30,58,138,0.12)] hover:shadow-[0_8px_40px_rgb(30,58,138,0.2)] hover:-translate-y-1 cursor-pointer group"
+            ? "bg-gradient-to-br from-white via-yellow-50 to-yellow-100 border-[3px] border-yellow-400 shadow-[0_0_40px_-5px_rgba(250,204,21,0.6)] hover:shadow-[0_0_60px_-5px_rgba(250,204,21,0.8)] hover:-translate-y-2 cursor-pointer group animate-[pulse_4s_ease-in-out_infinite]"
             : "bg-white border-2 border-slate-900 shadow-[6px_6px_0px_0px_rgba(15,23,42,0.15)] hover:shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] hover:-translate-y-1 cursor-pointer group"
         : "bg-slate-50 border-2 border-slate-200 opacity-60 cursor-not-allowed";
 
@@ -70,23 +67,23 @@ export const ChapterCard: React.FC<{ chapter: any; index: number }> = React.memo
             onClick={handleNavigate}
             onMouseEnter={() => isUnlocked && prefetchChapter(chapter.id)}
             className={`relative w-full rounded-[2.5rem] transition-all duration-300 ease-out select-none overflow-hidden p-0 ${containerClasses}`}
-            style={isHighlighted ? { backgroundImage: `url("${CARD_PATTERN}")`, backgroundSize: '60px 60px' } : {}}
         >
-            {/* Gradient Overlay subtil pour la profondeur sur la carte active */}
-            {isHighlighted && <div className="absolute inset-0 bg-gradient-to-br from-white/60 via-transparent to-blue-50/30 pointer-events-none"></div>}
+            {/* Effet de brillance supplémentaire pour le mode Highlighted */}
+            {isHighlighted && <div className="absolute inset-0 bg-yellow-400/10 animate-pulse pointer-events-none"></div>}
 
-            <div className="relative p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 h-full z-10">
+            <div className="relative p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 h-full">
                 
-                {/* GAUCHE : Indicateur de Progression - Style Blue Marin */}
+                {/* GAUCHE : Indicateur de Progression Épuré */}
                 <div className="flex-shrink-0 relative">
                     {isUnlocked ? (
-                         <div className="scale-110 transform transition-transform duration-500 group-hover:scale-125 group-hover:rotate-3">
+                         <div className="scale-110 transform transition-transform duration-500 group-hover:scale-125 group-hover:rotate-6">
                             <CircularProgress 
                                 percentage={stats.globalPercentage} 
                                 size={80} 
                                 strokeWidth={8} 
-                                color={isHighlighted ? "text-blue-900" : "text-slate-900"} 
-                                emptyColor={isHighlighted ? "text-blue-200/50" : "text-slate-100"} 
+                                // Couleur Jaune Brillant pour le cercle, texte Noir par défaut via component
+                                color={isHighlighted ? "text-yellow-500" : "text-slate-900"} 
+                                emptyColor={isHighlighted ? "text-yellow-200" : "text-slate-100"} 
                             />
                          </div>
                     ) : (
@@ -101,45 +98,46 @@ export const ChapterCard: React.FC<{ chapter: any; index: number }> = React.memo
                     
                     {/* Meta Tags & Session */}
                     <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
-                        <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm ${isHighlighted ? 'bg-blue-900 text-white' : 'bg-slate-900 text-white'}`}>
+                        {/* Badge Chapitre : Noir sur Jaune si actif, Blanc sur Noir sinon */}
+                        <span className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest shadow-sm ${isHighlighted ? 'bg-yellow-400 text-slate-900' : 'bg-slate-900 text-white'}`}>
                             Chapitre {String(index).padStart(2, '0')}
                         </span>
                         
-                        {/* Affichage Session */}
+                        {/* Affichage Session toujours visible si existante */}
                         <div className="scale-100 origin-left">
                              <SessionStatus chapter={chapter} />
                         </div>
                     </div>
 
-                    {/* Titre - Noir Profond (Visible) */}
-                    <h3 className="text-2xl md:text-3xl font-display font-black text-slate-900 leading-tight tracking-tight">
+                    {/* Titre - Toujours NOIR pour la lisibilité */}
+                    <h3 className={`text-2xl md:text-3xl font-display font-black leading-tight tracking-tight ${isUnlocked ? 'text-slate-900' : 'text-slate-400'}`}>
                         <MathRenderer expression={chapter.title} inline />
                     </h3>
 
-                    {/* Détails Techniques - Blue Marin contrasté */}
+                    {/* Détails Techniques - Noir ou Gris foncé */}
                     {isUnlocked && (
-                        <div className={`flex flex-wrap items-center justify-center md:justify-start gap-6 font-medium pt-1 ${isHighlighted ? 'text-blue-900' : 'text-slate-500'}`}>
+                        <div className={`flex flex-wrap items-center justify-center md:justify-start gap-6 font-medium pt-1 ${isHighlighted ? 'text-slate-800' : 'text-slate-500'}`}>
                             <div className="flex items-center gap-2">
-                                <div className={`w-1.5 h-1.5 rounded-full ${isHighlighted ? 'bg-blue-900' : 'bg-slate-900'}`}></div>
+                                <div className={`w-1.5 h-1.5 rounded-full ${isHighlighted ? 'bg-yellow-500' : 'bg-slate-900'}`}></div>
                                 <span className="text-[10px] font-bold uppercase tracking-wider">Cours</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <div className={`w-1.5 h-1.5 rounded-full ${isHighlighted ? 'bg-blue-900' : 'bg-slate-900'}`}></div>
+                                <div className={`w-1.5 h-1.5 rounded-full ${isHighlighted ? 'bg-yellow-500' : 'bg-slate-900'}`}></div>
                                 <span className="text-[10px] font-bold uppercase tracking-wider">{quizLoading ? '-' : (quizCount || 0)} QCM</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <div className={`w-1.5 h-1.5 rounded-full ${isHighlighted ? 'bg-blue-900' : 'bg-slate-900'}`}></div>
+                                <div className={`w-1.5 h-1.5 rounded-full ${isHighlighted ? 'bg-yellow-500' : 'bg-slate-900'}`}></div>
                                 <span className="text-[10px] font-bold uppercase tracking-wider">{exCount || 0} Exos</span>
                             </div>
                         </div>
                     )}
                 </div>
 
-                {/* DROITE : Flèche Extrême (Bouton Flottant - Blue Marin) */}
+                {/* DROITE : Flèche Extrême (Bouton Flottant) */}
                 {isUnlocked && (
                     <div className="hidden md:flex items-center justify-center pl-4">
-                        <div className={`w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-[-45deg] shadow-lg border-4 border-white ring-1 ${isHighlighted ? 'bg-blue-900 text-white ring-blue-200 shadow-blue-900/20' : 'bg-slate-900 text-white ring-slate-100'}`}>
-                            <Icon name="arrow_forward" className="text-3xl" />
+                        <div className={`w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-[-45deg] shadow-lg border-4 border-white ring-1 ${isHighlighted ? 'bg-yellow-400 text-slate-900 ring-yellow-300' : 'bg-slate-900 text-white ring-slate-100'}`}>
+                            <Icon name="arrow_forward" className="text-3xl font-bold" />
                         </div>
                     </div>
                 )}

@@ -88,32 +88,36 @@ export const SessionStatus: React.FC<{ chapter: CurriculumChapter }> = ({ chapte
 
     if (status === 'none' || !targetDate) return null;
 
-    // LIVE STYLE : GREEN EMERALD VIBRANT (NO BADGE)
+    // LIVE STYLE : JAUNE BRILLANT & NOIR
     if (status === 'live') {
         return (
-            <div className="flex items-center gap-3 pl-1">
-                <div className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                </div>
-                <div className="flex flex-col leading-none">
-                    <span className="text-[9px] font-black text-emerald-600 uppercase tracking-[0.2em] mb-0.5">En Direct</span>
-                    <span className="text-[11px] font-bold text-emerald-700 font-mono tracking-widest">
-                         {targetDate.toLocaleTimeString('fr-FR', {hour: '2-digit', minute:'2-digit'}).replace(':', 'H')}
-                    </span>
+            <div className="relative group">
+                <div className="absolute -inset-1 bg-yellow-400 rounded-full blur opacity-60 animate-pulse"></div>
+                <div className="relative flex items-center gap-3 px-4 py-1.5 rounded-full bg-yellow-50 border border-yellow-400 shadow-sm transition-all">
+                    <div className="relative flex h-3 w-3">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-500 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-3 w-3 bg-yellow-600"></span>
+                    </div>
+                    <div className="flex flex-col leading-none">
+                        <span className="text-[9px] font-black text-slate-900 uppercase tracking-[0.2em]">En Direct</span>
+                        <span className="text-[11px] font-bold text-slate-800 font-mono tracking-widest">
+                             {targetDate.toLocaleTimeString('fr-FR', {hour: '2-digit', minute:'2-digit'}).replace(':', 'H')}
+                        </span>
+                    </div>
                 </div>
             </div>
         );
     }
 
-    // UPCOMING STYLE : GREEN EMERALD CLAIR (NO BADGE)
+    // UPCOMING STYLE : NOIR SUR JAUNE/AMBRE
     if (status === 'upcoming') {
         return (
-            <div className="flex items-center gap-2 pl-1">
-                <Icon name="event" className="text-[18px] text-emerald-500" />
-                <span className="font-mono text-[11px] font-bold tracking-wider text-emerald-600 min-w-[120px]">
+            <div className="flex items-center gap-2 px-2 py-1">
+                <Icon name="event" className="text-[16px] text-yellow-600" />
+                {/* Texte Noir pour la visibilité maximale */}
+                <span className="font-mono text-[11px] font-bold tracking-wider text-slate-900 min-w-[120px]">
                     {text}
-                    <span className={`inline-block w-1.5 h-3 ml-0.5 align-middle bg-emerald-500 ${isBlinking ? 'opacity-100' : 'opacity-0'}`}></span>
+                    <span className={`inline-block w-1.5 h-3 ml-0.5 align-middle bg-yellow-500 ${isBlinking ? 'animate-pulse' : 'opacity-100'}`}></span>
                 </span>
             </div>
         );
@@ -121,7 +125,7 @@ export const SessionStatus: React.FC<{ chapter: CurriculumChapter }> = ({ chapte
 
     if (status === 'ended') {
         return (
-            <div className="flex items-center gap-2 opacity-50 grayscale hover:grayscale-0 transition-all pl-1">
+            <div className="flex items-center gap-2 opacity-60 grayscale hover:grayscale-0 transition-all">
                 <Icon name="history" className="text-[16px] text-slate-400" />
                 <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500 line-through decoration-slate-300">
                     Terminée

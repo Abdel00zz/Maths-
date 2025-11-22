@@ -298,5 +298,3 @@ L'application gère automatiquement le style "Architectural" :
 3.  **Trous** : Vérifier que les réponses dans `___réponse___` sont correctes.
 4.  **Images** : Vérifier que les liens sont accessibles.
 5.  **IDs** : Les IDs des exercices/quiz doivent être uniques.
-#   M a t h s -  
- 
